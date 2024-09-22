@@ -27,7 +27,7 @@ switch (action)
     case '%':
         result = Calculator.Modulus(num1, num2);
         break;
-    case 'P':
+    case 'p':
         result = Calculator.Power(num1, num2);
         break;
     default:
