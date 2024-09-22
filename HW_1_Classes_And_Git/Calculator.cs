@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace HW_1_Classes_And_Git
+﻿namespace HW_1_Classes_And_Git
 {
     internal class Calculator
     {
