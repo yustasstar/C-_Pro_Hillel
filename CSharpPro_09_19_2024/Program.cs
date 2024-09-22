@@ -98,11 +98,11 @@ namespace Lesson
 		{
 			Console.OutputEncoding = Encoding.UTF8;
 
-			var person = new Person
-			{
-				TestInfo = "demo"
-			};
-			Console.WriteLine(person.TestInfo);
+			//var person = new Person
+			//{
+			//	TestInfo = "demo"
+			//};
+			//Console.WriteLine(person.TestInfo);
 			// person.TestInfo = "qqqq";
 
 			//Console.WriteLine(InvoiceTypes.Urgent);
