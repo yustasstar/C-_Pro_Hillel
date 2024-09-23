@@ -42,12 +42,16 @@ if (result == double.PositiveInfinity && !isActionCorrect)
     Console.WriteLine("Something wrong!");
     Console.WriteLine($"Result = ({num1} {action} {num2}) = {result}");
 }
+
 Console.WriteLine("-----------------------------------------------");
 Console.WriteLine($"Result = ({num1} {action} {num2}) = {result}");
 Console.WriteLine("-----------------------------------------------");
-Console.WriteLine("Addition (+): " + Calculator.Add(num1, num2));
-Console.WriteLine("Subtraction (-): " + Calculator.Subtract(num1, num2));
-Console.WriteLine("Multiplication (*): " + Calculator.Multiply(num1, num2));
-Console.WriteLine("Division (/): " + Calculator.Divide(num1, num2));
-Console.WriteLine("Modulus (%): " + Calculator.Modulus(num1, num2));
-Console.WriteLine("Power (p): " + Calculator.Power(num1, num2));
+
+Console.WriteLine($@"
+Addition (+): {Calculator.Add(num1, num2)}
+Subtraction (-): {Calculator.Subtract(num1, num2)}
+Multiplication (*): {Calculator.Multiply(num1, num2)}
+Division (/): {Calculator.Divide(num1, num2)}
+Modulus (%): {Calculator.Modulus(num1, num2)}
+Power (p): {Calculator.Power(num1, num2)}
+");
