@@ -42,7 +42,7 @@
 
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace ThirdLesson.interfaces
+namespace Lesson_2.interfaces
 {
     public interface IMovableDemo
     {
@@ -364,7 +364,7 @@ namespace ThirdLesson.interfaces
 
             //
             IActionTest action1Test = new RunAction();
-            action1Test.Move(); 
+            action1Test.Move();
 
             IRunActionTest action2Test = new RunAction();
             action2Test.Move();

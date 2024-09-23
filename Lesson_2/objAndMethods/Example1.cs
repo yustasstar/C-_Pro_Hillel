@@ -2,7 +2,7 @@
 // Навіть якщо ми не вказуємо клас Object як базовий, за умовчанням неявно клас Object все одно стоїть на вершині ієрархії спадкування.
 // Тому всі типи та класи можуть реалізувати ті методи, які визначені у класі System.Object.
 
-namespace ThirdLesson.objAndMethods
+namespace Lesson_2.objAndMethods
 {
     public class Clock
     {
@@ -45,7 +45,7 @@ namespace ThirdLesson.objAndMethods
         {
             // якщо параметр методу представляє тип Person
             // то повертаємо true, якщо імена збігаються
-            if (obj is Person person) 
+            if (obj is Person person)
                 return Name == person.Name;
             return false;
         }

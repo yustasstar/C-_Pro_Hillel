@@ -1,4 +1,4 @@
-﻿namespace ThirdLesson.someStandardInterfaces
+﻿namespace Lesson_2.someStandardInterfaces
 {
     // ICloneable под капотом
     //public interface ICloneable

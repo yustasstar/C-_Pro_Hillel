@@ -3,7 +3,7 @@
 // На рівні пам'яті для статичних полів створюватиметься ділянка в пам'яті,
 // яка буде спільною для всіх об'єктів класу.
 
-namespace SecondLesson.static_examples
+namespace Lesson_2.static_examples
 {
     public class PersonV3
     {
