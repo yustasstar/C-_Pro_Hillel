@@ -1,4 +1,4 @@
-﻿namespace SecondLesson.oop
+﻿namespace Lesson_1.oop
 {
     public class Pencil
     {

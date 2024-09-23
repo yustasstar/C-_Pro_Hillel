@@ -1,8 +1,7 @@
-﻿using SecondLesson.oop;
+﻿using Lesson_2.objAndMethods;
 using System.Text;
-using ThirdLesson.objAndMethods;
 
-namespace Lesson
+namespace Lesson_2
 {
     public class Program
     {

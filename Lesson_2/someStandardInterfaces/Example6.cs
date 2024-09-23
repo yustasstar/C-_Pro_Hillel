@@ -1,4 +1,4 @@
-﻿namespace ThirdLesson.someStandardInterfaces
+﻿namespace Lesson_2.someStandardInterfaces
 {
     // Интерфейсы IEnumerable и IEnumerator
     public static class Example6

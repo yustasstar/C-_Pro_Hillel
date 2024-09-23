@@ -1,4 +1,4 @@
-﻿namespace SecondLesson.static_examples
+﻿namespace Lesson_2.static_examples
 {
     public static class MathOperations
     {

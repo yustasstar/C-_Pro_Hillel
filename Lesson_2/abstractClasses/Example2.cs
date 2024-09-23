@@ -38,7 +38,7 @@
 // Похідний клас повинен продати всі абстрактні члени базового класу.
 // Однак ми можемо відмовитися від реалізації, але в цьому випадку похідний клас також має бути визначений як абстрактний
 
-namespace ThirdLesson.abstractClasses
+namespace Lesson_2.abstractClasses
 {
     abstract class Transport
     {

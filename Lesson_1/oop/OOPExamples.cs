@@ -55,7 +55,7 @@
 
 // record class
 
-namespace SecondLesson.oop
+namespace Lesson_1.oop
 {
     // если у class нет явно модификатора доступа - по умолчанию будет internal
     class State
@@ -110,10 +110,10 @@ namespace SecondLesson.oop
         {
             _firstName = firstName;
 
-		}
+        }
 
-		// чтоб такое не писать - используйте автосвойство
-		public string Hobby
+        // чтоб такое не писать - используйте автосвойство
+        public string Hobby
         {
             get
             {
@@ -121,7 +121,7 @@ namespace SecondLesson.oop
             }
             set
             {
-                if( _hobby != value )
+                if (_hobby != value)
                 {
                     _hobby = value;
                 }
@@ -158,7 +158,7 @@ namespace SecondLesson.oop
                 Console.WriteLine("Incorrect age");
             }
 
-            this._age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
+            _age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
         }
 
         // readonly свойство (только для чтения)
@@ -222,8 +222,8 @@ namespace SecondLesson.oop
 
         public PhoneBase(string name, decimal cost)
         {
-            this.Name = name;
-            this.Cost = cost;
+            Name = name;
+            Cost = cost;
         }
 
         // virtual - означает что этот метод мы сможем явно переопределить
@@ -239,7 +239,7 @@ namespace SecondLesson.oop
 
         public SmartPhone(string name, decimal cost, double pixels) : base(name, cost)
         {
-            this.Pixels = pixels;
+            Pixels = pixels;
         }
 
         // неявное сокрытие метода - теряем реализацию метода с таким названием из базового класса

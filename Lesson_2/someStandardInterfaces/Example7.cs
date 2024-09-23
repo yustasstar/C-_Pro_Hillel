@@ -1,4 +1,4 @@
-﻿namespace ThirdLesson.someStandardInterfaces
+﻿namespace Lesson_2.someStandardInterfaces
 {
     // Итераторы и оператор yield
     public static class Example7

@@ -1,4 +1,4 @@
-﻿namespace SecondLesson.static_examples
+﻿namespace Lesson_1.static_examples
 {
     public static class InvoiceTypes
     {

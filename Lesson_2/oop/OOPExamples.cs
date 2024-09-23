@@ -55,7 +55,7 @@
 
 // record class
 
-namespace SecondLesson.oop
+namespace Lesson_2.oop
 {
     // если у class нет явно модификатора доступа - по умолчанию будет internal
     class State
@@ -213,8 +213,8 @@ namespace SecondLesson.oop
 
         public PhoneBase(string name, decimal cost)
         {
-            this.Name = name;
-            this.Cost = cost;
+            Name = name;
+            Cost = cost;
         }
 
         // virtual - означает что этот метод мы сможем явно переопределить
@@ -230,7 +230,7 @@ namespace SecondLesson.oop
 
         public SmartPhone(string name, decimal cost, double pixels) : base(name, cost)
         {
-            this.Pixels = pixels;
+            Pixels = pixels;
         }
 
         // неявное сокрытие метода - теряем реализацию метода с таким названием из базового класса
