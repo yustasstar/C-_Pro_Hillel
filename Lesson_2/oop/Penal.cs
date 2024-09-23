@@ -1,4 +1,6 @@
-﻿namespace Lesson_2.oop
+﻿using SecondLesson.oop;
+
+namespace Lesson_2.oop
 {
     public class Penal
     {
