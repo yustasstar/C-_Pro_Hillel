@@ -109,7 +109,6 @@ namespace SecondLesson.oop
         public Person(string firstName)
         {
             _firstName = firstName;
-
 		}
 
 		// чтоб такое не писать - используйте автосвойство
