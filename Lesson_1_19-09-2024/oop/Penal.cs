@@ -1,4 +1,4 @@
-﻿namespace CSharpPro_09_19_2024.oop
+﻿namespace oop
 {
     public class Penal
     {

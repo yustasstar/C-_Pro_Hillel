@@ -55,7 +55,7 @@
 
 // record class
 
-namespace CSharpPro_09_19_2024.oop
+namespace oop
 {
     // если у class нет явно модификатора доступа - по умолчанию будет internal
     class State
