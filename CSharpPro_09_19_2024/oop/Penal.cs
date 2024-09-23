@@ -1,4 +1,4 @@
-﻿namespace SecondLesson.oop
+﻿namespace CSharpPro_09_19_2024.oop
 {
     public class Penal
     {
