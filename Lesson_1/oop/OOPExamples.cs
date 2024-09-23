@@ -55,7 +55,7 @@
 
 // record class
 
-namespace oop
+namespace SecondLesson.oop
 {
     // если у class нет явно модификатора доступа - по умолчанию будет internal
     class State
@@ -109,10 +109,11 @@ namespace oop
         public Person(string firstName)
         {
             _firstName = firstName;
-        }
 
-        // чтоб такое не писать - используйте автосвойство
-        public string Hobby
+		}
+
+		// чтоб такое не писать - используйте автосвойство
+		public string Hobby
         {
             get
             {
@@ -120,7 +121,7 @@ namespace oop
             }
             set
             {
-                if (_hobby != value)
+                if( _hobby != value )
                 {
                     _hobby = value;
                 }
@@ -157,7 +158,7 @@ namespace oop
                 Console.WriteLine("Incorrect age");
             }
 
-            _age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
+            this._age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
         }
 
         // readonly свойство (только для чтения)
@@ -221,8 +222,8 @@ namespace oop
 
         public PhoneBase(string name, decimal cost)
         {
-            Name = name;
-            Cost = cost;
+            this.Name = name;
+            this.Cost = cost;
         }
 
         // virtual - означает что этот метод мы сможем явно переопределить
@@ -238,7 +239,7 @@ namespace oop
 
         public SmartPhone(string name, decimal cost, double pixels) : base(name, cost)
         {
-            Pixels = pixels;
+            this.Pixels = pixels;
         }
 
         // неявное сокрытие метода - теряем реализацию метода с таким названием из базового класса

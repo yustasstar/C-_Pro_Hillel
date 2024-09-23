@@ -1,4 +1,4 @@
-﻿namespace oop
+﻿namespace SecondLesson.oop
 {
     // интерфейс IGraphic
     interface IGraphic
