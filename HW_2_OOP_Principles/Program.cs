@@ -1,7 +1,7 @@
 ﻿using HW_2_OOP_Principles.Instruments;
 using HW_2_OOP_Principles.Product.Product;
 
-//HW_2_OOP_Principles:
+//HW_2_OOP_Principles: 
 Task1_OOP();
 Task2_OOP();
 Task3_OOP();
@@ -39,17 +39,24 @@ static void Task2_OOP()
 
 static void Task3_OOP()
 {
-    int numberToConvert = 255;
+    Console.WriteLine("Please enter the integer number to convert:");
+    if (!int.TryParse(Console.ReadLine(), out int numberToConvert))
+    {
+        throw new ArgumentException("Invalid input. Please enter a valid integer number.");
+    }
     DecimalNumber number = new(numberToConvert);
 
-    Console.WriteLine($"Decimal number = {numberToConvert} : Binary number = {number.ToBinary()}");
-    Console.WriteLine($"Decimal number = {numberToConvert} : Octal number = {number.ToOctal()}");
-    Console.WriteLine($"Decimal number = {numberToConvert} : Hexadecimal number = {number.ToHexadecimal()}");
+    Console.WriteLine($@"
+        Decimal number = {numberToConvert} 
+        Binary number = {number.ToBinary()}
+        Octal number = {number.ToOctal()}
+        Hexadecimal number = {number.ToHexadecimal()}");
 }
 
 internal readonly struct DecimalNumber(int value)
 {
     private readonly int _value = value;
+
     public readonly string ToBinary() => Convert.ToString(_value, 2);
     public readonly string ToOctal() => Convert.ToString(_value, 8);
     public readonly string ToHexadecimal() => Convert.ToString(_value, 16).ToUpper();
