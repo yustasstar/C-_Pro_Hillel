@@ -1,4 +1,4 @@
-﻿namespace HW_2_OOP_Principles
+﻿namespace HW_2_OOP_Principles.Product.Product
 {
     internal class Money
     {
@@ -59,7 +59,7 @@
                 throw new ArgumentException("Invalid input. Cents must be integer between 0 and 99!");
             }
 
-            int totalCents = (_wholePart * 100 + _cents) - (reduceWholePart * 100 + reduceCents);
+            int totalCents = _wholePart * 100 + _cents - (reduceWholePart * 100 + reduceCents);
             if (totalCents < 0)
             {
                 throw new ArgumentException("The price cannot be negative!");

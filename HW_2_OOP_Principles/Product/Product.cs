@@ -1,4 +1,4 @@
-﻿namespace HW_2_OOP_Principles
+﻿namespace HW_2_OOP_Principles.Product.Product
 {
     internal class Product
     {
