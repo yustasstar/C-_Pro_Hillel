@@ -5,5 +5,5 @@ Product product = new Product();
 product.SetProductName();
 product.SetProductPrice();
 product.DisplayProduct();
-product.ReducePrice();
+product.ReduceProductPrice();
 product.DisplayProduct();
