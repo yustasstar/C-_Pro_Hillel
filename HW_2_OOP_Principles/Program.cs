@@ -2,8 +2,8 @@
 using HW_2_OOP_Principles.Product.Product;
 
 //HW_2_OOP_Principles: 
-Task1_OOP();
-Task2_OOP();
+//Task1_OOP();
+//Task2_OOP();
 Task3_OOP();
 
 static void Task1_OOP()

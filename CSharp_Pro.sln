@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_2", "Lesson_2\Lesson
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_2_OOP_Principles", "HW_2_OOP_Principles\HW_2_OOP_Principles.csproj", "{F6E7E739-5ACF-4836-8D92-1BAD7B1DBE29}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson_3", "Lesson_3\Lesson_3.csproj", "{6CFD9D08-B26E-4B96-9237-B239FDB66567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_3", "Lesson_3\Lesson_3.csproj", "{6CFD9D08-B26E-4B96-9237-B239FDB66567}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_3_AbstractClasses_And_Interfaces", "HW_3_AbstractClasses_And_Interfaces\HW_3_AbstractClasses_And_Interfaces.csproj", "{16EEDC7E-6308-4AE5-B21A-2B242FB80E80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -43,6 +45,10 @@ Global
 		{6CFD9D08-B26E-4B96-9237-B239FDB66567}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CFD9D08-B26E-4B96-9237-B239FDB66567}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CFD9D08-B26E-4B96-9237-B239FDB66567}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16EEDC7E-6308-4AE5-B21A-2B242FB80E80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16EEDC7E-6308-4AE5-B21A-2B242FB80E80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16EEDC7E-6308-4AE5-B21A-2B242FB80E80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16EEDC7E-6308-4AE5-B21A-2B242FB80E80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{F0DF94B7-1FC2-4FDF-9979-EDC7AFE99351} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
 		{F6E7E739-5ACF-4836-8D92-1BAD7B1DBE29} = {6A05DF64-88D8-4839-98A0-785F3F512A6D}
 		{6CFD9D08-B26E-4B96-9237-B239FDB66567} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
+		{16EEDC7E-6308-4AE5-B21A-2B242FB80E80} = {6A05DF64-88D8-4839-98A0-785F3F512A6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}
