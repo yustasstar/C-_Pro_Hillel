@@ -1,9 +1,8 @@
 ﻿using HW_3_AbstractClasses_And_Interfaces.Interfaces;
 
-
 namespace HW_3_AbstractClasses_And_Interfaces.Classes
 {
-    public class MyArray : IOutput, IMath
+    public class MyArray : IOutput, IMath , ISort
     {
         private readonly int[] array;
 
@@ -12,15 +11,9 @@ namespace HW_3_AbstractClasses_And_Interfaces.Classes
             array = testArray;
         }
 
-        public void Show()
-        {
-            Console.WriteLine("Random test array generated elements: " + string.Join(", ", array));
-        }
+        public void Show() => Console.WriteLine("Random test array generated elements: " + string.Join(", ", array));
 
-        public void Show(string info)
-        {
-            Console.WriteLine($"Info message: '{info}' for test array elements: " + string.Join(", ", array));
-        }
+        public void Show(string info) => Console.WriteLine($"{info}: " + string.Join(", ", array));
 
         public int Max()
         {
@@ -36,9 +29,9 @@ namespace HW_3_AbstractClasses_And_Interfaces.Classes
             return minValue;
         }
 
-        public double Avg()
+        public float Avg()
         {
-            double avgValue = array.Average();
+            float avgValue = (float)array.Average();
             Console.WriteLine($"Average value of test array: '{avgValue}'");
             return avgValue;
         }
@@ -54,6 +47,33 @@ namespace HW_3_AbstractClasses_And_Interfaces.Classes
 
             Console.WriteLine($"Value '{valueToSearch}' is NOT present in the test array: {isPresent}");
             return isPresent;
+        }
+
+        public void SortAsc()
+        {
+            Array.Sort(array);
+            Console.WriteLine("Array sorted by Ascending order:");
+        }
+
+        public void SortDesc()
+        {
+            Array.Sort(array);
+            Array.Reverse(array);
+            Console.WriteLine("Array sorted by Descending order:");
+        }
+
+        public void SortByParam(bool isAsc)
+        {
+            Console.WriteLine($"Parameter to sort: {isAsc}");
+
+            if (!isAsc)
+            {
+                SortAsc();
+            }
+            else
+            {
+                SortDesc();
+            }
         }
     }
 }

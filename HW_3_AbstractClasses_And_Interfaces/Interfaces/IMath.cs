@@ -5,7 +5,7 @@ namespace HW_3_AbstractClasses_And_Interfaces.Interfaces
     {
         int Max();
         int Min();
-        double Avg();
+        float Avg();
         bool Search(int valueToSearch);
     }
 }
