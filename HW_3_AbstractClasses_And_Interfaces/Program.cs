@@ -10,8 +10,8 @@ namespace HW_3_AbstractClasses_And_Interfaces
             string messageBeforeSorting = "Array before sorting";
             string messageAfterSorting = "Array after sorting";
             int lenght = 9;
-            int minValue = -10; 
-            int maxValue = 100; 
+            int minValue = -10;
+            int maxValue = 100;
             int[] randomArray = GenerateRandomArray(lenght, minValue, maxValue);
 
             MyArray myArray = new MyArray(randomArray);
@@ -24,7 +24,7 @@ namespace HW_3_AbstractClasses_And_Interfaces
             myArray.Min();
             myArray.Max();
             myArray.Avg();
-           
+
 
             Console.WriteLine("Please enter the integer value to search in array:");
             bool success = int.TryParse(Console.ReadLine(), out int valueToSearch);
@@ -32,7 +32,7 @@ namespace HW_3_AbstractClasses_And_Interfaces
             {
                 throw new ArgumentException("Entered value is not valid to search!"); ;
             }
-   
+
             myArray.Search(valueToSearch);
 
             Console.WriteLine("Task 3 - Sort:");
