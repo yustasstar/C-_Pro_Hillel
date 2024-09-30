@@ -134,11 +134,11 @@ namespace ThirdLesson.someStandardInterfaces
             //peopleEnumerator.Reset(); // скидаємо покажчик на початок масиву
 
             ////
-            //Week week = new Week();
-            //foreach (var day in week)
-            //{
-            //    Console.WriteLine(day);
-            //}
+            Week week = new Week();
+            foreach (var day in week)
+            {
+                Console.WriteLine(day);
+            }
         }
     }
 }

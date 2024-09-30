@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Lesson_4",
+    "\\Lesson_4\\Lesson4",
+    "\\Lesson_4\\someStandardInterfaces"
   ],
-  "SelectedNode": "\\C:\\Users\\yusta\\Source\\Repos\\C_sharp_Pro_Hillel",
+  "SelectedNode": "\\Lesson_4\\someStandardInterfaces\\Example6.cs",
   "PreviewInSolutionExplorer": false
 }
