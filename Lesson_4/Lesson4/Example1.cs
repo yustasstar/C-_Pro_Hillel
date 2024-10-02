@@ -1,23 +1,15 @@
 ﻿namespace Lesson4
 {
-    // можно перегрузить
-
+    //можно перегрузить
     //унарные операторы +x, -x, !x, ~x, ++, --, true, false
-
     //бинарные операторы +, -, *, /, %
-
     //операции сравнения ==, !=, <, >, <=, >=
-
     //поразрядные операторы &, |, ^, <<, >>
-
     //логические операторы &&, ||
 
     // нужно определять парами
-
     //== и !=
-
     //< и >
-
     //<= и >=
 
     class Counter
@@ -150,55 +142,55 @@
     {
         public static void StartTest()
         {
-            //Counter counter1 = new Counter { Value = 23 };
-            //Counter counter2 = new Counter { Value = 45 };
-            //bool result = counter1 > counter2;
-            //Console.WriteLine(result); // false
+            Counter counter1 = new Counter { Value = 23 };
+            Counter counter2 = new Counter { Value = 45 };
+            bool result = counter1 > counter2;
+            Console.WriteLine(result); // false
 
-            //Counter counter3 = counter1 + counter2;
-            //Console.WriteLine(counter3.Value);  // 23 + 45 = 68
-
-
-            //Counter counter4 = new Counter() { Value = 10 };
-            //Counter counter5 = counter4++;
-            //Console.WriteLine(counter4.Value);      // 20
-            //Console.WriteLine(counter5.Value);      // 10
-
-            //Counter counter6 = ++counter4;
-            //Console.WriteLine(counter4.Value);      // 30
-            //Console.WriteLine(counter6.Value);      // 30
+            Counter counter3 = counter1 + counter2;
+            Console.WriteLine(counter3.Value);  // 23 + 45 = 68
 
 
-            //Counter counter = new Counter() { Value = 0 };
-            //if (counter)
-            //    Console.WriteLine(true);
-            //else
-            //    Console.WriteLine(false);
+            Counter counter4 = new Counter() { Value = 10 };
+            Counter counter5 = counter4++;
+            Console.WriteLine(counter4.Value);      // 20
+            Console.WriteLine(counter5.Value);      // 10
+
+            Counter counter6 = ++counter4;
+            Console.WriteLine(counter4.Value);      // 30
+            Console.WriteLine(counter6.Value);      // 30
 
 
-            //if (!counter)
-            //    Console.WriteLine(true);
-            //else
-            //    Console.WriteLine(false);
+            Counter counter = new Counter() { Value = 0 };
+            if (counter)
+                Console.WriteLine(true);
+            else
+                Console.WriteLine(false);
 
-            //
-            //var myOrg = new Organisation(new User[] {
-            //    new("Vasya", "test1@gmail.com", "street 1"),
-            //    new("Petya", "test2@gmail.com", "street 2"),
-            //    new("Anton", "test3@gmail.com", "street 3")
-            //});
 
-            //Console.WriteLine(myOrg[1]);
-            //Console.WriteLine(myOrg["Anton"]);
+            if (!counter)
+                Console.WriteLine(true);
+            else
+                Console.WriteLine(false);
 
-            //
-            CounterV2 counter1 = new CounterV2 { Seconds = 115 };
 
-            Timer timer = counter1;
-            Console.WriteLine($"{timer.Hours}:{timer.Minutes}:{timer.Seconds}"); // 0:1:55
+            var myOrg = new Organisation(new User[] {
+                new("Vasya", "test1@gmail.com", "street 1"),
+                new("Petya", "test2@gmail.com", "street 2"),
+                new("Anton", "test3@gmail.com", "street 3")
+            });
 
-            var counter2 = (CounterV2)timer;
-            Console.WriteLine(counter2.Seconds);  //115
+            Console.WriteLine(myOrg[1]);
+            Console.WriteLine(myOrg["Anton"]);
+
+
+            //CounterV2 counter1 = new CounterV2 { Seconds = 115 };
+
+            //Timer timer = counter1;
+            //Console.WriteLine($"{timer.Hours}:{timer.Minutes}:{timer.Seconds}"); // 0:1:55
+
+            //var counter2 = (CounterV2)timer;
+            //Console.WriteLine(counter2.Seconds);  //115
         }
     }
 }
