@@ -5,24 +5,24 @@ using SecondLesson.oop;
 namespace Lesson
 {
 	// v1
-	class Person
-	{
-		public string name;   // ім'я
-		public int age;                     // вік
-		public Company company;
+	//class Person
+	//{
+	//	public string name;   // ім'я
+	//	public int age;                     // вік
+	//	public Company company;
 
-		public Person()
-		{
-			name = "Undefined";
-			age = 18;
-			company = new Company();
-		}
+	//	public Person()
+	//	{
+	//		name = "Undefined";
+	//		age = 18;
+	//		company = new Company();
+	//	}
 
-		public void Print()
-		{
-			Console.WriteLine($"Name: {name}  Age: {age} Company: {company.title}");
-		}
-	}
+	//	public void Print()
+	//	{
+	//		Console.WriteLine($"Name: {name}  Age: {age} Company: {company.title}");
+	//	}
+	//}
 
 	class Company
 	{
@@ -98,11 +98,11 @@ namespace Lesson
 		{
 			Console.OutputEncoding = Encoding.UTF8;
 
-			//var person = new Person
-			//{
-			//	TestInfo = "demo"
-			//};
-			//Console.WriteLine(person.TestInfo);
+			var person = new Person("firstName")
+			{
+				TestInfo = "demo"
+			};
+			Console.WriteLine(person.TestInfo);
 			// person.TestInfo = "qqqq";
 
 			//Console.WriteLine(InvoiceTypes.Urgent);
