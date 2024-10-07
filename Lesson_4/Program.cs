@@ -90,7 +90,6 @@ namespace Lesson
     public class Calculator
     {
         public int Number1 { get; set; }
-
         public int Number2 { get; set; }
 
         public Calculator(int num1, int num2)
@@ -159,7 +158,7 @@ namespace Lesson
         {
             Console.OutputEncoding = Encoding.UTF8;
 
-            // Lesson4.Example1.StartTest();
+            //Lesson4.Example1.StartTest();
             Lesson4.Example2.StartTest();
 
             // Example5.StartTest();

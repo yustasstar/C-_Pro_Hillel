@@ -23,7 +23,7 @@
     {
         public static void StartTest()
         {
-            string s = "Hello world";
+            string s = "Helllllo world";
             char c = 'l';
             int i = s.CharCount(c);
             Console.WriteLine(i);
