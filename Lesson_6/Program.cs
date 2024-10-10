@@ -34,6 +34,8 @@ namespace Lesson6
 // https://refactoring.guru/ru/design-patterns/catalog
 // https://github.com/jnguyen095/clean-code/blob/master/Clean.Code.A.Handbook.of.Agile.Software.Craftsmanship.pdf
 
+//https://metanit.com/sharp/patterns/
+
 // MyDoctorAppointment ->
 // implement/fix SOLID principles
 // add different doctor types like (classes): head, intern, etc (with new methods)
