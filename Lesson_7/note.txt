@@ -1,0 +1,9 @@
+﻿Складання сміття, управління пам'яттю та вказівники
+Фіналізовані об'єкти
+Конструкція using
+Вказівники
+Вказівники на структури, члени класів та масиви
+
+https://www.loginworks.com/blogs/garbage-collector-work-net-c/
+https://ironpdf.com/blog/net-help/csharp-using/
+https://dou.ua/lenta/articles/principles-of-garbage-collection/
