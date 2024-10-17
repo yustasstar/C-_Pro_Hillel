@@ -37,6 +37,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson9", "Lesson9\Lesson9.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DoctorAppointmentDemo", "DoctorAppointmentDemo", "{1EF9A032-328F-4ACF-BD04-C37E28A80AD7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.Data", "DoctorAppointmentDemo\DoctorAppointmentDemo.Data\DoctorAppointmentDemo.Data.csproj", "{4C4D93D5-77B8-45BD-913E-2CA9971F54F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.Domain", "DoctorAppointmentDemo\DoctorAppointmentDemo.Domain\DoctorAppointmentDemo.Domain.csproj", "{3E8184EE-E87E-422C-9AD9-8BFE2C8672EC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.Service", "DoctorAppointmentDemo\DoctorAppointmentDemo.Service\DoctorAppointmentDemo.Service.csproj", "{29C1D15C-343F-4144-B2FC-DCE9CE392AAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.UI", "DoctorAppointmentDemo\DoctorAppointmentDemo.UI\DoctorAppointmentDemo.UI.csproj", "{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +107,22 @@ Global
 		{758A498C-90A5-48F8-90DF-10628F94A274}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{758A498C-90A5-48F8-90DF-10628F94A274}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{758A498C-90A5-48F8-90DF-10628F94A274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4D93D5-77B8-45BD-913E-2CA9971F54F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4D93D5-77B8-45BD-913E-2CA9971F54F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4D93D5-77B8-45BD-913E-2CA9971F54F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4D93D5-77B8-45BD-913E-2CA9971F54F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E8184EE-E87E-422C-9AD9-8BFE2C8672EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E8184EE-E87E-422C-9AD9-8BFE2C8672EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E8184EE-E87E-422C-9AD9-8BFE2C8672EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E8184EE-E87E-422C-9AD9-8BFE2C8672EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29C1D15C-343F-4144-B2FC-DCE9CE392AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C1D15C-343F-4144-B2FC-DCE9CE392AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C1D15C-343F-4144-B2FC-DCE9CE392AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C1D15C-343F-4144-B2FC-DCE9CE392AAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +142,10 @@ Global
 		{AC9BD3FB-A3CA-4D51-8F8B-ABAE04328768} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
 		{6E06C869-B896-4CF2-A3FB-E61F2DCC8E22} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
 		{758A498C-90A5-48F8-90DF-10628F94A274} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
+		{4C4D93D5-77B8-45BD-913E-2CA9971F54F1} = {1EF9A032-328F-4ACF-BD04-C37E28A80AD7}
+		{3E8184EE-E87E-422C-9AD9-8BFE2C8672EC} = {1EF9A032-328F-4ACF-BD04-C37E28A80AD7}
+		{29C1D15C-343F-4144-B2FC-DCE9CE392AAD} = {1EF9A032-328F-4ACF-BD04-C37E28A80AD7}
+		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149} = {1EF9A032-328F-4ACF-BD04-C37E28A80AD7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}
