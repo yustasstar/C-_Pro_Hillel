@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DoctorAppointmentDemo.Service\DoctorAppointmentDemo.Service.csproj" />
+  </ItemGroup>
+
 </Project>

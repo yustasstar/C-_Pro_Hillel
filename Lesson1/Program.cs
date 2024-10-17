@@ -2,7 +2,7 @@
 using System.Text;
 using SecondLesson.oop;
 
-namespace Lesson
+namespace Lesson1
 {
 	// v1
 	//class Person

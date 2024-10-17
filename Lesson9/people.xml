@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<people>
+  <person name="Mark">
+    <company>Facebook</company>
+    <age>30</age>
+  </person>
+  <person name="Sam">
+    <company>JetBrains</company>
+    <age>28</age>
+  </person>
+</people>
