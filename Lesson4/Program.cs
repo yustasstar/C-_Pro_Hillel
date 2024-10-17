@@ -1,9 +1,4 @@
-﻿using SecondLesson.oop;
-using System.Text;
-using ThirdLesson.abstractClasses;
-using ThirdLesson.objAndMethods;
-using ThirdLesson.someStandardInterfaces;
-using ThirdLesson.someStandardInterfacesV2;
+﻿using System.Text;
 
 // Запрограмуйте клас Money(об'єкт класу оперує однією валютою) для роботи з грошима. 
 
@@ -26,7 +21,7 @@ using ThirdLesson.someStandardInterfacesV2;
 
 //Реалізувати основні методи: додавання, віднімання, множення, розподіл, тощо.
 
-namespace Lesson
+namespace Lesson4
 {
     public class Money
     {

@@ -2,7 +2,7 @@
 using System.Text;
 using ThirdLesson.objAndMethods;
 
-namespace Lesson
+namespace Lesson2
 {
     public class Program
     {
