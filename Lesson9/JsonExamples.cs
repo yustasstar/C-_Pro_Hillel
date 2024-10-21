@@ -43,22 +43,26 @@ using System.Text.Json.Serialization;
 //// Повертається десеріалізований об'єкт, обернутий у Value
 //// Розглянемо застосування класу простому прикладі. Серіалізуємо та десеріалізуємо найпростіший об'єкт:
 
-Person tom = new Person("Tom", 37);
-string json = JsonSerializer.Serialize(tom, new JsonSerializerOptions{WriteIndented = true}); // Options for the json beatificator
-Console.WriteLine(json);
-Person? restoredPerson = JsonSerializer.Deserialize<Person>(json);
-Console.WriteLine($"Name = {restoredPerson?.Name}; Age = {restoredPerson?.Age}"); // Name = Tom; Age = 37
+///////////////////////////////////////////////////////////////////////
 
-class Person
-{
-    public string Name { get; }
-    public int Age { get; set; }
-    public Person(string name, int age)
-    {
-        Name = name;
-        Age = age;
-    }
-}
+//Person tom = new Person("Tom", 37);
+//string json = JsonSerializer.Serialize(tom, new JsonSerializerOptions{WriteIndented = true}); // Options for the json beatificator
+//Console.WriteLine(json);
+//Person? restoredPerson = JsonSerializer.Deserialize<Person>(json);
+//Console.WriteLine($"Name = {restoredPerson?.Name}; Age = {restoredPerson?.Age}"); // Name = Tom; Age = 37
+
+//class Person
+//{
+//    public string Name { get; }
+//    public int Age { get; set; }
+//    public Person(string name, int age)
+//    {
+//        Name = name;
+//        Age = age;
+//    }
+//}
+
+///////////////////////////////////////////////////////////////////////
 
 //// * Деякі зауваження щодо серіалізації/десеріалізації:
 //// Об'єкт, який піддається десеріалізації, повинен мати або конструктор без параметрів, або конструктор,
@@ -71,19 +75,23 @@ class Person
 //// Оскільки методи SerializeAsyc/DeserializeAsync можуть приймати потік типу Stream,
 //// то ми можемо використовувати файловий потік для збереження і подальшого вилучення даних:
 
+///////////////////////////////////////////////////////////////////////
 //// * сохранение данных:
-//using (FileStream fs = new FileStream("user.json", FileMode.OpenOrCreate))
+
+//using (FileStream fs = new FileStream("../../../user.json", FileMode.OpenOrCreate))
 //{
 //Person tom = new Person("Tom", 37);
 //await JsonSerializer.SerializeAsync<Person>(fs, tom);
 //Console.WriteLine("Data has been saved to file");
 //}
 
+///////////////////////////////////////////////////////////////////////
 //// * чтение данных:
-//using (FileStream fs = new FileStream("user.json", FileMode.OpenOrCreate))
+
+//using (FileStream fs = new FileStream("../../../user.json", FileMode.OpenOrCreate))
 //{
 //Person? person = await JsonSerializer.DeserializeAsync<Person>(fs);
-//Console.WriteLine($"Name: {person?.Name}  Age: {person?.Age}");
+//Console.WriteLine($"Name: {person?.Name};  Age: {person?.Age}");
 //}
 
 //class Person
@@ -97,8 +105,9 @@ class Person
 //    }
 //}
 
+///////////////////////////////////////////////////////////////////////
 
-//// Налаштування серіалізації за допомогою JsonSerializerOptions
+//// Налаштування серіалізації за допомогою JsonSerializerOptions:
 //// За замовчуванням JsonSerializer серіалізує об'єкти мініміфікованого коду.
 //// За допомогою додаткового параметра JsonSerializerOptions можна налаштувати механізм серіалізації/десеріалізації,
 //// використовуючи властивості JsonSerializerOptions. Деякі з його властивостей:
@@ -108,6 +117,8 @@ class Person
 //// IgnoreReadOnlyProperties: аналогічно встановлює, чи серіалізуватимуться властивості, призначені тільки для читання
 //// WriteIndented: встановлює, чи додаватимуться в json пробіли (умовно кажучи, для краси).
 //// Якщо одно true встановлюються додаткові прогалини
+
+///////////////////////////////////////////////////////////////////////
 
 //Person tom = new Person("Tom", 37);
 
@@ -131,7 +142,8 @@ class Person
 //    }
 //}
 
-//// * Налаштування серіалізації за допомогою атрибутів
+///////////////////////////////////////////////////////////////////////
+//// * Налаштування серіалізації за допомогою атрибутів:
 
 //// За умовчанням серіалізації підлягають усі громадські характеристики.
 //// Крім того, у вихідному об'єкті json усі назви властивостей відповідають назвам властивостей об'єкта C#.
@@ -140,6 +152,8 @@ class Person
 //// Атрибут JsonIgnore дозволяє виключити із серіалізації певну властивість.
 //// А JsonPropertyName дозволяє замінювати оригінальну назву властивості.
 //// Приклад використання:
+
+///////////////////////////////////////////////////////////////////////
 
 //Person tom = new Person("Tom", 37);
 
@@ -161,3 +175,5 @@ class Person
 //        Age = age;
 //    }
 //}
+
+///////////////////////////////////////////////////////////////////////
