@@ -96,13 +96,13 @@ namespace Lesson1
 	{
 		public static void Main()  // точка входа в программу, программа стартует с этой функции (метода)
 		{
-			Console.OutputEncoding = Encoding.UTF8;
+			//Console.OutputEncoding = Encoding.UTF8;
 
-			var person = new Person("firstName")
-			{
-				TestInfo = "demo"
-			};
-			Console.WriteLine(person.TestInfo);
+			//var person = new Person("firstName")
+			//{
+			//	TestInfo = "demo"
+			//};
+			//Console.WriteLine(person.TestInfo);
 			// person.TestInfo = "qqqq";
 
 			//Console.WriteLine(InvoiceTypes.Urgent);
