@@ -331,26 +331,26 @@
 // Нерідко в потоках використовуються деякі ресурси, що розділяються, загальні для всієї програми.
 // Це може бути загальні змінні, файли, інші ресурси. Наприклад:
 
-//int x = 0;
+int x = 0;
 
-//// запускаем пять потоков
-//for (int i = 1; i < 6; i++)
-//{
-//    Thread myThread = new(Print);
-//    myThread.Name = $"Thread {i}";   // устанавливаем имя для каждого потока
-//    myThread.Start();
-//}
+// запускаем пять потоков
+for (int i = 1; i < 6; i++)
+{
+    Thread myThread = new(Print);
+    myThread.Name = $"Thread {i}";   // устанавливаем имя для каждого потока
+    myThread.Start();
+}
 
-//void Print()
-//{
-//    x = 1;
-//    for (int i = 1; i < 6; i++)
-//    {
-//        Console.WriteLine($"{Thread.CurrentThread.Name}: {x}");
-//        x++;
-//        Thread.Sleep(100);
-//    }
-//}
+void Print()
+{
+    x = 1;
+    for (int i = 1; i < 6; i++)
+    {
+        Console.WriteLine($"{Thread.CurrentThread.Name}: {x}");
+        x++;
+        Thread.Sleep(100);
+    }
+}
 
 // Тут у нас запускаються п'ять потоків, які викликають метод Print і які працюють із загальною змінною x.
 // І ми припускаємо, що метод виведе всі значення від 1 до 5. І так для кожного потоку.
