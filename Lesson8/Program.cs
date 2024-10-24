@@ -1,34 +1,34 @@
 ﻿//namespace Lesson8
 //{
-//    //через делегаты
+//через делегаты:
 //    public delegate void AccountHandler(string message);
-//    public class Account
+//public class Account
+//{
+//    int sum;
+//    AccountHandler? taken;
+//    public Account(int sum) => this.sum = sum;
+//    // Реєструємо делегат
+//    public void RegisterHandler(AccountHandler del)
 //    {
-//        int sum;
-//        AccountHandler? taken;
-//        public Account(int sum) => this.sum = sum;
-//        // Реєструємо делегат
-//        public void RegisterHandler(AccountHandler del)
-//        {
-//            taken += del;
-//        }
-//        // Скасування реєстрації делегата
-//        public void UnregisterHandler(AccountHandler del)
-//        {
-//            taken -= del; // видаляємо делегат
-//        }
-//        public void Add(int sum) => this.sum += sum;
-//        public void Take(int sum)
-//        {
-//            if (this.sum >= sum)
-//            {
-//                this.sum -= sum;
-//                taken?.Invoke($"З рахунку списано {sum} у.о.");
-//            }
-//            else
-//                taken?.Invoke($"Недостатньо коштів. Баланс: {this.sum} у.о.");
-//        }
+//        taken += del;
 //    }
+//    // Скасування реєстрації делегата
+//    public void UnregisterHandler(AccountHandler del)
+//    {
+//        taken -= del; // видаляємо делегат
+//    }
+//    public void Add(int sum) => this.sum += sum;
+//    public void Take(int sum)
+//    {
+//        if (this.sum >= sum)
+//        {
+//            this.sum -= sum;
+//            taken?.Invoke($"З рахунку списано {sum} у.о.");
+//        }
+//        else
+//            taken?.Invoke($"Недостатньо коштів. Баланс: {this.sum} у.о.");
+//    }
+//}
 
 //    // через события
 //    class AccountEventArgs
@@ -168,19 +168,19 @@
 //    }
 //}
 
-//// v2
-//delegate void Message2(); // 1. Оголошуємо делегат вне класса
-//class Program2
-//{
-//    static void Main()
-//    {
-//        Message2 mes; // 2. Створюємо змінну делегата
-//        mes = Hello; // 3. Привласнюємо цю змінну адресу методу
-//        mes(); // 4. Викликаємо метод
+// v2
+delegate void Message2(); // 1. Оголошуємо делегат вне класса
+class Program2
+{
+    static void Main()
+    {
+        Message2 mes; // 2. Створюємо змінну делегата
+        mes = Hello; // 3. Привласнюємо цю змінну адресу методу
+        mes(); // 4. Викликаємо метод
 
-//        void Hello() => Console.WriteLine("Hello");
-//    }
-//}
+        void Hello() => Console.WriteLine("Hello");
+    }
+}
 
 //// * Параметри та результат делегата:
 

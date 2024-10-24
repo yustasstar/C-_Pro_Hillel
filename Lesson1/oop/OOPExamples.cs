@@ -57,127 +57,127 @@
 
 namespace SecondLesson.oop
 {
-    // если у class нет явно модификатора доступа - по умолчанию будет internal
-    class State
-    {
-        // все равно, что private string defaultVar;
-        string defaultVar = "default";
-        // поле доступно только из текущего класса
-        private string privateVar = "private";
-        // доступно из текущего класса и производных классов, которые определены в этом же проекте
-        protected private string protectedPrivateVar = "protected private";
-        // доступно из текущего класса и производных классов
-        protected string protectedVar = "protected";
-        // доступно в любом месте текущего проекта
-        internal string internalVar = "internal";
-        // доступно в любом месте текущего проекта и из классов-наследников в других проектах
-        protected internal string protectedInternalVar = "protected internal";
-        // доступно в любом месте программы, а также для других программ и сборок
-        public string publicVar = "public";
+    //    // если у class нет явно модификатора доступа - по умолчанию будет internal
+    //    class State
+    //    {
+    //        // все равно, что private string defaultVar;
+    //        string defaultVar = "default";
+    //        // поле доступно только из текущего класса
+    //        private string privateVar = "private";
+    //        // доступно из текущего класса и производных классов, которые определены в этом же проекте
+    //        protected private string protectedPrivateVar = "protected private";
+    //        // доступно из текущего класса и производных классов
+    //        protected string protectedVar = "protected";
+    //        // доступно в любом месте текущего проекта
+    //        internal string internalVar = "internal";
+    //        // доступно в любом месте текущего проекта и из классов-наследников в других проектах
+    //        protected internal string protectedInternalVar = "protected internal";
+    //        // доступно в любом месте программы, а также для других программ и сборок
+    //        public string publicVar = "public";
 
-        // по умолчанию имеет модификатор private
-        void Print() => Console.WriteLine(defaultVar);
+    //        // по умолчанию имеет модификатор private
+    //        void Print() => Console.WriteLine(defaultVar);
 
-        // метод доступен только из текущего класса
-        private void PrintPrivate() => Console.WriteLine(privateVar);
+    //        // метод доступен только из текущего класса
+    //        private void PrintPrivate() => Console.WriteLine(privateVar);
 
-        // доступен из текущего класса и производных классов, которые определены в этом же проекте
-        protected private void PrintProtectedPrivate() => Console.WriteLine(protectedPrivateVar);
+    //        // доступен из текущего класса и производных классов, которые определены в этом же проекте
+    //        protected private void PrintProtectedPrivate() => Console.WriteLine(protectedPrivateVar);
 
-        // доступен из текущего класса и производных классов
-        protected void PrintProtected() => Console.WriteLine(protectedVar);
+    //        // доступен из текущего класса и производных классов
+    //        protected void PrintProtected() => Console.WriteLine(protectedVar);
 
-        // доступен в любом месте текущего проекта
-        internal void PrintInternal() => Console.WriteLine(internalVar);
+    //        // доступен в любом месте текущего проекта
+    //        internal void PrintInternal() => Console.WriteLine(internalVar);
 
-        // доступен в любом месте текущего проекта и из классов-наследников в других проектах
-        protected internal void PrintProtectedInternal() => Console.WriteLine(protectedInternalVar);
+    //        // доступен в любом месте текущего проекта и из классов-наследников в других проектах
+    //        protected internal void PrintProtectedInternal() => Console.WriteLine(protectedInternalVar);
 
-        // доступен в любом месте программы, а также для других программ и сборок
-        public void PrintPublic() => Console.WriteLine(publicVar);
-    }
+    //        // доступен в любом месте программы, а также для других программ и сборок
+    //        public void PrintPublic() => Console.WriteLine(publicVar);
+    //    }
 
-    // v1
-    class Person
-    {
-        // поле
-        private int _age;
-        private string _companyName = "Google";
-        private string _hobby;
-        private string _firstName;
+    //    // v1
+    //    class Person
+    //    {
+    //        // поле
+    //        private int _age;
+    //        private string _companyName = "Google";
+    //        private string _hobby;
+    //        private string _firstName;
 
-        public Person(string firstName)
-        {
-            _firstName = firstName;
-		}
+    //        public Person(string firstName)
+    //        {
+    //            _firstName = firstName;
+    //		}
 
-		// чтоб такое не писать - используйте автосвойство
-		public string Hobby
-        {
-            get
-            {
-                return _hobby;
-            }
-            set
-            {
-                if( _hobby != value )
-                {
-                    _hobby = value;
-                }
-            }
-        }
+    //		// чтоб такое не писать - используйте автосвойство
+    //		public string Hobby
+    //        {
+    //            get
+    //            {
+    //                return _hobby;
+    //            }
+    //            set
+    //            {
+    //                if( _hobby != value )
+    //                {
+    //                    _hobby = value;
+    //                }
+    //            }
+    //        }
 
-        // автосвойство
-        public string Name { get; set; } = "noname";
+    //        // автосвойство
+    //        public string Name { get; set; } = "noname";
 
-        // свойство
-        public int Age
-        {
-            set
-            {
-                if (value <= 1 || value > 150)
-                {
-                    // throw new Exception("Incorrect age");
-                    Console.WriteLine("Incorrect age");
-                }
-                else
-                {
-                    _age = value; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
-                }
-            }
-            get { return _age; }
-        }
+    //        // свойство
+    //        public int Age
+    //        {
+    //            set
+    //            {
+    //                if (value <= 1 || value > 150)
+    //                {
+    //                    // throw new Exception("Incorrect age");
+    //                    Console.WriteLine("Incorrect age");
+    //                }
+    //                else
+    //                {
+    //                    _age = value; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
+    //                }
+    //            }
+    //            get { return _age; }
+    //        }
 
-        // обычный метод
-        public void SetAge(int age)
-        {
-            if (age <= 1 || age > 150)
-            {
-                // throw new Exception("Incorrect age");
-                Console.WriteLine("Incorrect age");
-            }
+    //        // обычный метод
+    //        public void SetAge(int age)
+    //        {
+    //            if (age <= 1 || age > 150)
+    //            {
+    //                // throw new Exception("Incorrect age");
+    //                Console.WriteLine("Incorrect age");
+    //            }
 
-            this._age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
-        }
+    //            this._age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
+    //        }
 
-        // readonly свойство (только для чтения)
-        public string CompanyName
-        {
-            // v1
-            // get { return _companyName; }
-            // v2
-            get;
-        }
+    //        // readonly свойство (только для чтения)
+    //        public string CompanyName
+    //        {
+    //            // v1
+    //            // get { return _companyName; }
+    //            // v2
+    //            get;
+    //        }
 
-        // writeonly свойство (только для записи)
-        public string FirstName
-        {
-            set { _firstName = value; }
-        }
+    //        // writeonly свойство (только для записи)
+    //        public string FirstName
+    //        {
+    //            set { _firstName = value; }
+    //        }
 
-        //
-        public string TestInfo { get; init; } = "Some test info";
-    }
+    //        //
+    //        public string TestInfo { get; init; } = "Some test info";
+    //    }
 
     // v2
     // sealed class Person - запечатанный класс, от него нельзя отнаследоваться
@@ -256,10 +256,10 @@ namespace SecondLesson.oop
 
         // override - переопределение реализации метода базового класса
         // public override sealed void Print() - делаем запрет на дальнейшее переопределение этого метода
-        public override void Print()
-        {
-            base.Print(); // вызываем реализацию из базового класса
-            Console.WriteLine($"Pixels: {Pixels}");
-        }
+        //public override void Print()
+        //{
+        //    base.Print(); // вызываем реализацию из базового класса
+        //    Console.WriteLine($"Pixels: {Pixels}");
+        //}
     }
 }
