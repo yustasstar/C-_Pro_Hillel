@@ -45,6 +45,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.UI", "DoctorAppointmentDemo\DoctorAppointmentDemo.UI\DoctorAppointmentDemo.UI.csproj", "{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson11", "Lesson11\Lesson11.csproj", "{B34AC894-B1ED-495C-9C03-A78C2D5EC379}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34AC894-B1ED-495C-9C03-A78C2D5EC379}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34AC894-B1ED-495C-9C03-A78C2D5EC379}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34AC894-B1ED-495C-9C03-A78C2D5EC379}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34AC894-B1ED-495C-9C03-A78C2D5EC379}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -146,6 +152,7 @@ Global
 		{3E8184EE-E87E-422C-9AD9-8BFE2C8672EC} = {1EF9A032-328F-4ACF-BD04-C37E28A80AD7}
 		{29C1D15C-343F-4144-B2FC-DCE9CE392AAD} = {1EF9A032-328F-4ACF-BD04-C37E28A80AD7}
 		{BA25E31D-9BD3-4764-A0ED-569CFFB4D149} = {1EF9A032-328F-4ACF-BD04-C37E28A80AD7}
+		{B34AC894-B1ED-495C-9C03-A78C2D5EC379} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}
