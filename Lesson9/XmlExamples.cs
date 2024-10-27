@@ -91,27 +91,21 @@
 //var xDoc = new XmlDocument();
 //xDoc.Load("../../../people.xml");
 
-//// получим корневой элемент
-//XmlElement? xRoot = xDoc.DocumentElement;
+//XmlElement? xRoot = xDoc.DocumentElement;                           // получим корневой элемент
 //if (xRoot != null)
 //{
-//    // обход всех узлов в корневом элементе
-//    foreach (XmlElement xnode in xRoot)
+//    foreach (XmlElement xnode in xRoot)                             // обход всех узлов в корневом элементе
 //    {
-//        // получаем атрибут name
-//        XmlNode? attr = xnode.Attributes.GetNamedItem("name");
+//        XmlNode? attr = xnode.Attributes.GetNamedItem("name");      // получаем атрибут name
 //        Console.WriteLine(attr?.Value);
 
-//        // обходим все дочерние узлы элемента user
-//        foreach (XmlNode childnode in xnode.ChildNodes)
+//        foreach (XmlNode childnode in xnode.ChildNodes)             // обходим все дочерние узлы элемента user
 //        {
-//            // если узел - company
-//            if (childnode.Name == "company")
+//            if (childnode.Name == "company")                        // если узел - company
 //            {
 //                Console.WriteLine($"Company: {childnode.InnerText}");
 //            }
-//            // если узел age
-//            if (childnode.Name == "age")
+//            if (childnode.Name == "age")                            // если узел age
 //            {
 //                Console.WriteLine($"Age: {childnode.InnerText}");
 //            }
@@ -138,8 +132,7 @@
 //var xDoc = new XmlDocument();
 //xDoc.Load("../../../people.xml");
 
-//// получим корневой элемент
-//XmlElement? xRoot = xDoc.DocumentElement;
+//XmlElement? xRoot = xDoc.DocumentElement;       // получим корневой элемент
 //if (xRoot != null)
 //{
 //    foreach (XmlElement xnode in xRoot)
@@ -193,38 +186,24 @@
 //xDoc.Load("../../../people.xml");
 //XmlElement? xRoot = xDoc.DocumentElement;
 
-//// создаем новый элемент person
-//XmlElement personElem = xDoc.CreateElement("person");
+//XmlElement personElem = xDoc.CreateElement("person");   // создаем новый элемент person
+//XmlAttribute nameAttr = xDoc.CreateAttribute("name");   // создаем атрибут name
+//XmlElement companyElem = xDoc.CreateElement("company"); // создаем элементы company
+//XmlElement ageElem = xDoc.CreateElement("age");         // создаем элементы age
 
-//// создаем атрибут name
-//XmlAttribute nameAttr = xDoc.CreateAttribute("name");
-
-//// создаем элементы company и age
-//XmlElement companyElem = xDoc.CreateElement("company");
-//XmlElement ageElem = xDoc.CreateElement("age");
-
-//// создаем текстовые значения для элементов и атрибута
-//XmlText nameText = xDoc.CreateTextNode("Ivan");
+//XmlText nameText = xDoc.CreateTextNode("Ivan");         // создаем текстовые значения для элементов и атрибута
 //XmlText companyText = xDoc.CreateTextNode("Rozetka");
 //XmlText ageText = xDoc.CreateTextNode("99");
 
-////добавляем узлы
-//nameAttr.AppendChild(nameText);
+//nameAttr.AppendChild(nameText);                         //добавляем узлы
 //companyElem.AppendChild(companyText);
 //ageElem.AppendChild(ageText);
 
-//// добавляем атрибут name
-//personElem.Attributes.Append(nameAttr);
-
-//// добавляем элементы company и age
-//personElem.AppendChild(companyElem);
-//personElem.AppendChild(ageElem);
-
-//// добавляем в корневой элемент новый элемент person
-//xRoot?.AppendChild(personElem);
-
-//// сохраняем изменения xml-документа в файл
-//xDoc.Save("../../../people.xml");
+//personElem.Attributes.Append(nameAttr);                 // добавляем атрибут name
+//personElem.AppendChild(companyElem);                    // добавляем элементы company
+//personElem.AppendChild(ageElem);                        // добавляем элементы age
+//xRoot?.AppendChild(personElem);                         // добавляем в корневой элемент новый элемент person
+//xDoc.Save("../../../people.xml");                       // сохраняем изменения xml-документа в файл
 
 ///////////////////////////////////////////////////////////////////////
 //// * Видалення вузлів
@@ -269,8 +248,7 @@
 //xDoc.Load("../../../people.xml");
 //XmlElement? xRoot = xDoc.DocumentElement;
 
-//// выбор всех дочерних узлов
-//XmlNodeList? nodes = xRoot?.SelectNodes("*");
+//XmlNodeList? nodes = xRoot?.SelectNodes("*");  // выбор всех дочерних узлов
 //if (nodes is not null)
 //{
 //    foreach (XmlNode node in nodes)
@@ -333,39 +311,29 @@
 //// v1
 
 //using System.Xml.Linq;
+//XDocument xmlDoc = new XDocument();                               
 
-//XDocument xdoc = new XDocument();
-//// создаем первый элемент person
-//XElement tom = new XElement("person");
-//// создаем атрибут name
-//XAttribute tomNameAttr = new XAttribute("name", "Tom");
-//// создаем два элемента company и age 
-//XElement tomCompanyElem = new XElement("company", "Microsoft");
-//XElement tomAgeElem = new XElement("age", 37);
-//// добавляем атрибут и элементы в первый элемент person
-//tom.Add(tomNameAttr);
+//XElement tom = new XElement("person");                          // создаем первый элемент person
+//XAttribute tomNameAttr = new XAttribute("name", "Tom");         // создаем атрибут name 
+//XElement tomCompanyElem = new XElement("company", "Microsoft"); // создаем элемент company
+//XElement tomAgeElem = new XElement("age", 37);                  // создаем элемент age
+//tom.Add(tomNameAttr);                                           // добавляем атрибут и элементы в первый элемент person
 //tom.Add(tomCompanyElem);
 //tom.Add(tomAgeElem);
 
-//// создаем второй элемент person
-//XElement bob = new XElement("person");
-//// создаем для него атрибут name
-//XAttribute bobNameAttr = new XAttribute("name", "Bob");
-//// и два элемента - company и age
-//XElement bobCompanyElem = new XElement("company", "Google");
+//XElement bob = new XElement("person");                          // создаем второй элемент person
+//XAttribute bobNameAttr = new XAttribute("name", "Bob");         // создаем для него атрибут name
+//XElement bobCompanyElem = new XElement("company", "Google");    // и два элемента - company и age
 //XElement bobAgeElem = new XElement("age", 41);
 //bob.Add(bobNameAttr);
 //bob.Add(bobCompanyElem);
 //bob.Add(bobAgeElem);
-//// создаем корневой элемент
-//XElement people = new XElement("people");
-//// добавляем два элемента person в корневой элемент
-//people.Add(tom);
+
+//XElement people = new XElement("people");                       // создаем корневой элемент
+//people.Add(tom);                                                // добавляем два элемента person в корневой элемент
 //people.Add(bob);
-//// добавляем корневой элемент в документ
-//xdoc.Add(people);
-////сохраняем документ
-//xdoc.Save("../../../people_v2.xml");
+//xmlDoc.Add(people);                                             // добавляем корневой элемент в документ
+//xmlDoc.Save("../../../people_v2.xml");                          // сохраняем документ
 
 //Console.WriteLine("Data saved");
 
@@ -374,7 +342,7 @@
 
 //using System.Xml.Linq;
 
-//XDocument xdoc = new XDocument(new XElement("people",
+//XDocument xmlDoc = new XDocument(new XElement("people",
 //    new XElement("person",
 //        new XAttribute("name", "Tom"),
 //        new XElement("company", "Microsoft"),
@@ -382,9 +350,11 @@
 //    new XElement("person",
 //        new XAttribute("name", "Bob"),
 //        new XElement("company", "Google"),
-//        new XElement("age", 41))));
-//xdoc.Save("../../../people_v3.xml");
+//        new XElement("age", 41))
+//    )
+//);
 
+//xmlDoc.Save("../../../people_v3.xml");
 //Console.WriteLine("Data saved");
 
 ///////////////////////////////////////////////////////////////////////
@@ -394,15 +364,13 @@
 
 //using System.Xml.Linq;
 
-//XDocument xdoc = XDocument.Load("../../../people.xml");
-//// получаем корневой узел
-//XElement? people = xdoc.Element("people");
+//XDocument xmlDoc = XDocument.Load("../../../people.xml");
+//XElement? people = xmlDoc.Element("people");                    // получаем корневой узел people
+
 //if (people is not null)
 //{
-//    // проходим по всем элементам person
-//    foreach (XElement person in people.Elements("person"))
+//    foreach (XElement person in people.Elements("person"))      // проходим по всем элементам person
 //    {
-
 //        XAttribute? name = person.Attribute("name");
 //        XElement? company = person.Element("company");
 //        XElement? age = person.Element("age");
@@ -410,8 +378,7 @@
 //        Console.WriteLine($"Person: {name?.Value}");
 //        Console.WriteLine($"Company: {company?.Value}");
 //        Console.WriteLine($"Age: {age?.Value}");
-
-//        Console.WriteLine(); //  для разделения при выводе на консоль
+//        Console.WriteLine();                                    //  для разделения при выводе на консоль
 //    }
 //}
 
@@ -420,13 +387,12 @@
 
 //using System.Xml.Linq;
 
-//XDocument xdoc = XDocument.Load("../../../people.xml");
+//XDocument xmlDoc = XDocument.Load("../../../people_v3.xml");
 
-//var microsoft = xdoc.Element("people")?   // получаем корневой узел people
-//    .Elements("person")             // получаем все элементы person
-//                                    // получаем все person, у которого company = Microsoft
-//    .Where(p => p.Element("company")?.Value == "Facebook")
-//    .Select(p => new        // для каждого объекта создаем анонимный объект
+//var microsoft = xmlDoc.Element("people")?                       // получаем корневой узел people
+//    .Elements("person")                                         // получаем все элементы person
+//    .Where(p => p.Element("company")?.Value == "Microsoft")     // получаем все person, у которого company = Microsoft
+//    .Select(p => new                                            // для каждого объекта создаем анонимный объект
 //    {
 //        name = p.Attribute("name")?.Value,
 //        age = p.Element("age")?.Value,
@@ -446,16 +412,15 @@
 
 //using System.Xml.Linq;
 
-//XDocument xdoc = XDocument.Load("../../../people.xml");
+//XDocument xmlDoc = XDocument.Load("../../../people.xml");
 
-//var tom = xdoc.Element("people")?   // получаем корневой узел people
-//    .Elements("person")             // получаем все элементы person
+//var tom = xmlDoc.Element("people")?                                 // получаем корневой узел people
+//    .Elements("person")                                             // получаем все элементы person
 //    .FirstOrDefault(p => p.Attribute("name")?.Value == "Bob");
 
 //var name = tom?.Attribute("name")?.Value;
 //var age = tom?.Element("age")?.Value;
 //var company = tom?.Element("company")?.Value;
-
 //Console.WriteLine($"Name: {name}  Age: {age}  Company: {company}");
 
 ///////////////////////////////////////////////////////////////////////
@@ -465,22 +430,19 @@
 
 //using System.Xml.Linq;
 
-//XDocument xdoc = XDocument.Load("../../../people.xml");
-//XElement? root = xdoc.Element("people");
+//XDocument xmlDoc = XDocument.Load("../../../people.xml");
+//XElement? root = xmlDoc.Element("people");
 
 //if (root != null)
 //{
-//    // добавляем новый элемент
-//    root.Add(new XElement("person",
+//    root.Add(new XElement("person",                     // добавляем новый элемент
 //                new XAttribute("name", "Sam"),
 //                new XElement("company", "JetBrains"),
 //                new XElement("age", 28)));
 
-//    xdoc.Save("../../../people.xml");
+//    xmlDoc.Save("../../../people.xml");
 //}
-
-//// выводим xml-документ на консоль
-//Console.WriteLine(xdoc);
+//Console.WriteLine(xmlDoc);                              // выводим xml-документ на консоль
 
 ///////////////////////////////////////////////////////////////////////
 //// * Зміна даних:
@@ -488,29 +450,22 @@
 
 //using System.Xml.Linq;
 
-//XDocument xdoc = XDocument.Load("../../../people.xml");
+//XDocument xmlDoc = XDocument.Load("../../../people.xml");
 
-//// получим элемент person с name = "Tom"
-//var tom = xdoc.Element("people")?
-//    .Elements("person")
-//    .FirstOrDefault(p => p.Attribute("name")?.Value == "Tom");
+//var tom = xmlDoc.Element("people")?.Elements("person")          // получим элемент person с name = "Sam"
+//    .FirstOrDefault(p => p.Attribute("name")?.Value == "Sam");
 
 //if (tom != null)
 //{
-//    //  меняем атрибут name
-//    var name = tom.Attribute("name");
+//    var name = tom.Attribute("name");                           // меняем атрибут name
 //    if (name != null) name.Value = "Tomas";
 
-
-//    //  меняем вложенный элемент age
-//    var age = tom.Element("age");
+//    var age = tom.Element("age");                               // меняем вложенный элемент age
 //    if (age != null) age.Value = "22";
 
-//    xdoc.Save("../../../people.xml");
+//    xmlDoc.Save("../../../people.xml");
 //}
-
-//// выводим xml-документ на консоль
-//Console.WriteLine(xdoc);
+//Console.WriteLine(xmlDoc);                                      // выводим xml-документ на консоль
 
 ///////////////////////////////////////////////////////////////////////
 //// * Видалення даних:
@@ -518,24 +473,19 @@
 
 //using System.Xml.Linq;
 
-//XDocument xdoc = XDocument.Load("../../../people.xml");
-//XElement? root = xdoc.Element("people");
+//XDocument xmlDoc = XDocument.Load("../../../people_v2.xml");
+//XElement? root = xmlDoc.Element("people");
 
 //if (root != null)
-//{
-//    // получим элемент person с name = "Bob"
-//    var bob = root.Elements("person")
-//        .FirstOrDefault(p => p.Attribute("name")?.Value == "Bob");
-//    // и удалим его
+//{           // получим элемент person с name = "Bob"
+//    var bob = root.Elements("person").FirstOrDefault(p => p.Attribute("name")?.Value == "Bob");
 //    if (bob != null)
-//    {
-//        bob.Remove();
-//        xdoc.Save("../../../people.xml");
+//    {       // и удалим его
+//        bob.Remove();   
+//        xmlDoc.Save("../../../people.xml");
 //    }
 //}
-
-//// выводим xml-документ на консоль
-//Console.WriteLine(xdoc);
+//Console.WriteLine(xmlDoc);  // выводим xml-документ на консоль
 
 ///////////////////////////////////////////////////////////////////////
 //// * Серіалізація у XML.XmlSerializer:
@@ -550,7 +500,7 @@
 
 //XmlSerializer xmlSerializer = new XmlSerializer(typeof(Person));
 
-////[Serializable]
+//[Serializable]
 //class Person { }
 
 ///////////////////////////////////////////////////////////////////////
@@ -565,25 +515,22 @@
 
 //using System.Xml.Serialization;
 
-//// объект для сериализации
-//Person person = new Person("Tom", 37);
-//// передаем в конструктор тип класса Person
-//XmlSerializer xmlSerializer = new XmlSerializer(typeof(Person));
+//Person person = new Person("Tom", 37);                              // объект для сериализации
+//XmlSerializer xmlSerializer = new XmlSerializer(typeof(Person));    // передаем в конструктор тип класса Person
 //// получаем поток, куда будем записывать сериализованный объект
 //using (FileStream fs = new FileStream("../../../person_v4.xml", FileMode.OpenOrCreate))
 //{
 //    xmlSerializer.Serialize(fs, person);
-
 //    Console.WriteLine("Object has been serialized");
 //}
 
 //[Serializable]
-//public class Person
+//public class Person  // повинен мати модифікатор доступу public
 //{
-//    public string Name { get; set; } = "Undefined";
+//    public string Name { get; set; } = "Undefined"; // з private модифікатором при серіалізації будуть ігноруватися
 //    public int Age { get; set; } = 1;
 
-//    public Person() { }
+//    public Person() { }  // повинен мати стандартний конструктор без параметрів
 //    public Person(string name, int age)
 //    {
 //        Name = name;
@@ -598,9 +545,8 @@
 //using System.Xml.Serialization;
 
 //XmlSerializer xmlSerializer = new XmlSerializer(typeof(Person));
-
 //// десериализуем объект:
-//using (FileStream fs = new FileStream("person_v4.xml", FileMode.OpenOrCreate))
+//using (FileStream fs = new FileStream("../../../person_v3.xml", FileMode.Open))
 //{
 //    Person? person = xmlSerializer.Deserialize(fs) as Person;
 //    Console.WriteLine($"Name: {person?.Name}  Age: {person?.Age}");
@@ -632,14 +578,14 @@
 //    new Person("Bob", 41)
 //};
 
-//XmlSerializer formatter = new XmlSerializer(typeof(Person[]));
+//var formatter = new XmlSerializer(typeof(Person[]));
 //// сохранение массива в файл
-//using (FileStream fs = new FileStream("../../../people_v5.xml", FileMode.OpenOrCreate))
+//using (var fs = new FileStream("../../../people_v4.xml", FileMode.OpenOrCreate))
 //{
 //    formatter.Serialize(fs, people);
 //}
 //// восстановление массива из файла
-//using (FileStream fs = new FileStream("../../../people_v5.xml", FileMode.OpenOrCreate))
+//using (var fs = new FileStream("../../../people_v4.xml", FileMode.Open))
 //{
 //    Person[]? newpeople = formatter.Deserialize(fs) as Person[];
 
@@ -703,16 +649,18 @@
 //public class Company
 //{
 //    public string Name { get; set; } = "Undefined";
-//    // стандартный конструктор без параметров
-//    public Company() { }
+    
+//    public Company() { }       // стандартный конструктор без параметров
 //    public Company(string name) => Name = name;
 //}
+
 //public class Person
 //{
 //    public string Name { get; set; } = "Undefined";
 //    public int Age { get; set; } = 1;
 //    public Company Company { get; set; } = new Company();
-//    public Person() { }
+    
+//    public Person() { }         // стандартный конструктор без параметров
 //    public Person(string name, int age, Company company)
 //    {
 //        Name = name;
