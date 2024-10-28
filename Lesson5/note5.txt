@@ -1,21 +1,11 @@
 Що таке шаблон
-
 У яких ситуаціях використовується
-
 Види шаблонних класів та інтерфейсів
-
 Основні стандартні класи та інтерфейси
-
 Приклади використання
-
 https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/types/generics
-
 https://www.tutorialsteacher.com/csharp/csharp-generics
-
 https://www.programiz.com/csharp-programming/generics
-
 https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/generics/generic-interfaces
-
 https://www.c-sharpcorner.com/UploadFile/Ashush/generics-in-C-Sharp-part-i/
-
 https://www.c-sharpcorner.com/uploadfile/Ashush/generics-in-C-Sharp-part-ii/

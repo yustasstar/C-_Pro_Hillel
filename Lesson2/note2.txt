@@ -1,21 +1,12 @@
 Реалізація принципів ООП (повторення)
-
 інкапсуляція
-
 наслідування
-
 поліморфізм
-
 Методи класу Object
 
 https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/tutorials/oop
-
 https://www.c-sharpcorner.com/UploadFile/mkagrahari/introduction-to-object-oriented-programming-concepts-in-C-Sharp/
-
 https://www.tutorialsteacher.com/csharp/oop
-
 https://medium.com/codex/c-object-oriented-programming-oop-2d92a5cd336f
-
 https://learn.microsoft.com/ru-ru/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers
-
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-tuples

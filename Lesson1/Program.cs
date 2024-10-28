@@ -5,24 +5,24 @@ using SecondLesson.oop;
 namespace Lesson1
 {
 	// v1
-	//class Person
-	//{
-	//	public string name;   // ім'я
-	//	public int age;                     // вік
-	//	public Company company;
+	class Person
+	{
+		public string name;			// ім'я
+		public int age;             // вік
+		public Company company;
 
-	//	public Person()
-	//	{
-	//		name = "Undefined";
-	//		age = 18;
-	//		company = new Company();
-	//	}
+		public Person()
+		{
+			name = "Undefined";
+			age = 18;
+			company = new Company();
+		}
 
-	//	public void Print()
-	//	{
-	//		Console.WriteLine($"Name: {name}  Age: {age} Company: {company.title}");
-	//	}
-	//}
+		public void Print()
+		{
+			Console.WriteLine($"Name: {name}  Age: {age} Company: {company.title}");
+		}
+	}
 
 	class Company
 	{
@@ -34,15 +34,15 @@ namespace Lesson1
 	{
 		public string name;
 		public int age;
-		public PersonV4() : this("Неизвестно")    // 1 конструктор
+		public PersonV4() : this("Неизвестно")			// 1 конструктор
 		{
 			Console.WriteLine("1 конструктор");
 		}
-		public PersonV4(string name) : this(name, 18) // 2 конструктор
+		public PersonV4(string name) : this(name, 18)	// 2 конструктор
 		{
 			Console.WriteLine("2 конструктор");
 		}
-		public PersonV4(string name, int age)     // 3 конструктор
+		public PersonV4(string name, int age)			// 3 конструктор
 		{
 			this.name = name;
 			this.age = age;

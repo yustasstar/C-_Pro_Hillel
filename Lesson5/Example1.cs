@@ -46,34 +46,25 @@
         }
     }
 
-    // Restriction types and standard restrictions
-
-    //We can use the following types as constraints:
-
-    //Classes
-
-    //Interfaces
-
-    //class - the generic parameter must represent a class
-
-    //struct - the generic parameter must represent a structure
-
-    //new () - the generic parameter must represent a type that has a public parameterless constructor
-
-    // examples
+    //// Restriction types and standard restrictions
+    //// We can use the following types as constraints:
+    //// Classes
+    //// Interfaces
+    //// class - the generic parameter must represent a class
+    //// struct - the generic parameter must represent a structure
+    //// new () - the generic parameter must represent a type that has a public parameterless constructor
+    //// * examples:
+    
     //class Messenger<T> where T : struct
     //{ }
-
     //class Messenger<T> where T : class
     //{ }
-
     //class Messenger<T> where T : new()
     //{ }
-
     //class Smartphone<T> where T : Messenger, new()
     //{ }
 
-    //
+    ////////////////////////////////////////////////////////////////////////////
     class Messenger<T, P>
     where T : Message
     where P : Person2
