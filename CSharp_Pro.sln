@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_5_GarbageCollector", "HW
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson01", "Lesson1\Lesson01.csproj", "{595A38A9-DC9B-46D7-B641-64C2BA5D5FAE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson02", "Lesson2\Lesson02.csproj", "{FFBF9D2A-446A-44F1-94A9-09F627E31C08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson2", "Lesson2\Lesson2.csproj", "{FFBF9D2A-446A-44F1-94A9-09F627E31C08}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson03", "Lesson3\Lesson03.csproj", "{4CA6718E-4416-420A-BC0A-9C744F7A9287}"
 EndProject
@@ -37,9 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson09 - JSON,XML,LINQ", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson11 - Thread,Task", "Lesson11\Lesson11 - Thread,Task.csproj", "{B34AC894-B1ED-495C-9C03-A78C2D5EC379}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoList", "Lesson10\TodoList\TodoList\TodoList.csproj", "{5D0A8F8A-357B-4C6C-A3DA-BC22D35A0255}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson10 - TodoList", "Lesson10\TodoList\TodoList\Lesson10 - TodoList.csproj", "{5D0A8F8A-357B-4C6C-A3DA-BC22D35A0255}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoListPlus", "Lesson10\TodoListPlus\TodoListPlus\TodoListPlus.csproj", "{74E91AD2-3976-41F4-976E-7F6FE03C5B3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson10 - TodoListPlus", "Lesson10\TodoListPlus\TodoListPlus\Lesson10 - TodoListPlus.csproj", "{74E91AD2-3976-41F4-976E-7F6FE03C5B3A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyDoctorAppointment", "MyDoctorAppointment", "{DC52D4C2-ADD0-4A69-8AB2-037CBE81EFB2}"
 EndProject
