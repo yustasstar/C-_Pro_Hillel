@@ -9,7 +9,6 @@ using System.Text.Json.Serialization;
 
 //// Для збереження об'єкта в json у класі JsonSerializer визначено статичний метод Serialize()
 //// та його асинхронний двійник SerializeAsyc(), які мають низку перевантажених версій. Деякі з них:
-
 //// string Serialize(Object obj, Type type, JsonSerializerOptions options):
 //// серіалізує об'єкт obj типу type і повертає код json у вигляді рядка.
 //// Останній необов'язковий параметр options дозволяє встановити додаткові опції серіалізації
@@ -46,7 +45,8 @@ using System.Text.Json.Serialization;
 ///////////////////////////////////////////////////////////////////////
 
 //Person tom = new Person("Tom", 37);
-//string json = JsonSerializer.Serialize(tom, new JsonSerializerOptions{WriteIndented = true}); // Options for the json beatificator
+//                                                                                  // Options for the json beatificator
+//string json = JsonSerializer.Serialize(tom, new JsonSerializerOptions { WriteIndented = true }); 
 //Console.WriteLine(json);
 //Person? restoredPerson = JsonSerializer.Deserialize<Person>(json);
 //Console.WriteLine($"Name = {restoredPerson?.Name}; Age = {restoredPerson?.Age}"); // Name = Tom; Age = 37
@@ -65,9 +65,8 @@ using System.Text.Json.Serialization;
 ///////////////////////////////////////////////////////////////////////
 //// * Деякі зауваження щодо серіалізації/десеріалізації:
 //// Об'єкт, який піддається десеріалізації, повинен мати або конструктор без параметрів, або конструктор,
-//// для всіх параметрів якого в json-об'єкті, що десеріалізується,
-//// є значення (відповідність між параметрами конструктора і властивостями json-об'єкта встановлюється на основі назв,
-//// причому регістр не грає значення).
+//// для всіх параметрів якого в json-об'єкті, що десеріалізується, є значення (відповідність між параметрами конструктора
+//// і властивостями json-об'єкта встановлюється на основі назв, причому регістр не грає значення).
 //// Серіалізації підлягають лише public характеристики об'єкта (з модифікатором public).
 
 //// * Запис та читання файлу json:
