@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson7", "Lesson7\Lesson7.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson8", "Lesson8\Lesson8.csproj", "{6E06C869-B896-4CF2-A3FB-E61F2DCC8E22}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson9", "Lesson9\Lesson9.csproj", "{758A498C-90A5-48F8-90DF-10628F94A274}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson9 - JSON,XML,LINQ", "Lesson9\Lesson9 - JSON,XML,LINQ.csproj", "{758A498C-90A5-48F8-90DF-10628F94A274}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DoctorAppointmentDemo", "DoctorAppointmentDemo", "{1EF9A032-328F-4ACF-BD04-C37E28A80AD7}"
 EndProject
@@ -45,7 +45,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.Servi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DoctorAppointmentDemo.UI", "DoctorAppointmentDemo\DoctorAppointmentDemo.UI\DoctorAppointmentDemo.UI.csproj", "{BA25E31D-9BD3-4764-A0ED-569CFFB4D149}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson11", "Lesson11\Lesson11.csproj", "{B34AC894-B1ED-495C-9C03-A78C2D5EC379}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson11 - Thread,Task,Monitor,Mutex,Semaphore", "Lesson11\Lesson11 - Thread,Task,Monitor,Mutex,Semaphore.csproj", "{B34AC894-B1ED-495C-9C03-A78C2D5EC379}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TodoList", "Lesson10\TodoList\TodoList\TodoList.csproj", "{5D0A8F8A-357B-4C6C-A3DA-BC22D35A0255}"
 EndProject
