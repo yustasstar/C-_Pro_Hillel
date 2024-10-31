@@ -54,7 +54,7 @@
     //// struct - the generic parameter must represent a structure
     //// new () - the generic parameter must represent a type that has a public parameterless constructor
     //// * examples:
-    
+
     //class Messenger<T> where T : struct
     //{ }
     //class Messenger<T> where T : class
@@ -102,7 +102,7 @@
 
     class MixedUser<T, K> : BaseUser<T>
         where K : struct
-        where T: class
+        where T : class
     {
         public K Code { get; set; }
         public MixedUser(T id, K code) : base(id)

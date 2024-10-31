@@ -1,16 +1,16 @@
 namespace Drawing
 {
-	/// <summary>
-	/// Interaction logic for RoundedRectangles.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for RoundedRectangles.xaml
+    /// </summary>
 
-	public partial class RoundedRectangles : System.Windows.Window
-	{
+    public partial class RoundedRectangles : System.Windows.Window
+    {
 
-		public RoundedRectangles()
-		{
-			InitializeComponent();
-		}
+        public RoundedRectangles()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

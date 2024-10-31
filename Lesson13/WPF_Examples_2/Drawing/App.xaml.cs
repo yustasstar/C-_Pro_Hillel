@@ -1,12 +1,10 @@
-﻿using System.Windows;
-
-namespace Drawing
+﻿namespace Drawing
 {
-	/// <summary>
-	/// Interaction logic for App.xaml
-	/// </summary>
-	public partial class App : Application
-	{
-	}
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+    }
 
 }

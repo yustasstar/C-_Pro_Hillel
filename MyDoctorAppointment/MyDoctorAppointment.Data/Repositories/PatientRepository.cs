@@ -1,6 +1,6 @@
 ﻿namespace MyDoctorAppointment.Data.Repositories
 {
-	public class PatientRepository
-	{
-	}
+    public class PatientRepository
+    {
+    }
 }

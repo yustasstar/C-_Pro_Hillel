@@ -1,18 +1,18 @@
 namespace ClassicControls
 {
-	/// <summary>
-	/// Interaction logic for Window1.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for Window1.xaml
+    /// </summary>
 
-	public partial class EmbeddedFont : System.Windows.Window
-	{
+    public partial class EmbeddedFont : System.Windows.Window
+    {
 
-		public EmbeddedFont()
-		{
-			InitializeComponent();
+        public EmbeddedFont()
+        {
+            InitializeComponent();
 
-			//MessageBox.Show(tst.FontFamily.BaseUri.ToString());
-		}
+            //MessageBox.Show(tst.FontFamily.BaseUri.ToString());
+        }
 
-	}
+    }
 }

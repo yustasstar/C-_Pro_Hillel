@@ -1,8 +1,5 @@
 ﻿using CopyFilesWPF.Presenter;
 using CopyFilesWPF.View;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Forms;
 
 namespace CopyFilesWPF
 {

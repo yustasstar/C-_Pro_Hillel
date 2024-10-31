@@ -1,15 +1,15 @@
 ﻿namespace MyDoctorAppointment.Domain.Enums
 {
-	public enum IllnestTypes
-	{
-		EyeDisease = 1,
+    public enum IllnestTypes
+    {
+        EyeDisease = 1,
 
-		Infection,
+        Infection,
 
-		DentalDisease,
+        DentalDisease,
 
-		SkinDisease,
+        SkinDisease,
 
-		Ambulance,
-	}
+        Ambulance,
+    }
 }

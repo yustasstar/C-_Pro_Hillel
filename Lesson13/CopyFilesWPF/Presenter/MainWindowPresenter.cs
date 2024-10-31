@@ -1,10 +1,5 @@
 ﻿using CopyFilesWPF.Model;
 using CopyFilesWPF.View;
-using System.IO;
-using System.Threading;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Threading;
 
 namespace CopyFilesWPF.Presenter
 {
@@ -13,7 +8,8 @@ namespace CopyFilesWPF.Presenter
         private readonly IMainWindowView _mainWindowView;
         private readonly MainWindowModel _mainWindowModel;
 
-        public MainWindowPresenter(IMainWindowView mainWindowView) {
+        public MainWindowPresenter(IMainWindowView mainWindowView)
+        {
             _mainWindowView = mainWindowView;
             _mainWindowModel = new MainWindowModel();
         }
@@ -86,7 +82,8 @@ namespace CopyFilesWPF.Presenter
         private void PauseCancelClick(object sender, RoutedEventArgs routedEventArgs)
         {
             ((Button)sender).IsEnabled = false;
-            if(((Button)sender)!.Content.ToString()!.Equals("Cancel")) {
+            if (((Button)sender)!.Content.ToString()!.Equals("Cancel"))
+            {
                 ((((Button)sender).Tag as Grid)!.Tag as FileCopier)!.CancelFlag = true;
             }
             else if (((Button)sender)!.Content.ToString()!.Equals("Pause"))

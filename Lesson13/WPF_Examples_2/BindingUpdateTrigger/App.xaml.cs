@@ -1,12 +1,10 @@
-﻿using System.Windows;
-
-namespace BindingUpdateTrigger
+﻿namespace BindingUpdateTrigger
 {
-	/// <summary>
-	/// Interaction logic for App.xaml
-	/// </summary>
-	public partial class App : Application
-	{
-	}
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App : Application
+    {
+    }
 
 }

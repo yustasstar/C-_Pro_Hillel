@@ -1,16 +1,16 @@
 namespace Drawing
 {
-	/// <summary>
-	/// Interaction logic for Reflection.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for Reflection.xaml
+    /// </summary>
 
-	public partial class Reflection : System.Windows.Window
-	{
+    public partial class Reflection : System.Windows.Window
+    {
 
-		public Reflection()
-		{
-			InitializeComponent();
-		}
+        public Reflection()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

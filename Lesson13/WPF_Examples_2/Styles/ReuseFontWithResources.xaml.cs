@@ -1,16 +1,16 @@
 namespace Styles
 {
-	/// <summary>
-	/// Interaction logic for ReuseFontWithResources.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for ReuseFontWithResources.xaml
+    /// </summary>
 
-	public partial class ReuseFontWithResources : System.Windows.Window
-	{
+    public partial class ReuseFontWithResources : System.Windows.Window
+    {
 
-		public ReuseFontWithResources()
-		{
-			InitializeComponent();
-		}
+        public ReuseFontWithResources()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

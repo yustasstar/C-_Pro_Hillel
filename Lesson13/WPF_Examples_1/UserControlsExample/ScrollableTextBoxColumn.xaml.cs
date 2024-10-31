@@ -1,34 +1,32 @@
-using System.Windows;
-
 namespace Content
 {
-	/// <summary>
-	/// Interaction logic for TextBoxColumn.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for TextBoxColumn.xaml
+    /// </summary>
 
-	public partial class ScrollableTextBoxColumn : System.Windows.Window
-	{
+    public partial class ScrollableTextBoxColumn : System.Windows.Window
+    {
 
-		public ScrollableTextBoxColumn()
-		{
-			InitializeComponent();
-		}
+        public ScrollableTextBoxColumn()
+        {
+            InitializeComponent();
+        }
 
-		private void LineUp(object sender, RoutedEventArgs e)
-		{
-			scroller.LineUp();
-		}
-		private void LineDown(object sender, RoutedEventArgs e)
-		{
-			scroller.LineDown();
-		}
-		private void PageUp(object sender, RoutedEventArgs e)
-		{
-			scroller.PageUp();
-		}
-		private void PageDown(object sender, RoutedEventArgs e)
-		{
-			scroller.PageDown();
-		}
-	}
+        private void LineUp(object sender, RoutedEventArgs e)
+        {
+            scroller.LineUp();
+        }
+        private void LineDown(object sender, RoutedEventArgs e)
+        {
+            scroller.LineDown();
+        }
+        private void PageUp(object sender, RoutedEventArgs e)
+        {
+            scroller.PageUp();
+        }
+        private void PageDown(object sender, RoutedEventArgs e)
+        {
+            scroller.PageDown();
+        }
+    }
 }

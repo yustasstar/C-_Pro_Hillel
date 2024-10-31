@@ -1,7 +1,7 @@
 ﻿namespace DependencyInversionPrinciple.MessageInterface
 {
-	public interface IMessage
-	{
-		string SendMessage();
-	}
+    public interface IMessage
+    {
+        string SendMessage();
+    }
 }

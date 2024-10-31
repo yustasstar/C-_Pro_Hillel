@@ -1,16 +1,16 @@
 namespace DrawingIn3D
 {
-	/// <summary>
-	/// Interaction logic for Materials.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for Materials.xaml
+    /// </summary>
 
-	public partial class TrackballRing : System.Windows.Window
-	{
+    public partial class TrackballRing : System.Windows.Window
+    {
 
-		public TrackballRing()
-		{
-			InitializeComponent();
-		}
+        public TrackballRing()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

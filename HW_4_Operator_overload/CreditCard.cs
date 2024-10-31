@@ -1,6 +1,4 @@
-﻿using System.Xml.Linq;
-
-namespace HW_4._Operator_overload
+﻿namespace HW_4._Operator_overload
 {
     public class CreditCard
     {

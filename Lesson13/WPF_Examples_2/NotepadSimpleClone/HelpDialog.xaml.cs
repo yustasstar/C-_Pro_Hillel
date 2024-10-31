@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace NotepadSimpleClone
+﻿namespace NotepadSimpleClone
 {
     /// <summary>
     /// Interaction logic for HelpDialog.xaml

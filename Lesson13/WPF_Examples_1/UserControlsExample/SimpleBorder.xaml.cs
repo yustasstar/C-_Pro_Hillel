@@ -1,16 +1,16 @@
 namespace Content
 {
-	/// <summary>
-	/// Interaction logic for SimpleBorder.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for SimpleBorder.xaml
+    /// </summary>
 
-	public partial class SimpleBorder : System.Windows.Window
-	{
+    public partial class SimpleBorder : System.Windows.Window
+    {
 
-		public SimpleBorder()
-		{
-			InitializeComponent();
-		}
+        public SimpleBorder()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

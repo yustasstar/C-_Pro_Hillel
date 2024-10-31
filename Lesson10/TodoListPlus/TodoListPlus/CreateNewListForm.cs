@@ -24,7 +24,7 @@
         {
             name = AddTodoListTextBox.Text;
 
-            if(!string.IsNullOrWhiteSpace(name) && !TodoLists.Contains(name)) 
+            if (!string.IsNullOrWhiteSpace(name) && !TodoLists.Contains(name))
             {
                 DialogResult = DialogResult.OK;
                 Close();

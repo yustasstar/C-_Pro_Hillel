@@ -12,7 +12,7 @@
     // дорівнює нулю. Отже, обидва об'єкти рівні
     // Більше нуля. Отже, поточний об'єкт повинен перебувати після об'єкта, що передається як параметр
 
-    class Person : IComparable 
+    class Person : IComparable
     // class Person : IComparable<Person>
     {
         public string Name { get; }

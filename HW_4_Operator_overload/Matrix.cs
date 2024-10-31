@@ -10,7 +10,7 @@
         public int this[int row, int col]
         {
             get => _matrix[row, col];
-            set => _matrix[row, col] = value; 
+            set => _matrix[row, col] = value;
         }
 
         public Matrix(int rows, int columns)

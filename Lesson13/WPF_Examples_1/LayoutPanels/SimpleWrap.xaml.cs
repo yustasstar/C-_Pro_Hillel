@@ -1,18 +1,16 @@
-using System.Windows;
-
 namespace LayoutPanels
 {
-	/// <summary>
-	/// Interaction logic for SimpleWrap.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for SimpleWrap.xaml
+    /// </summary>
 
-	public partial class SimpleWrap : Window
-	{
+    public partial class SimpleWrap : Window
+    {
 
-		public SimpleWrap()
-		{
-			InitializeComponent();
-		}
+        public SimpleWrap()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

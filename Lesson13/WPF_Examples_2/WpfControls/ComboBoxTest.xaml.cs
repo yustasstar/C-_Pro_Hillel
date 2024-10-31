@@ -1,16 +1,16 @@
 namespace ClassicControls
 {
-	/// <summary>
-	/// Interaction logic for ComboBoxTest.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for ComboBoxTest.xaml
+    /// </summary>
 
-	public partial class ComboBoxTest : System.Windows.Window
-	{
+    public partial class ComboBoxTest : System.Windows.Window
+    {
 
-		public ComboBoxTest()
-		{
-			InitializeComponent();
-		}
+        public ComboBoxTest()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

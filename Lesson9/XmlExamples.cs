@@ -649,7 +649,7 @@
 //public class Company
 //{
 //    public string Name { get; set; } = "Undefined";
-    
+
 //    public Company() { }       // стандартный конструктор без параметров
 //    public Company(string name) => Name = name;
 //}
@@ -659,7 +659,7 @@
 //    public string Name { get; set; } = "Undefined";
 //    public int Age { get; set; } = 1;
 //    public Company Company { get; set; } = new Company();
-    
+
 //    public Person() { }         // стандартный конструктор без параметров
 //    public Person(string name, int age, Company company)
 //    {

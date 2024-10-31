@@ -1,16 +1,16 @@
 namespace Content
 {
-	/// <summary>
-	/// Interaction logic for TabTest.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for TabTest.xaml
+    /// </summary>
 
-	public partial class TabTest : System.Windows.Window
-	{
+    public partial class TabTest : System.Windows.Window
+    {
 
-		public TabTest()
-		{
-			InitializeComponent();
-		}
+        public TabTest()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

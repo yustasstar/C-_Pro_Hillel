@@ -1,17 +1,17 @@
 namespace ClassicControls
 {
-	/// <summary>
-	/// Interaction logic for LabelTest.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for LabelTest.xaml
+    /// </summary>
 
-	public partial class LabelTest : System.Windows.Window
-	{
+    public partial class LabelTest : System.Windows.Window
+    {
 
-		public LabelTest()
-		{
-			InitializeComponent();
-		}
+        public LabelTest()
+        {
+            InitializeComponent();
+        }
 
 
-	}
+    }
 }

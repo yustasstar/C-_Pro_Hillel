@@ -1,16 +1,16 @@
 namespace Content
 {
-	/// <summary>
-	/// Interaction logic for ButtonWithViewboxContent.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for ButtonWithViewboxContent.xaml
+    /// </summary>
 
-	public partial class ButtonWithViewboxContent : System.Windows.Window
-	{
+    public partial class ButtonWithViewboxContent : System.Windows.Window
+    {
 
-		public ButtonWithViewboxContent()
-		{
-			InitializeComponent();
-		}
+        public ButtonWithViewboxContent()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

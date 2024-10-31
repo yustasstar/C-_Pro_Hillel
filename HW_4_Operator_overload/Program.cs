@@ -97,7 +97,7 @@ for (int i = 0; i < 2; i++)
     Console.WriteLine();
 }
 
-Matrix diff = matrix1 - matrix2; 
+Matrix diff = matrix1 - matrix2;
 Console.WriteLine("Difference of Matrices:");
 for (int i = 0; i < 2; i++)
 {

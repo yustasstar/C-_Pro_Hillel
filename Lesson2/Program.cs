@@ -1,5 +1,4 @@
-﻿using SecondLesson.oop;
-using System.Text;
+﻿using System.Text;
 using ThirdLesson.objAndMethods;
 
 namespace Lesson2

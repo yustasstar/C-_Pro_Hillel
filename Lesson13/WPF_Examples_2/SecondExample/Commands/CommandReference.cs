@@ -1,61 +1,60 @@
-﻿using System.Windows;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 
 namespace SecondExample.Commands
 {
-	public class CommandReference : Freezable, ICommand
-	{
-		public CommandReference()
-		{
-		}
+    public class CommandReference : Freezable, ICommand
+    {
+        public CommandReference()
+        {
+        }
 
-		public static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(CommandReference), new PropertyMetadata(new PropertyChangedCallback(OnCommandChanged)));
+        public static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(CommandReference), new PropertyMetadata(new PropertyChangedCallback(OnCommandChanged)));
 
-		public ICommand Command
-		{
-			get { return (ICommand)GetValue(CommandProperty); }
-			set { SetValue(CommandProperty, value); }
-		}
+        public ICommand Command
+        {
+            get { return (ICommand)GetValue(CommandProperty); }
+            set { SetValue(CommandProperty, value); }
+        }
 
-		#region ICommand Members
+        #region ICommand Members
 
-		public bool CanExecute(object parameter)
-		{
-			if (Command != null)
-				return Command.CanExecute(parameter);
-			return false;
-		}
+        public bool CanExecute(object parameter)
+        {
+            if (Command != null)
+                return Command.CanExecute(parameter);
+            return false;
+        }
 
-		public void Execute(object parameter)
-		{
-			Command.Execute(parameter);
-		}
+        public void Execute(object parameter)
+        {
+            Command.Execute(parameter);
+        }
 
-		public event EventHandler CanExecuteChanged;
+        public event EventHandler CanExecuteChanged;
 
-		private static void OnCommandChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-		{
-			CommandReference commandReference = d as CommandReference;
+        private static void OnCommandChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            CommandReference commandReference = d as CommandReference;
 
-			if (e.OldValue is ICommand oldCommand)
-			{
-				oldCommand.CanExecuteChanged -= commandReference.CanExecuteChanged;
-			}
-			if (e.NewValue is ICommand newCommand)
-			{
-				newCommand.CanExecuteChanged += commandReference.CanExecuteChanged;
-			}
-		}
+            if (e.OldValue is ICommand oldCommand)
+            {
+                oldCommand.CanExecuteChanged -= commandReference.CanExecuteChanged;
+            }
+            if (e.NewValue is ICommand newCommand)
+            {
+                newCommand.CanExecuteChanged += commandReference.CanExecuteChanged;
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#region Freezable
+        #region Freezable
 
-		protected override Freezable CreateInstanceCore()
-		{
-			throw new NotImplementedException();
-		}
+        protected override Freezable CreateInstanceCore()
+        {
+            throw new NotImplementedException();
+        }
 
-		#endregion
-	}
+        #endregion
+    }
 }

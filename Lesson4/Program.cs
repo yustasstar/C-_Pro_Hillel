@@ -36,7 +36,7 @@ namespace Lesson4
             }
             set
             {
-                if(value > 0)
+                if (value > 0)
                 {
                     _integerPart = value;
                 }

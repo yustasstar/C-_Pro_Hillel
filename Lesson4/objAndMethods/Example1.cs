@@ -45,7 +45,7 @@ namespace ThirdLesson.objAndMethods
         {
             // якщо параметр методу представляє тип Person
             // то повертаємо true, якщо імена збігаються
-            if (obj is Person person) 
+            if (obj is Person person)
                 return Name == person.Name;
             return false;
         }

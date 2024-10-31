@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace CopyFilesWPF.Model
+﻿namespace CopyFilesWPF.Model
 {
     public sealed record FilePath
     {

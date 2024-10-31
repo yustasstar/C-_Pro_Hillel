@@ -1,7 +1,7 @@
 ﻿namespace MyDoctorAppointment.Data.Interfaces
 {
-	public interface IPatientRepository
-	{
+    public interface IPatientRepository
+    {
 
-	}
+    }
 }

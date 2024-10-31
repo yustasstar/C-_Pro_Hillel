@@ -2,19 +2,19 @@
 
 namespace NotepadSimpleClone.ViewModels
 {
-	public class HelpViewModel : ObservableObject
-	{
-		public ICommand HelpCommand { get; }
+    public class HelpViewModel : ObservableObject
+    {
+        public ICommand HelpCommand { get; }
 
-		public HelpViewModel()
-		{
-			HelpCommand = new RelayCommand(DisplayAbout);
-		}
+        public HelpViewModel()
+        {
+            HelpCommand = new RelayCommand(DisplayAbout);
+        }
 
-		private void DisplayAbout()
-		{
-			var helpDialog = new HelpDialog();
-			helpDialog.ShowDialog();
-		}
-	}
+        private void DisplayAbout()
+        {
+            var helpDialog = new HelpDialog();
+            helpDialog.ShowDialog();
+        }
+    }
 }

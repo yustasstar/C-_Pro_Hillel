@@ -1151,3 +1151,11 @@
 //// Так як у нас на індексі рівному 5 відбувається переривання, то властивість IsCompleted буде мати значення false,
 //// а LowestBreakIteration
 //// дорівнюватиме 5.
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Main method intentionally left empty
+    }
+}

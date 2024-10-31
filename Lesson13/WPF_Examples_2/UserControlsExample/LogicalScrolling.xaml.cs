@@ -1,16 +1,16 @@
 namespace Content
 {
-	/// <summary>
-	/// Interaction logic for LogicalScrolling.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for LogicalScrolling.xaml
+    /// </summary>
 
-	public partial class LogicalScrolling : System.Windows.Window
-	{
+    public partial class LogicalScrolling : System.Windows.Window
+    {
 
-		public LogicalScrolling()
-		{
-			InitializeComponent();
-		}
+        public LogicalScrolling()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

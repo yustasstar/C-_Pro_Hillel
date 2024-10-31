@@ -16,17 +16,14 @@
 // проте їх використання дозволить поліпшити код програми,
 // спростити можливі його зміни та підтримку.
 
-
-using Lesson6.Interfaces.ContravarianceExamples;
-
 namespace Lesson6
 {
-	public static class Program
-	{
-		public static void Main()
-		{
-		}
-	}
+    public static class Program
+    {
+        public static void Main()
+        {
+        }
+    }
 }
 
 // https://senior.ua/articles/kiss-dry-solid-yagni--navscho-dotrimuvatis-principv-programuvannya

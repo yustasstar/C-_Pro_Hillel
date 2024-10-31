@@ -1,6 +1,4 @@
-﻿using System.Threading;
-using System.Windows.Controls;
-using static CopyFilesWPF.Model.FileCopier;
+﻿using static CopyFilesWPF.Model.FileCopier;
 
 namespace CopyFilesWPF.Model
 {
@@ -8,7 +6,8 @@ namespace CopyFilesWPF.Model
     {
         public FilePath FilePath { get; set; }
 
-        public MainWindowModel() {
+        public MainWindowModel()
+        {
             FilePath = new FilePath();
         }
 

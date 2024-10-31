@@ -2,10 +2,10 @@
 
 namespace MyDoctorAppointment.Data.Interfaces
 {
-	public interface IAppointmentRepository
-	{
-		Appointment GetAllByDoctor(Doctor doctor);
+    public interface IAppointmentRepository
+    {
+        Appointment GetAllByDoctor(Doctor doctor);
 
-		Appointment GetAllByPatient(Patient patient);
-	}
+        Appointment GetAllByPatient(Patient patient);
+    }
 }

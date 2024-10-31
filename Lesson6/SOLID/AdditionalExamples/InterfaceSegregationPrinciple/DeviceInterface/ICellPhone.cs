@@ -1,7 +1,7 @@
 ﻿namespace InterfaceSegregationPrinciple.DeviceInterface
 {
-	interface ICellPhone
-	{
-		string CaseMaterial { get; set; }
-	}
+    interface ICellPhone
+    {
+        string CaseMaterial { get; set; }
+    }
 }

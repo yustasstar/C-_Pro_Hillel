@@ -2,7 +2,7 @@
 
 namespace HW_3_AbstractClasses_And_Interfaces.Classes
 {
-    public class MyArray : IOutput, IMath , ISort
+    public class MyArray : IOutput, IMath, ISort
     {
         private readonly int[] array;
 

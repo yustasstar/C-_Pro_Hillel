@@ -1,16 +1,16 @@
 namespace ClassicControls
 {
-	/// <summary>
-	/// Interaction logic for RadioButtonGroups.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for RadioButtonGroups.xaml
+    /// </summary>
 
-	public partial class RadioButtonGroups : System.Windows.Window
-	{
+    public partial class RadioButtonGroups : System.Windows.Window
+    {
 
-		public RadioButtonGroups()
-		{
-			InitializeComponent();
-		}
+        public RadioButtonGroups()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

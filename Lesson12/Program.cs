@@ -1,4 +1,12 @@
-﻿// Скасування завдань та паралельних операцій. CancellationToken
+﻿class Program
+{
+    static void Main(string[] args)
+    {
+        // Main method intentionally left empty
+    }
+}
+
+// Скасування завдань та паралельних операцій. CancellationToken
 
 // Паралельне виконання завдань може тривати багато часу.
 // І іноді може виникнути необхідність перервати завдання, що виконується.

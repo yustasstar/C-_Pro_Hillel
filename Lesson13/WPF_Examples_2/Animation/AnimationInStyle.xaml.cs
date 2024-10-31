@@ -1,16 +1,16 @@
 namespace Animation
 {
-	/// <summary>
-	/// Interaction logic for AnimationInStyle.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for AnimationInStyle.xaml
+    /// </summary>
 
-	public partial class AnimationInStyle : System.Windows.Window
-	{
+    public partial class AnimationInStyle : System.Windows.Window
+    {
 
-		public AnimationInStyle()
-		{
-			InitializeComponent();
-		}
+        public AnimationInStyle()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

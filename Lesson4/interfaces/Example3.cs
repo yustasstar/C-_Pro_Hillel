@@ -362,7 +362,7 @@ namespace ThirdLesson.interfaces
 
             //
             IActionTest action1Test = new RunAction();
-            action1Test.Move(); 
+            action1Test.Move();
 
             IRunActionTest action2Test = new RunAction();
             action2Test.Move();

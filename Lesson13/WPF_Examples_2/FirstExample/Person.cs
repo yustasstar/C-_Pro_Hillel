@@ -1,13 +1,13 @@
 ﻿namespace FirstExample
 {
-	internal class Person
-	{
-		public string Surname { get; set; }
-		public string Name { get; set; }
+    internal class Person
+    {
+        public string Surname { get; set; }
+        public string Name { get; set; }
 
-		public override string ToString()
-		{
-			return string.Concat(Name, " ", Surname);
-		}
-	}
+        public override string ToString()
+        {
+            return string.Concat(Name, " ", Surname);
+        }
+    }
 }

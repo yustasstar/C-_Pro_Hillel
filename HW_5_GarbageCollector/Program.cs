@@ -10,7 +10,7 @@ Console.WriteLine("-------------------------------------");
 
 Play play2 = new Play("Othello", "William Shakespeare", "Tragedy", 1604);
 play2.Read();
-play2.Update(authorFullName:"Name Updated", title:"New Title");
+play2.Update(authorFullName: "Name Updated", title: "New Title");
 play2.Read();
 
 play2.Dispose();

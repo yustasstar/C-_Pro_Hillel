@@ -2,8 +2,8 @@
 
 namespace MyDoctorAppointment.Data.Interfaces
 {
-	public interface IDoctorRepository : IGenericRepository<Doctor>
-	{
+    public interface IDoctorRepository : IGenericRepository<Doctor>
+    {
 
-	}
+    }
 }

@@ -1,16 +1,16 @@
 namespace Animation
 {
-	/// <summary>
-	/// Interaction logic for MultiPartTemplates.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for MultiPartTemplates.xaml
+    /// </summary>
 
-	public partial class AnimationInTemplate : System.Windows.Window
-	{
+    public partial class AnimationInTemplate : System.Windows.Window
+    {
 
-		public AnimationInTemplate()
-		{
-			InitializeComponent();
-		}
+        public AnimationInTemplate()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }

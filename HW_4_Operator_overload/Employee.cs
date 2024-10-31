@@ -53,7 +53,7 @@ namespace HW_4._Operator_overload
             Employee other = (Employee)obj;
             return Salary == other.Salary;
         }
-        public override int GetHashCode() => HashCode.Combine(Name, Salary); 
+        public override int GetHashCode() => HashCode.Combine(Name, Salary);
         public void PrintEmployeeInfo() => Console.WriteLine($"{Name} - Salary: {Salary:C}");
 
 

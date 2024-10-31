@@ -1,13 +1,13 @@
 ﻿namespace InterfaceSegregationPrinciple.DeviceInterface
 {
-	public interface IProduct
-	{
-		int Id { get; set; }
+    public interface IProduct
+    {
+        int Id { get; set; }
 
-		double Weight { get; set; }
+        double Weight { get; set; }
 
-		int Stock { get; set; }
+        int Stock { get; set; }
 
-		string GetFeatures();
-	}
+        string GetFeatures();
+    }
 }

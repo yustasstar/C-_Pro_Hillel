@@ -1,16 +1,16 @@
 namespace Animation
 {
-	/// <summary>
-	/// Interaction logic for ExpandElement.xaml
-	/// </summary>
+    /// <summary>
+    /// Interaction logic for ExpandElement.xaml
+    /// </summary>
 
-	public partial class ExpandElement : System.Windows.Window
-	{
+    public partial class ExpandElement : System.Windows.Window
+    {
 
-		public ExpandElement()
-		{
-			InitializeComponent();
-		}
+        public ExpandElement()
+        {
+            InitializeComponent();
+        }
 
-	}
+    }
 }
