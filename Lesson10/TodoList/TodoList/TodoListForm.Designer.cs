@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             TodoLabel = new Label();
             todoTextBox = new TextBox();
             AddBtn = new Button();
@@ -35,6 +36,8 @@
             checkedListBoxTodos = new CheckedListBox();
             ClearCheckedBtn = new Button();
             ClearAllBtn = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
             // TodoLabel
@@ -42,7 +45,7 @@
             TodoLabel.AutoSize = true;
             TodoLabel.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point);
             TodoLabel.ForeColor = SystemColors.Info;
-            TodoLabel.Location = new Point(132, 22);
+            TodoLabel.Location = new Point(116, 17);
             TodoLabel.Name = "TodoLabel";
             TodoLabel.Size = new Size(201, 45);
             TodoLabel.TabIndex = 0;
@@ -52,19 +55,21 @@
             // todoTextBox
             // 
             todoTextBox.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            todoTextBox.Location = new Point(12, 70);
+            todoTextBox.Location = new Point(10, 55);
+            todoTextBox.Margin = new Padding(3, 2, 3, 2);
             todoTextBox.Multiline = true;
             todoTextBox.Name = "todoTextBox";
-            todoTextBox.Size = new Size(473, 102);
+            todoTextBox.Size = new Size(414, 81);
             todoTextBox.TabIndex = 1;
             // 
             // AddBtn
             // 
             AddBtn.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             AddBtn.ForeColor = Color.FromArgb(0, 192, 0);
-            AddBtn.Location = new Point(12, 178);
+            AddBtn.Location = new Point(10, 141);
+            AddBtn.Margin = new Padding(3, 2, 3, 2);
             AddBtn.Name = "AddBtn";
-            AddBtn.Size = new Size(232, 62);
+            AddBtn.Size = new Size(203, 49);
             AddBtn.TabIndex = 2;
             AddBtn.Text = "Add";
             AddBtn.UseVisualStyleBackColor = true;
@@ -74,9 +79,10 @@
             // 
             ClearBtn.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             ClearBtn.ForeColor = Color.Red;
-            ClearBtn.Location = new Point(250, 178);
+            ClearBtn.Location = new Point(219, 141);
+            ClearBtn.Margin = new Padding(3, 2, 3, 2);
             ClearBtn.Name = "ClearBtn";
-            ClearBtn.Size = new Size(235, 62);
+            ClearBtn.Size = new Size(206, 49);
             ClearBtn.TabIndex = 3;
             ClearBtn.Text = "Clear";
             ClearBtn.UseVisualStyleBackColor = true;
@@ -85,9 +91,10 @@
             // checkedListBoxTodos
             // 
             checkedListBoxTodos.FormattingEnabled = true;
-            checkedListBoxTodos.Location = new Point(13, 255);
+            checkedListBoxTodos.Location = new Point(11, 201);
+            checkedListBoxTodos.Margin = new Padding(3, 2, 3, 2);
             checkedListBoxTodos.Name = "checkedListBoxTodos";
-            checkedListBoxTodos.Size = new Size(472, 319);
+            checkedListBoxTodos.Size = new Size(414, 238);
             checkedListBoxTodos.TabIndex = 4;
             // 
             // ClearCheckedBtn
@@ -95,9 +102,10 @@
             ClearCheckedBtn.BackColor = Color.FromArgb(255, 128, 128);
             ClearCheckedBtn.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             ClearCheckedBtn.ForeColor = Color.White;
-            ClearCheckedBtn.Location = new Point(13, 580);
+            ClearCheckedBtn.Location = new Point(11, 458);
+            ClearCheckedBtn.Margin = new Padding(3, 2, 3, 2);
             ClearCheckedBtn.Name = "ClearCheckedBtn";
-            ClearCheckedBtn.Size = new Size(231, 58);
+            ClearCheckedBtn.Size = new Size(202, 46);
             ClearCheckedBtn.TabIndex = 5;
             ClearCheckedBtn.Text = "Clear checked";
             ClearCheckedBtn.UseVisualStyleBackColor = false;
@@ -108,20 +116,25 @@
             ClearAllBtn.BackColor = Color.FromArgb(192, 0, 0);
             ClearAllBtn.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             ClearAllBtn.ForeColor = Color.FromArgb(192, 255, 192);
-            ClearAllBtn.Location = new Point(250, 580);
+            ClearAllBtn.Location = new Point(219, 458);
+            ClearAllBtn.Margin = new Padding(3, 2, 3, 2);
             ClearAllBtn.Name = "ClearAllBtn";
-            ClearAllBtn.Size = new Size(235, 58);
+            ClearAllBtn.Size = new Size(206, 46);
             ClearAllBtn.TabIndex = 6;
             ClearAllBtn.Text = "Clear all";
             ClearAllBtn.UseVisualStyleBackColor = false;
             ClearAllBtn.Click += ClearAllBtn_Click;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
             // TodoListForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(497, 650);
+            ClientSize = new Size(435, 513);
             Controls.Add(ClearAllBtn);
             Controls.Add(ClearCheckedBtn);
             Controls.Add(checkedListBoxTodos);
@@ -129,10 +142,12 @@
             Controls.Add(AddBtn);
             Controls.Add(todoTextBox);
             Controls.Add(TodoLabel);
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "TodoListForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Todo list";
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,5 +161,6 @@
         private CheckedListBox checkedListBoxTodos;
         private Button ClearCheckedBtn;
         private Button ClearAllBtn;
+        private ErrorProvider errorProvider1;
     }
 }

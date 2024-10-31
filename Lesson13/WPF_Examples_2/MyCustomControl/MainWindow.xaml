@@ -1,0 +1,9 @@
+﻿<Window x:Class="MyCustomControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cpicker="clr-namespace:CustomControlLibrary;assembly=CustomControlLibrary"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <cpicker:ColorPicker Color="Brown" Margin="80,118,110,82" />
+    </Grid>
+</Window>

@@ -42,7 +42,7 @@ using System.Text.Json.Serialization;
 ///////////////////////////////////////////////////////////////////////
 
 //Person tom = new Person("Tom", 37);
-//                                                                      // Options for the json beatificator
+//// Options for the json beatificator
 //string json = JsonSerializer.Serialize(tom, new JsonSerializerOptions { WriteIndented = true });
 //Console.WriteLine(json);
 //Person? restoredPerson = JsonSerializer.Deserialize<Person>(json);
@@ -76,13 +76,13 @@ using System.Text.Json.Serialization;
 //using (var fs = new FileStream("../../../user.json", FileMode.OpenOrCreate))
 //{
 //Person tom = new Person("Tom", 37);
-//await JsonSerializer.SerializeAsync<Person>(fs, tom);                     // * сохранение данных:
+///*await*/ JsonSerializer.Serialize/*Async*/<Person>(fs, tom);                     // * сохранение данных:
 //Console.WriteLine("Data has been saved to file");
 //}
 
 //using (var fs = new FileStream("../../../user.json", FileMode.OpenOrCreate))
 //{
-//Person? person = await JsonSerializer.DeserializeAsync<Person>(fs);       // * чтение данных:
+//Person? person = /*await*/ JsonSerializer.Deserialize/*Async*/<Person>(fs);       // * чтение данных:
 //Console.WriteLine($"Name: {person?.Name};  Age: {person?.Age}");
 //}
 
@@ -113,7 +113,7 @@ using System.Text.Json.Serialization;
 
 //var options = new JsonSerializerOptions
 //{
-//    WriteIndented = true
+//WriteIndented = true
 //};
 //string json = JsonSerializer.Serialize(tom, options);
 //Console.WriteLine(json);

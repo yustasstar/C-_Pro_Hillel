@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="BitmapEffects.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CombiningShapes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DashedLines.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FillModes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Gradients.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GradientText.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GroupedShapes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ImageBrushes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LineCaps.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="LineJoins.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NoSymbol.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OpacityMask.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PolylinesAndPolygons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RadialGradient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Reflection.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ReusingGeometry.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RotateElement.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RotateShape.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RoundedRectangles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Shapes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TileFlip.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TileTypes.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ViewboxResize.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VisualBrush.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>
