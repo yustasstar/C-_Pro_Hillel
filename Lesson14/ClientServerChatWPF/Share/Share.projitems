@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>44170d02-cb96-421c-ae2b-063f1a51c75a</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Share</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)SocketClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SocketCommon.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SocketPacket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SocketServer.cs" />
+  </ItemGroup>
+</Project>
