@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctorAppointment.Service
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_7_Threading", "HW_7_Threading\HW_7_Threading.csproj", "{231B9666-073B-4139-A21C-F8B8BA15EFA9}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_14", "Lesson_14", "{F07C715D-2958-4491-8715-1A6AA33BB15B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_14 - WPF - SynchronizationContext", "Lesson_14 - WPF - SynchronizationContext", "{F07C715D-2958-4491-8715-1A6AA33BB15B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventExamples", "Lesson14\EventExamples\EventExamples\EventExamples.csproj", "{0AB1210F-7058-44FB-BF82-99CCBA9ADF40}"
 EndProject
