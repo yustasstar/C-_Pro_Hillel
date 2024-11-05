@@ -114,6 +114,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_13 - WPF - FileCopier", "Lesson_13 - WPF - FileCopier", "{FCCBC99B-CB9D-4B96-A652-22A6C47DECDD}"
 	ProjectSection(SolutionItems) = preProject
 		Lesson13\MVVM Pattern.pptx = Lesson13\MVVM Pattern.pptx
+		Lesson13\notes.txt = Lesson13\notes.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_5", "Lesson5\Lesson_5.csproj", "{7CCA3678-7439-4F55-9529-D8A44FC90EC2}"
@@ -121,6 +122,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_11 - Thread,Task", "Lesson11\Lesson_11 - Thread,Task.csproj", "{E23E9058-8500-496E-8CC3-01846F9A7188}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CopyFilesWPF", "CopyFilesWPF", "{E0080421-5921-44D0-A201-56C9034FB002}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyFilesWPF", "Lesson13\CopyFilesWPF\CopyFilesWPF\CopyFilesWPF.csproj", "{E38C304D-F7D2-4E2A-B410-E8720B0416B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -340,6 +343,14 @@ Global
 		{E23E9058-8500-496E-8CC3-01846F9A7188}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E23E9058-8500-496E-8CC3-01846F9A7188}.Release|x86.ActiveCfg = Release|Any CPU
 		{E23E9058-8500-496E-8CC3-01846F9A7188}.Release|x86.Build.0 = Release|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Debug|x86.Build.0 = Debug|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Release|x86.ActiveCfg = Release|Any CPU
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -389,6 +400,7 @@ Global
 		{7CCA3678-7439-4F55-9529-D8A44FC90EC2} = {6EEF504F-4B2C-4F62-83A6-79CFE63C02FB}
 		{E23E9058-8500-496E-8CC3-01846F9A7188} = {34BF74C5-54BE-4A4B-877C-77EF242130D1}
 		{E0080421-5921-44D0-A201-56C9034FB002} = {FCCBC99B-CB9D-4B96-A652-22A6C47DECDD}
+		{E38C304D-F7D2-4E2A-B410-E8720B0416B8} = {E0080421-5921-44D0-A201-56C9034FB002}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}
