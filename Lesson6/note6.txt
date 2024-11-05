@@ -1,19 +1,11 @@
 Реалізація принципів SOLID
-
 Приклади використання
-
 Практики написання коду
-
 kiss, yagni, dry
 
 https://dou.ua/lenta/articles/solid-principles/
-
 https://highload.today/uk/solid/
-
 https://www.infoworld.com/article/3693755/applying-the-dry-kiss-and-yagni-principles-in-c-sharp.html#:~:text=The%20DRY%20(%E2%80%9CDon't,in%20mind%20when%20we%20code.
-
 https://senior.ua/articles/kiss-dry-solid-yagni--navscho-dotrimuvatis-principv-programuvannya
-
 https://gist.github.com/wojteklu/73c6914cc446146b8b533c0988cf8d29
-
 https://refactoring.guru/ru/design-patterns/catalog
