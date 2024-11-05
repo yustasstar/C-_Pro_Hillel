@@ -1,6 +1,5 @@
 ﻿using CopyFilesWPF.Model;
 using CopyFilesWPF.View;
-using Model;
 using System.IO;
 using System.Threading;
 using System.Windows;

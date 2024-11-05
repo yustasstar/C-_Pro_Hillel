@@ -1,11 +1,10 @@
-﻿using CopyFilesWPF.Model;
-using System;
+﻿using System;
 using System.IO;
 using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Model
+namespace CopyFilesWPF.Model
 {
     public class FileCopier
     {
@@ -41,7 +40,7 @@ namespace Model
             {
                 try
                 {
-                    using (var source = new FileStream(_filePath.PathFrom, FileMode.Open, FileAccess.Read))
+                    using(var source = new FileStream(_filePath.PathFrom, FileMode.Open, FileAccess.Read))
                     {
                         var fileLength = source.Length;
                         using var destination = new FileStream(_filePath.PathTo, FileMode.CreateNew, FileAccess.Write);
@@ -54,7 +53,7 @@ namespace Model
                             destination.Write(buffer, 0, currentBlockSize);
                             OnProgressChanged(persentage, ref CancelFlag, _gridPanel);
 
-                            if (CancelFlag == true)
+                            if(CancelFlag == true)
                             {
                                 File.Delete(_filePath.PathTo);
                                 isCopy = false;

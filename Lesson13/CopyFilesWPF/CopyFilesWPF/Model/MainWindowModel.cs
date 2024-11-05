@@ -1,7 +1,6 @@
-﻿using Model;
-using System.Threading;
+﻿using System.Threading;
 using System.Windows.Controls;
-using static Model.FileCopier;
+using static CopyFilesWPF.Model.FileCopier;
 
 namespace CopyFilesWPF.Model
 {
