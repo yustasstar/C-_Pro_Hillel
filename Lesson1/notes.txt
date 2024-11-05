@@ -6,22 +6,26 @@ Git flow
 https://git-scm.com/downloads
 Windows: http://gitextensions.github.io/
 Windows/Mac: https://www.sourcetreeapp.com/ чи https://desktop.github.com/ чи https://www.gitkraken.com/jc
+
 Туторіали:
 https://www.w3schools.com/git/
 https://www.atlassian.com/git/tutorials
 https://githowto.com/setup
 https://www.tutorialspoint.com/git/index.htm
 https://opensource.com/article/18/1/step-step-guide-git
+
 Static classes:
 https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/static
 https://www.tutorialsteacher.com/csharp/csharp-static
 https://henriquesd.medium.com/singleton-vs-static-class-e6b2b32ec331#:~:text=Differences%20between%20Singleton%20and%20Static,and%20therefore%20cannot%20be%20inherited.
 https://dotnethow.net/static-vs-non-static-classes-in-c-understanding-the-differences-and-use-cases/
 https://debug.to/3494/abstract-class-vs-partial-class-vs-static-class-vs-sealed-class
+
 Кориснi посилання:
 https://www.geeksforgeeks.org/introduction-to-visual-studio/
 https://www.edureka.co/blog/visual-studio-tutorial/
 https://learn.microsoft.com/en-us/visualstudio/version-control/git-with-visual-studio?view=vs-2022
+
 Книги з .Net/C#
 1. А. Васильєв. «Програмування на С# для початківців. Основні відомості"
 2. Джеффрі Ріхтер. CLR via C#. Програмування на платформі Microsoft .NET Framework мовою C#

@@ -1,11 +1,7 @@
 Що таке перевантаження операторів
-
 У яких ситуаціях використовується
-
 Приклади використання
-
 Створення прикладу на пройденi теми
 
 https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/operators/operator-overloading
-
 https://www.bestprog.net/uk/2022/09/07/c-overloading-of-operators-general-information-overloading-of-unary-operators-ua/

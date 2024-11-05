@@ -98,112 +98,120 @@ namespace SecondLesson.oop
     }
 
     // v1
-    //class Person
-    //{
-    //    // поле
-    //    private int _age;
-    //    private string _companyName = "Google";
-    //    private string _hobby;
-    //    private string _firstName;
+    class Person
+    {
+        // поле
+        private int _age;
+        private string _companyName = "Google";
+        private string _hobby;
+        private string _firstName;
 
-    //    // чтоб такое не писать - используйте автосвойство
-    //    public string Hobby
-    //    {
-    //        get
-    //        {
-    //            return _hobby;
-    //        }
-    //        set
-    //        {
-    //            _hobby = value;
-    //        }
-    //    }
+        public Person(string firstName)
+        {
+            _firstName = firstName;
+		}
 
-    //    // автосвойство
-    //    public string Name { get; set; } = "noname";
+		// чтоб такое не писать - используйте автосвойство
+		public string Hobby
+        {
+            get
+            {
+                return _hobby;
+            }
+            set
+            {
+                if( _hobby != value )
+                {
+                    _hobby = value;
+                }
+            }
+        }
 
-    //    // свойство
-    //    public int Age
-    //    {
-    //        set
-    //        {
-    //            if (value <= 1 || value > 150)
-    //            {
-    //                // throw new Exception("Incorrect age");
-    //                Console.WriteLine("Incorrect age");
-    //            }
-    //            else
-    //            {
-    //                _age = value; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
-    //            }
-    //        }
-    //        get { return _age; }
-    //    }
+        // автосвойство
+        public string Name { get; set; } = "noname";
 
-    //    // обычный метод
-    //    public void SetAge(int age)
-    //    {
-    //        if (age <= 1 || age > 150)
-    //        {
-    //            // throw new Exception("Incorrect age");
-    //            Console.WriteLine("Incorrect age");
-    //        }
+        // свойство
+        public int Age
+        {
+            set
+            {
+                if (value <= 1 || value > 150)
+                {
+                    // throw new Exception("Incorrect age");
+                    Console.WriteLine("Incorrect age");
+                }
+                else
+                {
+                    _age = value; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
+                }
+            }
+            get { return _age; }
+        }
 
-    //        _age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
-    //    }
+        // обычный метод
+        public void SetAge(int age)
+        {
+            if (age <= 1 || age > 150)
+            {
+                // throw new Exception("Incorrect age");
+                Console.WriteLine("Incorrect age");
+            }
 
-    //    // readonly свойство (только для чтения)
-    //    public string CompanyName
-    //    {
-    //        // v1
-    //        // get { return _companyName; }
-    //        // v2
-    //        get;
-    //    }
+            this._age = age; // value - это ключ слово, которое будет содержать значение которое мы присвоим в дальнейшем
+        }
 
-    //    // writeonly свойство (только для записи)
-    //    public string FirstName
-    //    {
-    //        set { _firstName = value; }
-    //    }
+        // readonly свойство (только для чтения)
+        public string CompanyName
+        {
+            // v1
+            // get { return _companyName; }
+            // v2
+            get;
+        }
 
-    //    //
-    //    public string TestInfo { get; init; } = "Some test info";
-    //}
+        // writeonly свойство (только для записи)
+        public string FirstName
+        {
+            set { _firstName = value; }
+        }
+
+        //
+        public string TestInfo { get; init; } = "Some test info";
+    }
 
     // v2
     // sealed class Person - запечатанный класс, от него нельзя отнаследоваться
-    public class Person
-    {
-        public string Name { get; set; } = "noname";
+    //public class Person
+    //{
+    //    public string Name { get; set; } = "noname";
 
-        protected string Hobby { get; set; } = "no hobby";
+    //    protected string Hobby { get; set; } = "no hobby";
 
-        private string HobbyPrivate { get; set; } = "no private hobby";
+    //    private string HobbyPrivate { get; set; } = "no private hobby";
 
-        public Person(string name, string hobby, string hobbyPrivate)
-        {
-            Name = name;
-            Hobby = hobby;
-            HobbyPrivate = hobbyPrivate;
-        }
-    }
+    //    public Person(string name, string hobby, string hobbyPrivate)
+    //    {
+    //        Name = name;
+    //        Hobby = hobby;
+    //        HobbyPrivate = hobbyPrivate;
+    //    }
+    //}
 
-    public class Employee : Person // наследуемся от класса Person
-    {
-        public string Company { get; set; } = "Google";
+    //public class Employee : Person // наследуемся от класса Person
+    //{
+    //    public string Company { get; set; } = "Google";
 
-        public Employee(string company, string name, string hobby, string hobbyPrivate)
-            : base(name, hobby, hobbyPrivate) // передали данные конструктору базового класса
-        {
-            Company = company;
-        }
+    //    public Employee(string company, string name, string hobby, string hobbyPrivate)
+    //        : base(name, hobby, hobbyPrivate) // передали данные конструктору базового класса
+    //    {
+    //        Company = company;
+    //    }
 
-        public void ShowInfo()
-        {
-            Console.WriteLine($"Name: {Name} Hobby: {Hobby} Company: {Company}");
-        }
-    }
+    //    public void ShowInfo()
+    //    {
+    //        Console.WriteLine($"Name: {Name} Hobby: {Hobby} Company: {Company}");
+    //    }
+    //}
 
     // v3
     public class PhoneBase
@@ -236,7 +244,6 @@ namespace SecondLesson.oop
         // неявное сокрытие метода - теряем реализацию метода с таким названием из базового класса
         //public void Print()
         //{
-        //    base.Print(); // вызываем реализацию из базового класса
         //    Console.WriteLine($"Pixels: {Pixels}");
         //}
 
@@ -244,7 +251,6 @@ namespace SecondLesson.oop
         // эту ситуацию лучше не создавать, а использовать override
         //public new void Print()
         //{
-        //    base.Print();
         //    Console.WriteLine($"Pixels: {Pixels}");
         //}
 

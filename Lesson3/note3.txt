@@ -1,21 +1,12 @@
 Абстрактні класи
-
 Iнтерфейси
-
 Різниця між ними
-
 Основні стандартні інтерфейси
-
 Приклади використання
 
 https://www.bytehide.com/blog/abstract-class-vs-interface-csharp#:~:text=Abstract%20classes%20can%20have%20fields,contract%20that%20classes%20must%20implement.
-
 https://www.geeksforgeeks.org/difference-between-abstract-class-and-interface-in-c-sharp/
-
 https://learn.microsoft.com/en-us/answers/questions/1131111/abstract-class-vs-interface-in-our-days
-
 https://byjus.com/gate/difference-between-abstract-class-and-interface-in-c-sharp/
-
 https://www.turing.com/kb/abstract-class-vs-interface-in-c-sharp
-
 https://debug.to/3494/abstract-class-vs-partial-class-vs-static-class-vs-sealed-class
