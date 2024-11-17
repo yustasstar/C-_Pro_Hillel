@@ -1,0 +1,86 @@
+[
+  {
+    "Id": 1,
+    "ProductName": "iPhone 7",
+    "Manufacturer": "Apple",
+    "ProductCount": 5,
+    "Price": 52000.00
+  },
+  {
+    "Id": 2,
+    "ProductName": "iPhone 6",
+    "Manufacturer": "Apple",
+    "ProductCount": 3,
+    "Price": 36000.00
+  },
+  {
+    "Id": 3,
+    "ProductName": "Galaxy S8",
+    "Manufacturer": "Samsung",
+    "ProductCount": 2,
+    "Price": 46000.00
+  },
+  {
+    "Id": 4,
+    "ProductName": "Galaxy S8 Plus",
+    "Manufacturer": "Samsung",
+    "ProductCount": 1,
+    "Price": 56000.00
+  },
+  {
+    "Id": 5,
+    "ProductName": "Mi6",
+    "Manufacturer": "Xiaomi",
+    "ProductCount": 0,
+    "Price": 28000.00
+  },
+  {
+    "Id": 6,
+    "ProductName": "iPhone 6",
+    "Manufacturer": "Apple",
+    "ProductCount": 3,
+    "Price": 36000.00
+  },
+  {
+    "Id": 7,
+    "ProductName": "iPhone 6S",
+    "Manufacturer": "Apple",
+    "ProductCount": 2,
+    "Price": 41000.00
+  },
+  {
+    "Id": 8,
+    "ProductName": "iPhone 7",
+    "Manufacturer": "Apple",
+    "ProductCount": 5,
+    "Price": 52000.00
+  },
+  {
+    "Id": 9,
+    "ProductName": "Galaxy S8",
+    "Manufacturer": "Samsung",
+    "ProductCount": 2,
+    "Price": 46000.00
+  },
+  {
+    "Id": 10,
+    "ProductName": "Galaxy S8 Plus",
+    "Manufacturer": "Samsung",
+    "ProductCount": 1,
+    "Price": 56000.00
+  },
+  {
+    "Id": 11,
+    "ProductName": "Mi6",
+    "Manufacturer": "Xiaomi",
+    "ProductCount": 5,
+    "Price": 28000.00
+  },
+  {
+    "Id": 12,
+    "ProductName": "OnePlus 5",
+    "Manufacturer": "OnePlus",
+    "ProductCount": 6,
+    "Price": 38000.00
+  }
+]

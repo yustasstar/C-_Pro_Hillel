@@ -125,6 +125,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CopyFilesWPF", "CopyFilesWP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CopyFilesWPF", "Lesson13\CopyFilesWPF\CopyFilesWPF\CopyFilesWPF.csproj", "{E38C304D-F7D2-4E2A-B410-E8720B0416B8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_15 - Intro to MS SQL", "Lesson_15 - Intro to MS SQL", "{C3047DED-9AA6-453F-9606-E26CF4091BF7}"
+	ProjectSection(SolutionItems) = preProject
+		Lesson15\HW_8_IuriiSylaiev.sql = Lesson15\HW_8_IuriiSylaiev.sql
+		Lesson15\notes.txt = Lesson15\notes.txt
+		Lesson15\Results.json = Lesson15\Results.json
+		Lesson15\Results.md = Lesson15\Results.md
+		Lesson15\Results.xlsx = Lesson15\Results.xlsx
+		Lesson15\Results.xml = Lesson15\Results.xml
+		Lesson15\SQL_Lesson_1.sql = Lesson15\SQL_Lesson_1.sql
+		Lesson15\Теорія баз даних_part_1.pptx = Lesson15\Теорія баз даних_part_1.pptx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -401,6 +413,7 @@ Global
 		{E23E9058-8500-496E-8CC3-01846F9A7188} = {34BF74C5-54BE-4A4B-877C-77EF242130D1}
 		{E0080421-5921-44D0-A201-56C9034FB002} = {FCCBC99B-CB9D-4B96-A652-22A6C47DECDD}
 		{E38C304D-F7D2-4E2A-B410-E8720B0416B8} = {E0080421-5921-44D0-A201-56C9034FB002}
+		{C3047DED-9AA6-453F-9606-E26CF4091BF7} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}

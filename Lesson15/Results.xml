@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<data>
+  <row>
+    <Id>1</Id>
+    <ProductName>iPhone 7</ProductName>
+    <Manufacturer>Apple</Manufacturer>
+    <ProductCount>5</ProductCount>
+    <Price>52000.00</Price>
+  </row>
+  <row>
+    <Id>2</Id>
+    <ProductName>iPhone 6</ProductName>
+    <Manufacturer>Apple</Manufacturer>
+    <ProductCount>3</ProductCount>
+    <Price>36000.00</Price>
+  </row>
+  <row>
+    <Id>3</Id>
+    <ProductName>Galaxy S8</ProductName>
+    <Manufacturer>Samsung</Manufacturer>
+    <ProductCount>2</ProductCount>
+    <Price>46000.00</Price>
+  </row>
+  <row>
+    <Id>4</Id>
+    <ProductName>Galaxy S8 Plus</ProductName>
+    <Manufacturer>Samsung</Manufacturer>
+    <ProductCount>1</ProductCount>
+    <Price>56000.00</Price>
+  </row>
+  <row>
+    <Id>5</Id>
+    <ProductName>Mi6</ProductName>
+    <Manufacturer>Xiaomi</Manufacturer>
+    <ProductCount>0</ProductCount>
+    <Price>28000.00</Price>
+  </row>
+  <row>
+    <Id>6</Id>
+    <ProductName>iPhone 6</ProductName>
+    <Manufacturer>Apple</Manufacturer>
+    <ProductCount>3</ProductCount>
+    <Price>36000.00</Price>
+  </row>
+  <row>
+    <Id>7</Id>
+    <ProductName>iPhone 6S</ProductName>
+    <Manufacturer>Apple</Manufacturer>
+    <ProductCount>2</ProductCount>
+    <Price>41000.00</Price>
+  </row>
+  <row>
+    <Id>8</Id>
+    <ProductName>iPhone 7</ProductName>
+    <Manufacturer>Apple</Manufacturer>
+    <ProductCount>5</ProductCount>
+    <Price>52000.00</Price>
+  </row>
+  <row>
+    <Id>9</Id>
+    <ProductName>Galaxy S8</ProductName>
+    <Manufacturer>Samsung</Manufacturer>
+    <ProductCount>2</ProductCount>
+    <Price>46000.00</Price>
+  </row>
+  <row>
+    <Id>10</Id>
+    <ProductName>Galaxy S8 Plus</ProductName>
+    <Manufacturer>Samsung</Manufacturer>
+    <ProductCount>1</ProductCount>
+    <Price>56000.00</Price>
+  </row>
+  <row>
+    <Id>11</Id>
+    <ProductName>Mi6</ProductName>
+    <Manufacturer>Xiaomi</Manufacturer>
+    <ProductCount>5</ProductCount>
+    <Price>28000.00</Price>
+  </row>
+  <row>
+    <Id>12</Id>
+    <ProductName>OnePlus 5</ProductName>
+    <Manufacturer>OnePlus</Manufacturer>
+    <ProductCount>6</ProductCount>
+    <Price>38000.00</Price>
+  </row>
+</data>
