@@ -1,0 +1,11 @@
+Вступ до ASP.NET Core.
+
+Inversion of Control.
+
+Dependency Injection.
+
+ASP.NET Core Razor Pages.
+
+https://www.tutorialsteacher.com/core
+
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/?view=aspnetcore-7.0&tabs=windows
