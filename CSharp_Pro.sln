@@ -8,19 +8,19 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{6A05DF64-88D8-4839-98A0-785F3F512A6D}"
 	ProjectSection(SolutionItems) = preProject
 		HW_10_SQL\HW_10_IuriiSylaiev.sql = HW_10_SQL\HW_10_IuriiSylaiev.sql
-		Lesson15\HW_8_IuriiSylaiev.sql = Lesson15\HW_8_IuriiSylaiev.sql
-		Lesson16\HW_9_Hospital_IuriiSylaiev&additional 1.sql = Lesson16\HW_9_Hospital_IuriiSylaiev&additional 1.sql
+		Lesson16\HW_09_Hospital_IuriiSylaiev&additional 1.sql = Lesson16\HW_09_Hospital_IuriiSylaiev&additional 1.sql
+		Lesson15\HW_08_IuriiSylaiev.sql = Lesson15\HW_08_IuriiSylaiev.sql
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_1_Classes_And_Git", "HW_1_Classes_And_Git\HW_1_Classes_And_Git.csproj", "{D0D8625C-F512-47B4-A25D-44E4C9EC455B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_01_Classes_And_Git", "HW_1_Classes_And_Git\HW_01_Classes_And_Git.csproj", "{D0D8625C-F512-47B4-A25D-44E4C9EC455B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_2_OOP_Principles", "HW_2_OOP_Principles\HW_2_OOP_Principles.csproj", "{F6E7E739-5ACF-4836-8D92-1BAD7B1DBE29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_02_OOP_Principles", "HW_2_OOP_Principles\HW_02_OOP_Principles.csproj", "{F6E7E739-5ACF-4836-8D92-1BAD7B1DBE29}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_3_AbstractClasses_And_Interfaces", "HW_3_AbstractClasses_And_Interfaces\HW_3_AbstractClasses_And_Interfaces.csproj", "{16EEDC7E-6308-4AE5-B21A-2B242FB80E80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_03_AbstractClasses_And_Interfaces", "HW_3_AbstractClasses_And_Interfaces\HW_03_AbstractClasses_And_Interfaces.csproj", "{16EEDC7E-6308-4AE5-B21A-2B242FB80E80}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_4._Operator_overload", "HW_4_Operator_overload\HW_4._Operator_overload.csproj", "{D70EADCF-9AB4-40D3-B540-ED99DC68A1B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_04._Operator_overload", "HW_4_Operator_overload\HW_04._Operator_overload.csproj", "{D70EADCF-9AB4-40D3-B540-ED99DC68A1B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_5_GarbageCollector", "HW_5_GarbageCollector\HW_5_GarbageCollector.csproj", "{452896D8-7BF0-4879-AE2E-4146B00C38E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_05_GarbageCollector", "HW_5_GarbageCollector\HW_05_GarbageCollector.csproj", "{452896D8-7BF0-4879-AE2E-4146B00C38E7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyDoctorAppointment", "MyDoctorAppointment", "{DC52D4C2-ADD0-4A69-8AB2-037CBE81EFB2}"
 EndProject
@@ -32,7 +32,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctorAppointment.Domain"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDoctorAppointment.Service", "MyDoctorAppointment\MyDoctorAppointment.Service\MyDoctorAppointment.Service.csproj", "{1333861B-C3B5-4FDB-83B9-BA473CF2E25D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_7_Threading", "HW_7_Threading\HW_7_Threading.csproj", "{231B9666-073B-4139-A21C-F8B8BA15EFA9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_07_Threading", "HW_7_Threading\HW_07_Threading.csproj", "{231B9666-073B-4139-A21C-F8B8BA15EFA9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_14 - WPF - SynchronizationContext", "Lesson_14 - WPF - SynchronizationContext", "{F07C715D-2958-4491-8715-1A6AA33BB15B}"
 EndProject
