@@ -1,0 +1,15 @@
+HTML + CSS
+JavaScript
+Реалізація різних прикладів верстки HTML сторінок
+
+https://www.w3schools.com/html/
+https://www.w3schools.com/css/
+https://developer.mozilla.org/en-US/docs/Learn/CSS
+https://www.codecademy.com/catalog/language/html-css
+https://learn.shayhowe.com/html-css/
+https://advermedia.ua/blog/spetssimvoly-html/
+https://css.in.ua/css/property/display
+https://css.in.ua/css/property/position
+
+Д/З:
+Створити сайт візитку про себе, працювати зі стилями, використовувати семантичну верстку HTML.
