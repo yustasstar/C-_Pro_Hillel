@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        #but1 {
+            background-color: pink;
+        }
+
+        #wrap1 {
+            padding: 30px;
+            border: 1px solid;
+            width: 150px;
+            height: 20px;
+            background-color: #74e868;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+
+        $("#but2").click(function () {
+            $("#but1").val("Показать/скрыть абзац");
+            $("#but1").css("backgroundColor", "#E467B3");
+            $("#wrap1").css("backgroundColor", "#14D100");
+            $("#wrap1").delegate("#but1", "click", function () {
+                $("#par1").toggle(1500);
+            });
+        });
+        $("#but3").click(function () {
+            $("#but1").val("Я ничего не делаю");
+            $("#but1").css("backgroundColor", "pink");
+            $("#wrap1").css("backgroundColor", "#74e868");
+            $("#wrap1").undelegate();
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <p id="par1">
+        Метод delegate позволяет привязать обработчик события к элементам-потомкам выбранного элемента.
+        Привязанные обработчики событий будут работать как с уже существующими элементами, так и с теми, которые будут созданы во время исполнения скрипта в будущем.
+    </p>
+    <div id="wrap1">
+        <input id="but1" type="button" value="Я ничего не делаю" />
+    </div>
+    <br />
+    <input id="but2" type="button" value="Привязать к кнопке обработчик события" />
+    <input id="but3" type="button" value="Удалить у кнопки обработчик события" />
+</body>
+</html>

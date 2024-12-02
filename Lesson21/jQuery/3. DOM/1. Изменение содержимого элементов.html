@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        #wrap1 {
+            font-family: verdana;
+            color: #06799f;
+            font-size: 25px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+
+        $("#but1").click(function () {
+            $("#par1").html("<b>jQuery</b> - это библиотека, значительно упрощающая написание кода.");
+        });
+        $("#but2").click(function () {
+            $("#par2").text("jQuery значительно облегчает взаимодействие с DOM.");
+        });
+        $("#but3").click(function () {
+            alert($("#par1").html());
+        });
+        $("#but4").click(function () {
+            alert($("#par2").html());
+        });
+        $("#but5").click(function () {
+            $("#par3").prepend("<b>jQuery</b> - это  ");
+        });
+        $("#but6").click(function () {
+            $("#par3").append(", значительно упрощающая написание кода.");
+        });
+        $("#but7").click(function () {
+            $("body").append("<p>Это добавленный абзац.</p>");
+        });
+
+        $("#but8").click(function () {
+            alert($("#anchor1").attr("href"));
+        });
+        $("#but9").click(function () {
+            $("#anchor1").attr("href", "http://www.wisdomweb.ru/JQ/");
+        });
+        $("#but10").click(function () {
+            $("#anchor1").removeAttr("href");
+        });
+
+        $("#b1").click(function () {
+            $("#p1").wrap("<i></i>");
+        });
+        $("#b2").click(function () {
+            $("#p2").wrap("<b></b>");
+        });
+        $("#b3").click(function () {
+            $("#p3").wrap("<div id='wrap1'></div>");
+        });
+    });
+    </script>
+</head>
+<body>
+    <p id="par1">Это первый абзац. </p>
+    <p id="par2">Это второй абзац. </p>
+    <input id="but1" type="button" value="Изменить текст первого абзаца" />
+    <input id="but2" type="button" value="Изменить текст второго абзаца" />
+    <br /><br />
+    <input id="but3" type="button" value="Узнать текст первого абзаца" />
+    <input id="but4" type="button" value="Узнать текст второго абзаца" />
+
+    <p id="par3">библиотека</p>
+    <input id="but5" type="button" value="Добавить содержимое перед текстом" />
+    <input id="but6" type="button" value="Добавить содержимое после текста" />
+    <br /><br />
+    <input id="but7" type="button" value="Добавить новый абзац в конце документа" />
+
+    <br />
+    <a id="anchor1" href="http://www.wisdomweb.ru/">wisdomweb.ru</a>
+    <br /><br />
+    <input id="but8" type="button" value="Узнать содержимое атрибута href" />
+    <input id="but9" type="button" value="Изменить содержимое атрибута href" />
+    <input id="but10" type="button" value="Удалить атрибут href" />
+
+    <p id="p1">Это третий абзац.</p>
+    <p id="p2">Это четвертый абзац.</p>
+    <p id="p3">Это пятый абзац.</p>
+    <input id="b1" type="button" value="Обернуть третий абзац" />
+    <input id="b2" type="button" value="Обернуть четвертый абзац" />
+    <input id="b3" type="button" value="Обернуть пятый абзац" />
+
+</body>
+</html>

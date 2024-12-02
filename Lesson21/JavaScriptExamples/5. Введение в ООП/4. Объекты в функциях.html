@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объекты в функциях</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        function createClub(pName, pCity, pYear)
+        {
+            return {
+                name: pName,
+                city: pCity,
+                year: pYear,
+                displayInfo: function()
+                {
+                    document.write("Название: " + this.name +
+                        "<br />Город: " + this.city +
+                        "<br />Год основания: " + this.year + "<br/>");
+                }
+            };
+        };
+
+        function setClub(obj)
+        {
+            obj.name = "Барселона";
+            obj.city = "Барселона";
+            obj.year = 1899;
+        }
+
+        function show(obj)
+        {
+            document.write("Название: " + obj.name +
+                        "<br />Город: " + obj.city +
+                        "<br />Год основания: " + obj.year + "<br/>");
+        }
+
+        var club = createClub("Динамо", "Киев", 1927);
+        club.displayInfo();
+
+        club = createClub("Черноморец", "Одесса", 1936);
+        club.displayInfo();
+
+        club = createClub("Шахтер", "Донецк", 1936);
+        club.displayInfo();
+        setClub(club);
+        show(club);
+    </script>
+</body>
+</html>

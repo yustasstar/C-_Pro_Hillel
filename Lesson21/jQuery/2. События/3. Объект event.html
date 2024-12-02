@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        #square {
+            border: 1px solid;
+            width: 250px;
+            height: 250px;
+            font-size: 30px;
+            padding-left: 30px;
+            padding-top: 100px;
+            float: left;
+            margin-right: 15px;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+
+        #coord {
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+    <script>
+    // http://www.wisdomweb.ru/JQd/event.php
+    $(document).ready(function () {
+
+        $("#square").click(function (event) {
+            $("#coord").css("display", "block");
+            $("#x").html(event.pageX);
+            $("#y").html(event.pageY);
+        });
+
+        $("#but1").click(function (event) {
+            alert("Данное событие было вызвано " + event.target.nodeName);
+        });
+        $("p").click(function (event) {
+            alert("Данное событие было вызвано " + event.target.nodeName);
+        });
+        $("div").click(function (event) {
+            alert("Данное событие было вызвано " + event.target.nodeName);
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="square">Щелкните где-нибудь в данном поле.</div>
+    <input id="but1" type="button" value="Щелкните на меня мышкой" />
+    <p>Щелкните на меня мышкой.</p>
+    <div>Щелкните на меня мышкой.</div>
+    <div id="coord" style="display:none">Координаты курсора мыши: <br /><br /> 
+    <b>X:<span id="x"></span> Y:<span id="y"> </span></b> 
+    </div>
+</body>
+</html>

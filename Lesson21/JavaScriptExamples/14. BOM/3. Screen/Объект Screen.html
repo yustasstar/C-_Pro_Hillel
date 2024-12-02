@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Screen</title>
+</head>
+<body>
+    <script>
+        document.write("<table width='20%' align='center'>");
+        document.write("<tr>");
+        document.write("<td>Разрешение экрана:</td><td>" + screen.width + "x" + screen.height + "</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<td>Доступная ширина:</td><td>" + screen.availWidth + "</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<td>Доступная высота:</td><td>" + screen.availHeight + "</td>");
+        document.write("</tr>");
+        document.write("<tr>");
+        document.write("<td>Глубина цвета (бит/пиксель):</td><td>" + screen.colorDepth + "</td>");
+        document.write("</tr>");
+        document.write("</table>");
+    </script>
+</body>
+</html>

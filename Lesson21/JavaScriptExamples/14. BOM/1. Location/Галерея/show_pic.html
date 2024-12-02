@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Галерея</title>
+</head>
+<body>
+    <p style="text-align: center">
+        <img src="" id="bigImage" /><br /><br />
+        <span id="fname"></span><br /><br />
+        <input type="button" value="Back" onclick="location.replace('./galery.html')" />
+    </p>
+    <script>
+        // location используется для получения информации об адресе, с которого загружена страница. 
+        var src = location.search.slice(1);
+        document.images["bigImage"].src = "./BIG/" + src;
+        var index = src.indexOf(".");
+        fname.innerText = src.substring(0, index);
+
+        document.write("Строка запроса: " + location.href + "<br />");
+        document.write("Путь к ресурсу: " + location.pathname + "<br />");
+        document.write("Схема: " + location.origin + "<br />");
+        document.write("Протокол: " + location.protocol + "<br />");
+        document.write("Порт: " + location.port + "<br />");
+        document.write("Хост: " + location.host + "<br />");
+        document.write("Имя хоста: " + location.hostname + "<br />");
+        document.write("Хэш: " + location.hash + "<br />");
+        document.write("Поиск: " + location.search + "<br />");
+
+    </script>
+</body>
+</html>

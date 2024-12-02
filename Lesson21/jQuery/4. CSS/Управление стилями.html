@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        .blp {
+            color: blue;
+            font-size: 25px;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+        $("#but1").click(function () {
+            alert($("#par1").css("color"));
+        });
+        $("#but2").click(function () {
+            $("#par2").css("color", "red");
+        });
+        $("#but3").click(function () {
+            $("#par3").css({ "font-size": "27px", "color": "red", "font-family": "Arial" });
+        });
+        $("#text1").focus(function () {
+            $("#text1").val("");
+        });
+        $("#but4").click(function () {
+            $("#par4").css("font-size", $("#text1").val() + "px");
+        });
+
+        $("#but5").click(function () {
+            $("#p1").addClass("blp");
+        });
+        $("#but6").click(function () {
+            $("#p1").removeClass("blp");
+        });
+        $("#but7").click(function () {
+            $("#p1").toggleClass("blp");
+        });
+    });
+    </script>
+</head>
+<body>
+    <p id="par1" style="color:blue;">Это первый абзац.</p>
+    <p id="par2">Это второй абзац.</p>
+    <p id="par3">Это третий абзац.</p>
+    <p id="par4">Это четвертый абзац.</p>
+    <input id="but1" type="button" value="Вывести значение свойства color первого абзаца" />
+    <input id="but2" type="button" value="Изменить цвет второго абзаца" />
+    <br /><br />
+    <input id="but3" type="button" value="Оформить третий абзац, установив несколько свойств одновременно" />
+    <br /><br />
+    <input id="text1" type="text" style="width:180px" value="Введите размер шрифта в пикселях." />
+    <input id="but4" type="button" value="Изменить размер шрифта четвертого абзаца на указанный" />
+    <p id="p1">
+        С помощью метода addClass Вы можете добавить указанный класс выбранному элементу.
+        С помощью метода removeClass Вы можете удалить указанный класс у выбранного элемента.
+        Метод toggleClass позволяет переключатся между удалением и добавлением класса выбранного элемента.
+    </p>
+    <input id="but5" type="button" value="Добавить класс blp" />
+    <input id="but6" type="button" value="Удалить класс blp" />
+    <input id="but7" type="button" value="Добавить/удалить класс blp" />
+</body>
+</html>

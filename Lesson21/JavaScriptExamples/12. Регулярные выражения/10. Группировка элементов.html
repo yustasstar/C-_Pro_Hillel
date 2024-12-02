@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Регулярные выражения</title>
+</head>
+<body>
+    <script>
+        var s = prompt("Введите номер телефона");
+        checkPhone(s);
+        function checkPhone(txt) {
+            // (8-232)333-22-23
+            var r = /^(\(8(-| )\d{3}\))?\d{3}((-| )\d{2}){2}$/; 
+            if (r.test(txt))
+                alert("Дозвон!")
+            else
+                alert("Некорректный номер!")
+        }
+    </script>
+</body>
+</html>

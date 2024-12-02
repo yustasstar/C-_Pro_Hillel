@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeWork", "HomeWork", "{6A05DF64-88D8-4839-98A0-785F3F512A6D}"
 	ProjectSection(SolutionItems) = preProject
 		Lesson15\HW_8_IuriiSylaiev.sql = Lesson15\HW_8_IuriiSylaiev.sql
+		Lesson16\HW_9_Hospital_IuriiSylaiev&additional 1.sql = Lesson16\HW_9_Hospital_IuriiSylaiev&additional 1.sql
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_1_Classes_And_Git", "HW_1_Classes_And_Git\HW_1_Classes_And_Git.csproj", "{D0D8625C-F512-47B4-A25D-44E4C9EC455B}"
@@ -139,13 +140,40 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_15 - Intro to MS SQL
 		Lesson15\Теорія баз даних_part_1.pptx = Lesson15\Теорія баз даних_part_1.pptx
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_16 - GroupBy, Subqueries, Join, Functions.", "Lesson_16 - GroupBy, Subqueries, Join, Functions.", "{737B448E-417B-4656-B340-3A7013160EF0}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_16 - SQL, GroupBy, JOIN", "Lesson_16 - SQL, GroupBy, JOIN", "{2842C34A-E9ED-43A0-8396-B55606F55245}"
 	ProjectSection(SolutionItems) = preProject
 		Lesson16\SQL_Lesson_2_materials\SQL_Lesson_2.sql = Lesson16\SQL_Lesson_2_materials\SQL_Lesson_2.sql
 		Lesson16\sql_додаткове_завдання_1.txt = Lesson16\sql_додаткове_завдання_1.txt
 		Lesson16\sql_додаткове_завдання_2.txt = Lesson16\sql_додаткове_завдання_2.txt
 		Lesson16\Реляційні_бази_даних_part_2.pptx = Lesson16\Реляційні_бази_даних_part_2.pptx
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_17 - SQL, Trigger, Procedure, Func", "Lesson_17 - SQL, Trigger, Procedure, Func", "{EDC657B8-8D68-4DAF-8FA3-5DE6BA88D943}"
+	ProjectSection(SolutionItems) = preProject
+		Lesson17\hw10request.txt = Lesson17\hw10request.txt
+		Lesson17\notes.txt = Lesson17\notes.txt
+		Lesson17\preparation_for_interview_list_of_sites.txt = Lesson17\preparation_for_interview_list_of_sites.txt
+		Lesson17\SQL_Lesson_3.sql = Lesson17\SQL_Lesson_3.sql
+		Lesson17\transactions_and_acid.pptx = Lesson17\transactions_and_acid.pptx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_18 - SQL, Indexes, roles", "Lesson_18 - SQL, Indexes, roles", "{79974310-A503-4E21-A11C-4064019E3396}"
+	ProjectSection(SolutionItems) = preProject
+		Lesson18\notes.txt = Lesson18\notes.txt
+		Lesson18\preparation_for_interview_list_of_sites.txt = Lesson18\preparation_for_interview_list_of_sites.txt
+		Lesson18\SQL_Indexes.pptx = Lesson18\SQL_Indexes.pptx
+		Lesson18\SQL_Lesson_4.sql = Lesson18\SQL_Lesson_4.sql
+		Lesson18\transactions_and_acid.pptx = Lesson18\transactions_and_acid.pptx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_19 - NOSQL. Mongo DB", "Lesson_19 - NOSQL. Mongo DB", "{DD47DEED-CFE0-4923-94AF-3F4A0D09CB3A}"
+	ProjectSection(SolutionItems) = preProject
+		Lesson19\notes.txt = Lesson19\notes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbDemo", "Lesson19\MongoDbDemo\MongoDbDemo\MongoDbDemo.csproj", "{D7B8D299-41E7-422E-9FF1-249160F1086C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookShopApi", "Lesson19\BookShopApi\BookShopApi\BookShopApi\BookShopApi.csproj", "{935A164B-207B-4ED7-B282-F82289CE090F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -373,6 +401,22 @@ Global
 		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Release|x86.ActiveCfg = Release|Any CPU
 		{E38C304D-F7D2-4E2A-B410-E8720B0416B8}.Release|x86.Build.0 = Release|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Debug|x86.Build.0 = Debug|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7B8D299-41E7-422E-9FF1-249160F1086C}.Release|x86.Build.0 = Release|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Debug|x86.Build.0 = Debug|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Release|x86.ActiveCfg = Release|Any CPU
+		{935A164B-207B-4ED7-B282-F82289CE090F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -424,7 +468,12 @@ Global
 		{E0080421-5921-44D0-A201-56C9034FB002} = {FCCBC99B-CB9D-4B96-A652-22A6C47DECDD}
 		{E38C304D-F7D2-4E2A-B410-E8720B0416B8} = {E0080421-5921-44D0-A201-56C9034FB002}
 		{C3047DED-9AA6-453F-9606-E26CF4091BF7} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
-		{737B448E-417B-4656-B340-3A7013160EF0} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
+		{2842C34A-E9ED-43A0-8396-B55606F55245} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
+		{EDC657B8-8D68-4DAF-8FA3-5DE6BA88D943} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
+		{79974310-A503-4E21-A11C-4064019E3396} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
+		{DD47DEED-CFE0-4923-94AF-3F4A0D09CB3A} = {B374D4C0-1865-4032-8315-91C1EB4D4B21}
+		{D7B8D299-41E7-422E-9FF1-249160F1086C} = {DD47DEED-CFE0-4923-94AF-3F4A0D09CB3A}
+		{935A164B-207B-4ED7-B282-F82289CE090F} = {DD47DEED-CFE0-4923-94AF-3F4A0D09CB3A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}

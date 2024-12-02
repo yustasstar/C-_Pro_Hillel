@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Работа с датами</title>
+</head>
+<body>
+    <script>
+        var currentDate = new Date(); // текущие дата и время
+        document.write(currentDate + "<br />");
+        var myDate = new Date("1 September 2016");
+        document.write(myDate + "<br />");
+        var myDate = new Date("9/1/2016 12:20");
+        document.write(myDate + "<br />");
+        var myDate = new Date(2016, 8, 1, 12, 20);
+        document.write(myDate + "<br />");
+
+        var days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
+        var months = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
+
+        var myDate = new Date();
+        var h = myDate.getHours();
+        var welcome = "";
+        if (h >= 0 && h < 5)
+            welcome = "Доброй ночи!";
+        else if (h >= 5 && h < 12)
+            welcome = "Доброе утро!";
+        else if (h >= 12 && h < 17)
+            welcome = "Добрый день!";
+        else
+            welcome = "Добрый вечер!";
+        if (h < 10)
+            h = "0" + h;
+        var m = myDate.getMinutes();
+        if (m < 10)
+            m = "0" + m;
+        var s = myDate.getSeconds();
+        if (s < 10)
+            s = "0" + s;
+        var fullDate = days[myDate.getDay()] + ", " +myDate.getDate() + " " + months[myDate.getMonth()] +
+                        " " + myDate.getFullYear() + "  " + h + ":" + m + ":" + s;
+        document.write("<h3>" + welcome + "</h3>");
+        document.write(fullDate);
+
+        var myDate = new Date();
+        myDate.setDate(12);
+        myDate.setMonth(8);
+        myDate.setYear(2016);
+
+        var fullDate = myDate.getDate() + " " + months[myDate.getMonth()] +
+                        " " + myDate.getFullYear() + ", " + days[myDate.getDay()];
+        document.write("<br /><h3>День программиста</h3>" + fullDate);
+    </script>
+</body>
+</html>

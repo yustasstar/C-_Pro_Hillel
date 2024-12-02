@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Конструктор</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        function WidthRect()
+        {
+            return this.right - this.left;
+        }
+        function HeightRect()
+        {
+            return this.bottom - this.top;
+        }
+
+        function Rectangle(l, t, r, b)
+        {
+            this.left = l;
+            this.top = t;
+            this.right = r;
+            this.bottom = b;
+            this.Width = WidthRect;
+            this.Height = HeightRect;
+        }
+        var leftX = parseInt(prompt("Введите координату X левого верхнего угла: ", ""));
+        var topY = parseInt(prompt("Введите координату Y левого верхнего угла: ", ""));
+        var rightX = parseInt(prompt("Введите координату X правого нижнего угла: ", ""));
+        var bottomY = parseInt(prompt("Введите координату Y правого нижнего угла: ", ""));
+        var r = new Rectangle(leftX, topY, rightX, bottomY);
+        alert("Ширина прямоугольника: " + r.Width());
+        alert("Высота прямоугольника: " + r.Height());
+    </script>
+</body>
+</html>

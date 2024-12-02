@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        #sort1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 40%;
+        }
+
+            #sort1 li {
+                margin: 2px;
+                padding: 0.4em;
+                border-style: solid;
+                border-width: 1px;
+                height: 18px;
+                background-color: #c5f97b;
+            }
+
+        #sort2 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 40%;
+        }
+
+            #sort2 li {
+                background-color: #dd9af3;
+                margin: 2px;
+                padding: 0.4em;
+                border-style: solid;
+                border-width: 1px;
+                height: 18px;
+            }
+
+        #sort3 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 40%;
+        }
+
+            #sort3 li {
+                margin: 2px;
+                padding: 0.4em;
+                border-style: solid;
+                border-width: 1px;
+                height: 18px;
+            }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $("#sort3").sortable();
+        $("#sort1").sortable({ connectWith: "#sort2" });
+        $("#sort2").sortable({ connectWith: "#sort1" });
+    });
+    </script>
+</head>
+<body>
+    <p>Элементы одного списка могут быть перемещены в другой.</p>
+    <ol id="sort1" class="ui-widget connect">
+        <li>Первый пункт списка</li>
+        <li>Второй пункт списка</li>
+        <li>Третий пункт списка</li>
+        <li>Четвертый пункт списка</li>
+        <li>Пятый пункт списка</li>
+    </ol>
+    <br />
+    <ol id="sort2" class="ui-widget connect">
+        <li>Первый пункт списка</li>
+        <li>Второй пункт списка</li>
+        <li>Третий пункт списка</li>
+        <li>Четвертый пункт списка</li>
+        <li>Пятый пункт списка</li>
+    </ol>
+    <p>Вы можете изменять местоположение элементов в списке ниже, перетаскивая их на необходимые места.</p>
+    <ol id="sort3" class="ui-widget">
+        <li>Первый пункт списка</li>
+        <li>Второй пункт списка</li>
+        <li>Третий пункт списка</li>
+        <li>Четвертый пункт списка</li>
+        <li>Пятый пункт списка</li>
+    </ol>
+</body>
+</html>

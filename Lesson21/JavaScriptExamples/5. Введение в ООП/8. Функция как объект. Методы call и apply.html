@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Функция как объект. Методы call и apply</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        function display() {
+            document.write(this.name + "<br />");
+            document.write(this.city + "<br />");
+            document.write(this.year + "<br />");
+        }
+
+        var cube = new Function('n', 'return n * n * n;');
+        document.write(cube(4) + "<br />");
+
+        var club = {};
+        club.name = "Динамо";
+        club.city = "Киев";
+        club.year = 1927;
+        display.call(club);
+
+        var calc = { arg1: 10, arg2: 20 };
+        function set(x, y) {
+
+            this.arg1 = x;
+            this.arg2 = y;
+        }
+        function add() {
+
+            return this.arg1 + this.arg2;
+        }
+        function mult() {
+
+            return this.arg1 * this.arg2;
+        }
+        set.call(calc, 5, 10);
+        document.write(add.call(calc) + "<br />");
+        document.write(mult.call(calc) + "<br />");
+
+        set.apply(calc, [3, 7]);
+        document.write(add.apply(calc) + "<br />");
+        document.write(mult.apply(calc) + "<br />");
+
+        function printArguments() {
+            var slice = [].slice;
+            var join = [].join;
+            // вызов slice() скопирует все элементы из this в новый массив
+            var args = slice.call(arguments);
+            document.write(args.join(', ') + "<br />");
+            var argStr = join.call(arguments, ', ');
+            document.write(argStr + "<br />");
+        }
+
+        printArguments('Динамо', 'Киев', 'Украина');
+
+        var arr = [];
+        arr.push(10);
+        arr.push(5);
+        arr.push(200);
+
+        // получить максимум из элементов массива arr
+        document.write(Math.max.apply(null, arr) + "<br />");
+
+    </script>
+</body>
+</html>

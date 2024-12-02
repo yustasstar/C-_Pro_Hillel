@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Элементы форм</title>
+</head>
+<body>
+    <form name="form1">
+        <select name="combobox"></select>
+        <input type="button" value="Delete" onclick="Del()" />
+    </form>
+    <script>
+        for (var i = 1; i <= 5; i++) {
+            var item = new Option("Element " + i, "value");
+            form1.combobox.add(item, i - 1);
+        }
+        function Del() {
+            if (form1.combobox.length)
+                form1.combobox.remove(form1.combobox.selectedIndex);
+        }
+    </script>
+</body>
+</html>

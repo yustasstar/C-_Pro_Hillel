@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Замена элемента</title>
+</head>
+<body>
+    <div class="article">
+        <h3>Заголовок статьи</h3>
+        <p>Первый абзац</p>
+        <p>Второй абзац</p>
+    </div>
+    <script>
+        var articleDiv = document.querySelector("div.article");
+        var oldNode = document.querySelectorAll("div.article p")[0];
+        var newNode = document.createElement("h2");
+        var elemText = document.createTextNode("JavaScript. Document Object Model");
+        newNode.appendChild(elemText);
+        articleDiv.replaceChild(newNode, oldNode);
+    </script>
+</body>
+</html>

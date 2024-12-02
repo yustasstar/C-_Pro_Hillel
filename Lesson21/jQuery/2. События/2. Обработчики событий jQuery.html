@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <script>
+    // http://www.wisdomweb.ru/JQd/event.php
+    $(document).ready(function () {
+
+        $("#el1").focus(function () {
+            $(this).css("color", "black");
+        });
+
+        $("#el1").blur(function () {
+            $(this).css("color", "grey");
+        });
+
+        $("#el2").change(function () { alert("Содержимое данного элемента: " + $(this).val()) });
+
+    });
+    </script>
+
+</head>
+<body>
+    <p>
+    Код обработчика focus() будет выполнен, когда элемент станет активным.
+    Код обработчика blur() будет выполнен, когда элемент перестанет быть активным.
+    </p>
+    <input id="el1" type="text" style="color:grey" value="Текстовое поле" />
+    <p>Измените содержимое элемента ниже и щелкните за его пределами.</p>
+    <input id="el2" type="text" value="Измените меня" />
+</body>
+</html>

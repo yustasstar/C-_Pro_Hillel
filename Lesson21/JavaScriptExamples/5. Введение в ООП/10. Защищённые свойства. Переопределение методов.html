@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>ООП в функциональном стиле</title>
+</head>
+<body>
+    <script>
+        function Person(name, surname, age)
+        {
+            this._name = name;
+            this._surname = surname;
+            this._age = age;
+            var self = this;
+
+            this.setName = function (name) {
+                if (!name) {
+                    throw new Error("Значение name не определено!");
+                }
+                self._name = name;
+            };
+            this.getName = function () {
+                return self._name;
+            };
+
+            this.setSurname = function (surname) {
+                if (!surname) {
+                    throw new Error("Значение surname не определено!");
+                }
+                self._surname = surname;
+            };
+            this.getSurname = function () {
+                return self._surname;
+            };
+
+            this.setAge = function (age) {
+                if (!age || age <= 0) {
+                    throw new Error("Значение age должно быть положительным!");
+                }
+                self._age = age;
+            };
+            this.getAge = function () {
+                return self._age;
+            };
+
+            this.print = function () {
+                document.write("Имя: " + self._name + "<br />");
+                document.write("Фамилия: " + self._surname + "<br />");
+                document.write("Возраст: " + self._age + "<br />");
+            };
+        }
+
+        function Student(name, surname, age, rating) {
+            Person.call(this, name, surname, age);
+
+            this._rating = rating;
+
+            this.setRating = function (rating) {
+                if (!rating || rating <= 0 || rating > 12) {
+                    throw new Error("Значение rating должно быть в диапазоне от 1 до 12!");
+                }
+                this._rating = rating;
+            };
+            this.getRating = function () {
+                return this._rating;
+            };
+
+            var parentPrint = this.print;
+            this.print = function () {
+                parentPrint();
+                document.write("Рейтинг: " + this._rating + "<br />");
+            }
+        }
+
+        var person = new Person("Иван", "Иванов", 25);
+        person.print();
+        person.setName("Петр");
+        person.setSurname("Петров");
+        person.setAge(30);
+        person.print();
+
+        var student = new Student("Алексей", "Алексеев", 27, 10.5);
+        student.print();
+        student.setName("Сергей");
+        student.setSurname("Кузнецов");
+        student.setAge(30);
+        student.setRating(12);
+        student.print();
+    </script>
+</body>
+</html>

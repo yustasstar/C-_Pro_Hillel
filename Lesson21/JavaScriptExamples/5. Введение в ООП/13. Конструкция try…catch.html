@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Конструкция try…catch</title>
+</head>
+<body>
+    <script>
+        function createClub(pName, pCity, pYear)
+        {
+            if (pName === undefined || pCity === undefined || pYear === undefined)
+                throw new TypeError("Функция не создала объект!");
+            else  return {
+                name: pName,
+                city: pCity,
+                year: pYear,
+                displayInfo: function () {
+                    document.write("Название: " + this.name +
+                        "<br />Город: " + this.city +
+                        "<br />Год основания: " + this.year + "<br/>");
+                }
+            };
+        }
+
+        function SQRT(arg)
+        {
+            try{
+                if (arg < 0)
+                    throw new RangeError("Аргумент должен быть больше либо равен нулю!");
+                alert(Math.sqrt(arg));
+            }
+            catch(e)
+            {
+                alert('Ошибка ' + e.name /* Тип ошибки */ + "\n"
+                + e.message /* Текстовое сообщение о деталях ошибки */ + "\n"
+                + e.stack /*свойство stack, которое содержит строку с информацией 
+                о последовательности вызовов, которая привела к ошибке*/);
+                throw e; // проброс ошибки
+            }
+        }
+
+        try
+        {
+            //SQRT(-9);
+            alert('Начало блока try');
+            var a = 10;
+            //alert(a.length()); // ошибка, объект не поддерживает метод length!
+            //alert(undeclaredVariable); // ошибка, переменная не определена!
+            var club = createClub("Динамо", "Киев", 1927);
+            club.displayInfo();
+            var club = createClub(); //ошибка: функция возвращает null
+            club.displayInfo();
+            alert('Конец блока try');  
+        }
+        catch (e)
+        {
+            alert('Ошибка ' + e.name /* Тип ошибки */ + "\n"
+                + e.message /* Текстовое сообщение о деталях ошибки */ + "\n"
+                + e.stack /*свойство stack, которое содержит строку с информацией 
+                о последовательности вызовов, которая привела к ошибке*/);
+        }
+        alert("Затем код продолжит выполнение...");
+
+        var n = +prompt('Введите n?', 100);
+        var counter = 0;
+        try {
+            var result = sum(n);
+        } catch (e) {
+            result = 0;
+            alert('Ошибка ' + e.name /* Тип ошибки */ + "\n"
+               + e.message /* Текстовое сообщение о деталях ошибки */ + "\n"
+               + e.stack /*свойство stack, которое содержит строку с информацией 
+                о последовательности вызовов, которая привела к ошибке*/);
+        } finally {
+            alert("Счётчик рекурсий: " + counter);
+        }
+
+        alert(result ? result : 'Ошибка из-за слишком глубокой рекурсии');
+
+        function sum(n) {
+            counter++;
+            return n ? (n + sum(n - 1)) : 0;
+        }
+    </script>
+</body>
+</html>

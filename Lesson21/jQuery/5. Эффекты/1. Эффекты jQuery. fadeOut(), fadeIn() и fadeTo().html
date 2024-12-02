@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <script>
+    $(document).ready(function () {
+
+        $("#but1").click(function () { $("#par1").fadeOut(3000) });
+        $("#but2").click(function () { $("#par1").fadeIn(3000) });
+        $("#but3").click(function () { $("#par1").fadeTo(3000, 0.3) });
+        $("#but4").click(function () { $("#par1").fadeTo(3000, 0.8) });
+        $("#but5").click(function () {
+            $("#par1").fadeOut(3000, function () {
+                alert("Изображение было полностью скрыто.");
+            });
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <input id="but1" type="button" value="Постепенное скрытие" />
+    <input id="but2" type="button" value="Постепенное появление" />
+    <input id="but3" type="button" value="Постепенное скрытие до уровня прозрачности 0.3" />
+    <br /><br />
+    <input id="but4" type="button" value="Постепенное появление до уровня прозрачности 0.8" />
+    <input id="but5" type="button" value="Вывод всплывающего окна после применения эффекта к абзацу" />
+    <p id="par1" style="font-size:20px;">
+        <img src="WP_000005.jpg" alt="" />
+    </p>
+</body>
+</html>

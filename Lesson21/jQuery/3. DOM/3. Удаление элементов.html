@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {  // Предотвращение преждевременного выполнения кода в jQuery
+            $("#but1").click(function () {
+                $('li:even').remove();
+            });
+
+            $("#but2").click(function () {
+                // удаляем из списка первый элемент, сохраняя его в переменной item
+                var item = $('li:first').detach();
+                // вставляем его в конец списка
+                $('ul').append(item);
+            });
+
+            $("#but3").click(function () {
+                $('ul').empty();
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="but1" type="button" value="Удалить все чётные элементы" />
+    <input id="but2" type="button" value="Удалить из списка первый элемент" />
+    <input id="but3" type="button" value="Очистить содержимое списка" />
+    <ul>
+        <li class="lang">Java</li>
+        <li class="lang">C/C++</li>
+        <li class="lang">C#</li>
+        <li class="lang">JavaScript</li>
+        <li class="lang">PHP</li>
+    </ul>
+</body>
+</html>

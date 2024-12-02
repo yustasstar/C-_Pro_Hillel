@@ -1,0 +1,6 @@
+http://www.w3schools.com/jquery/jquery_examples.asp
+http://jquery-docs.ru/Selectors/
+http://www.wisdomweb.ru/
+http://jquery.page2page.ru
+http://anton.shevchuk.name/jquery-book/
+http://plugindetector.com/

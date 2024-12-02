@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        var upperLimit = 20; 
+        var counter; 
+        var sum = 0; 
+        for (counter = 1; counter <= upperLimit; counter++) 
+        {
+            sum += counter; 
+        }
+        alert("Сумма чисел от 1 до " + upperLimit + ": " + sum);
+
+        outer: for (var i = 0; i < 3; i++) {
+
+            for (var j = 0; j < 3; j++) {
+
+                var input = prompt('Значение в координатах ' + i + ',' + j, '');
+
+                // если отмена ввода или пустая строка -
+                // завершить оба цикла
+                if (!input) break outer; // (*)
+
+            }
+        }
+        alert('Готово!');
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Элементы форм</title>
+</head>
+<body>
+    <form name="form1">
+        Поиск на
+        <select name="addr">
+            <option>http://www.rambler.ru</option>
+            <option>http://www.yandex.ru</option>
+            <option>http://www.google.com</option>
+            <option>http://www.yahoo.com</option>
+        </select>
+        <input type="button" value="Go!" onClick="go()" /><br /><br />
+        <select name="web" size="3" onchange="f()">
+            <option>HTML</option>
+            <option>JavaScript</option>
+            <option>PHP</option>
+        </select>
+    </form>
+
+    <script>
+        function go() {
+            window.open(form1.addr.options[form1.addr.selectedIndex].text);
+        }
+        function f() {
+            alert(form1.web.options[form1.web.selectedIndex].text);
+        }
+    </script>
+</body>
+</html>

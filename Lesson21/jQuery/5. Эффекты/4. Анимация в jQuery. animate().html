@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        #par1 {
+            position: relative;
+        }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function () {
+
+        $("#but1").click(function () {
+            $("p").animate({ top: 400 }, 2000);
+            $("p").animate({ left: 800 }, 2000);
+            $("p").animate({ top: 0, left: 0 }, 2000);
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <input id="but1" type="button" value="Начать анимацию" />
+    <p id="par1"><img src="WP_000005.jpg" alt="" width="200px" /></p>
+</body>
+</html>

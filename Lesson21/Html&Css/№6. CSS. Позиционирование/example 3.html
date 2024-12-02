@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS. Позиционирование</title>
+    <style type="text/css">
+        h1.DropShadow {
+            position: relative;
+            color: red;
+            font-family: Impact, sans-serif;
+            font-size: 72pt;
+        }
+
+            h1.DropShadow span.text {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            h1.DropShadow span.shadow {
+                position: absolute;
+                left: 10px;
+                top: 10px;
+                color: #888888;
+            }
+    </style>
+</head>
+<body>
+    <h1 class="DropShadow">
+        <span class="shadow">Заголовок с тенью</span>
+        <span class="text">Заголовок с тенью</span>
+    </h1>
+</body>
+</html>

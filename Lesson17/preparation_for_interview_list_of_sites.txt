@@ -1,0 +1,42 @@
+.Net / C#
+https://itvdn.com/ru/blog/article/150-questions-net-developer
+https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c
+https://bool.dev/blog/detail/voprosy-na-sobesedovanii-dlya-senior-net-developer
+https://dou.ua/lenta/articles/interview-questions-net-developer/
+https://hurma.work/ru/blog/kak-nanyat-back-end-developer/
+
+SQL
+https://senior.ua/articles/50-populyarnyh-voprosov-i-otvetov-na-sobesedovanii-po-sql-server
+https://dou.ua/lenta/articles/sql-questions/
+
+NOSQL (Mongo)
+https://coderlessons.com/tutorials/bazy-dannykh/uchebnik-mongodb/23-voprosy-interviu-mongodb
+https://jsehelper.blogspot.com/2016/05/mongodb.html
+
+WEB
+https://jsehelper.blogspot.com/2016/01/web.html
+https://appmaster.io/blog/top-rest-api-interview-questions
+https://senior.ua/articles/eti-pyat-voprosov-pomogut-nayti-idealnogo-vebrazrabotchika-chto-nuzhno-sprashivat-na-sobesedovanii
+
+Frontend
+https://hurma.work/ru/blog/kak-nanyat-front-end-developer/
+https://h5bp.org/Front-end-Developer-Interview-Questions/translations/ukrainian/
+https://dev.ua/ru/news/frontend
+https://itvdn.com/ru/blog/article/300-js
+
+Алгоритмы
+https://dimlix.com/interview-algorithm/
+https://dev.ua/ru/news/valid-article-1662018511-1662018511
+
+Общие темы для изучения:
+- Patterns & Practices
+- Data Persistance / ORM
+- Computer Science / Data Structures / Algorithms
+- Architecture
+- Security
+- Network
+
+
+
+
+

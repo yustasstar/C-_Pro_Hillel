@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        .el1 {
+            border-style: solid;
+            border-width: 1px;
+            width: 220px;
+            letter-spacing: 0px;
+        }
+
+        .newclass {
+            color: #7608AA;
+            background-color: #FFF1B1;
+            font-size: 1.5em;
+            width: 550px;
+            height: 40px;
+            padding: 40px;
+            letter-spacing: 10px;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+
+        $("#but1").click(function () {
+            $(".el1").addClass("newclass", 2000);
+        });
+        $("#but2").click(function () {
+            $(".el1").removeClass("newclass", 2000);
+        });
+        $("#but3").click(function () {
+            $(".el1").toggleClass("newclass", 2000);
+        });
+        $("#but4").click(function () {
+            $(".el1").switchClass("el1", "newclass");
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <input id="but1" type="button" value="Добавить класс newclass" />
+    <input id="but2" type="button" value="Удалить класс newclass" />
+    <br /><br />
+    <input id="but3" type="button" value="Добавить/удалить класс newclass" />
+    <input id="but4" type="button" value="Переключится с класса el1 на newclass" />
+    <p class="el1">Оформляемый элемент</p>
+</body>
+</html>

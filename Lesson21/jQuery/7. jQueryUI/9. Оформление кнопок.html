@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    /*
+    С помощью метода button/buttonset можно стилизовать:
+    - обычные кнопки (определяемые тэгами button и input type='button')
+    - кнопки отправления форм
+    - радио-кнопки
+    - флажки
+    - ссылки
+    */
+        $("#but1,#but2,#but3").button();
+        $("#group1,#group2").buttonset();
+    });
+    </script>
+</head>
+<body>
+    <input id="but1" type="button" value="Обычная кнопка" />
+    <button id="but2">Еще одна обычная кнопка</button>
+    <br /><br />
+    <input id="but3" type="submit" value="Кнопка отправления формы">
+    <div id="group1">
+        <input type="radio" name="radio" id="radio1" /><label for="radio1">Первая радио кнопка</label><br/>
+        <input type="radio" name="radio" id="radio2" /><label for="radio2">Вторая радио кнопка</label><br />
+        <input type="radio" name="radio" id="radio3" /><label for="radio3">Третья радио кнопка</label><br />
+    </div>
+    <div id="group2">
+        <input type="checkbox" id="check1" /><label for="check1">Первый флажок</label><br />
+        <input type="checkbox" id="check2" /><label for="check2">Второй флажок</label><br />
+        <input type="checkbox" id="check3" /><label for="check3">Третий флажок</label><br />
+    </div>
+</body>
+</html>

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>CSS3</title>
+
+<style type="text/css">
+    .box1 {
+        border: 1px solid #434343;
+        padding: 10px;
+        background: #e3e3e3;
+        border-radius: 10px;
+        width: 500px;
+    }
+
+    .box2 {
+        border: 2px solid #434343;
+        padding: 47px;
+        background: #e3e3e3;
+        border-radius: 120px;
+        width: 132px;
+    }
+
+    .box3 {
+        border: 2px solid #434343;
+        padding: 47px;
+        background: #e3e3e3;
+        box-shadow: 5px 5px 2px black;
+        width: 132px;
+        opacity: .4;
+    }
+
+    @font-face {
+        font-family: 'IrmSoCKUcs';
+        src: url('IrmSoCKUcs.ttf');
+    }
+
+    .font {
+        font-family: IrmSoCKUcs;
+        font-size: 20px;
+    }
+
+    .box4 {
+        border: 2px solid #434343;
+        padding: 47px;
+        background-image: url(anim.gif);
+        border-radius: 120px;
+        width: 500px;
+        color: Yellow;
+        background-size: 10%;
+    }
+
+    .columns {
+        width: 50%;
+        color: Yellow;
+        column-count: 5;
+        -moz-column-count: 3;
+        -webkit-column-count: 3;
+        padding: 20px;
+        border: 1px solid;
+        resize: both;
+        overflow: auto;
+        background: url(anim.gif) top left repeat-x, url(bg_img_1.jpg) bottom left repeat-x;
+    }
+
+
+    .box5 {
+        -webkit-border-image: url(bg_img_1.jpg) 27 27 27 27 round round;
+        border: 8px solid #000;
+        -moz-border-top-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+        -moz-border-left-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+        -moz-border-right-colors: #897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;
+        padding: 5px 5px 5px 15px;
+        width: 300px;
+        position: relative;
+        -webkit-transition: top 1000ms linear;
+    }
+
+        .box5:hover {
+            top: 50px;
+        }
+        div.gradient {
+            width: 200px;
+            height: 100px;
+            background-color: #eee;
+            background-image: linear-gradient(left, #ccc, red 30%, red 70%, #ccc);
+            background-image: -o-linear-gradient(left, #ccc, red 30%, red 70%, #ccc);
+            background-image: -moz-linear-gradient(left, #ccc, red 30%, red 70%, #ccc);
+            background-image: -webkit-linear-gradient(left, #ccc, red 30%, red 70%, #ccc);
+        }
+        div.gradient p{
+            margin: 0;
+            padding-top: 30px;
+            text-align: center;
+            color:white;
+        }
+
+         div.linear-gradient {
+            width: 200px;
+            height: 100px;
+            background-color: #eee;
+            background-image: linear-gradient(left,black,white);
+            background-image: -o-linear-gradient(left,black,white);
+            background-image: -moz-linear-gradient(left,black,white);
+            background-image: -webkit-linear-gradient(left,black,white);
+        }
+        div.linear-gradient p{
+            margin: 0;
+            padding-top: 30px;
+            text-align: center;
+            color:white;
+        }
+
+         div.radial-gradient {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+             
+            background-color: #eee;
+            background-image: radial-gradient(white, black);
+            background-image: -moz-radial-gradient(white, black);
+            background-image: -webkit-radial-gradient(white, black);
+        }
+        div.radial-gradient p{
+            margin: 0;
+            padding-top: 60px;
+            text-align: center;
+            color: #eee;
+        }
+
+        div.no-rotated{
+                background-color: #ccc;
+                width: 120px;
+                height: 120px;
+                margin:5px;
+                padding: 40px 10px;
+                box-sizing: border-box;
+                border: 1px solid #333;
+                display: inline-block;
+
+            }
+            #rotated{
+                transform: rotate(30deg);
+            }
+</style>
+
+</head>
+<body>
+    <div class="no-rotated"></div>
+    <div class="no-rotated" id="rotated">rotate(30deg)</div>
+    <div class="no-rotated"></div>
+
+    <div class="box1">
+        ИНТЕРНЕТ - всемирная компьютерная сеть, соединяющая вместе тысячи сетей, включая сети вооруженных сил и правительственных организаций, образовательных учреждений, благотворительных организаций, индустриальных предприятий и корпораций всех видов, а также коммерческих предприятий (сервис-провайдеров), которые предоставляют частным лицам доступ к сети.
+
+        Среди типов доступа в Интернет различают on line доступ, который позволяет использовать сеть в режиме реального времени, и off line доступ, когда задание для сети готовится заранее, а при соединении происходит лишь передача или прием подготовленных данных. Такой доступ менее требователен к качеству и скорости каналов связи, но дает возможность пользоваться только e- mail — электронной почтой.
+    </div>
+    <div class="box2">
+        ИНТЕРНЕТ - всемирная компьютерная сеть.
+    </div>
+    <h1 style="text-shadow:#6699ff 1px 1px 1px">CSS 3  – создаем текст с тенью</h1>
+    <h1 style="text-shadow:#cccccc -15px -20px 2px">Как сделать текст с тенью при помощи CSS?</h1>
+    <div class="box3">
+        ИНТЕРНЕТ - всемирная компьютерная сеть, соединяющая вместе тысячи сетей, включая сети вооруженных сил и правительственных организаций, образовательных учреждений, благотворительных организаций, индустриальных предприятий и корпораций всех видов, а также коммерческих предприятий (сервис-провайдеров), которые предоставляют частным лицам доступ к сети.
+    </div>
+    <div class="font">НЛО прилетело и опубликовало эту надпись здесь.</div>
+    <div class="box4">
+        ИНТЕРНЕТ - всемирная компьютерная сеть, соединяющая вместе тысячи сетей, включая сети вооруженных сил и правительственных организаций, образовательных учреждений, благотворительных организаций, индустриальных предприятий и корпораций всех видов, а также коммерческих предприятий (сервис-провайдеров), которые предоставляют частным лицам доступ к сети.
+
+        Среди типов доступа в Интернет различают on line доступ, который позволяет использовать сеть в режиме реального времени, и off line доступ, когда задание для сети готовится заранее, а при соединении происходит лишь передача или прием подготовленных данных. Такой доступ менее требователен к качеству и скорости каналов связи, но дает возможность пользоваться только e- mail — электронной почтой.
+    </div>
+    <div class="columns">
+        <p>
+            Интернет - всемирная компьютерная сеть, соединяющая вместе тысячи сетей, включая сети вооруженных сил и правительственных организаций, образовательных учреждений, благотворительных организаций, индустриальных предприятий и корпораций всех видов, а также коммерческих предприятий (сервис-провайдеров), которые предоставляют частным лицам доступ к сети.
+        </p>
+        <p>
+            Среди типов доступа в Интернет различают  on line доступ, который позволяет использовать сеть в режиме реального времени, и  off line доступ, когда задание для сети готовится заранее, а при соединении происходит лишь передача или прием подготовленных данных. Такой доступ менее требователен к качеству и скорости каналов связи, но дает возможность пользоваться только
+            e- mail — электронной почтой.
+        </p>
+    </div>
+
+    <div class="box5">
+        Интернет - всемирная компьютерная сеть, соединяющая вместе тысячи сетей, включая сети вооруженных сил и правительственных организаций, образовательных учреждений, благотворительных организаций, индустриальных предприятий и корпораций всех видов, а также коммерческих предприятий (сервис-провайдеров), которые предоставляют частным лицам доступ к сети.
+        Среди типов доступа в Интернет различают  on line доступ, который позволяет использовать сеть в режиме реального времени, и  off line доступ, когда задание для сети готовится заранее, а при соединении происходит лишь передача или прием подготовленных данных. Такой доступ менее требователен к качеству и скорости каналов связи, но дает возможность пользоваться только
+        e- mail — электронной почтой.
+    </div>
+    <div class="linear-gradient"><p>Линейный градиент</p></div>
+    <div class="gradient"><p>Линейный градиент</p></div>
+    <div class="radial-gradient"><p>Радиальный градиент</p></div>
+
+</body>
+</html>
+

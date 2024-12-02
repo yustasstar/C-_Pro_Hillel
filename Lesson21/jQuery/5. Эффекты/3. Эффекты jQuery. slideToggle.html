@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        #menu {
+            border: 1px solid black;
+            color: white;
+            width: 178px;
+            padding: 6px;
+            margin: 0px;
+            background-color: #006064;
+            font-size: 1.1em;
+        }
+
+        #list {
+            border-bottom: 4px solid;
+            width: 192px;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            font-size: 1.1em;
+        }
+
+            #list li {
+                padding: 6px;
+                border-bottom-style: solid;
+                border-bottom-color: white;
+                border-width: 1px;
+                background-color: #ffd273;
+            }
+
+        #img {
+            margin: 0px;
+        }
+    </style>
+
+    <script>
+    $(document).ready(function () {
+
+        $("#menu").click(function () { $("#list").slideToggle(2000) });
+        $("#menu").mouseover(function () { $("#menu").css("background-color", "#01939a") });
+        $("#menu").mouseout(function () { $("#menu").css("background-color", "#006064") });
+        $("button").click(function () {
+            $("div").slideToggle(6000);
+        });
+    });
+    </script>
+</head>
+<body>
+    <p>Щелкните на заголовок "выбрать язык" для того, чтобы свернуть или развернуть меню.</p>
+    <p id="menu">Выбрать язык   </p>
+    <ul id="list">
+        <li>Английский язык</li>
+        <li>Русский язык</li>
+        <li>Франзузский язык</li>
+        <li>Испанский язык</li>
+        <li>Немецкий язык</li>
+    </ul>
+    <button>Свернуть/Развернуть</button><br><br>
+    <div>
+        <img src="WP_000005.jpg" alt="" />
+    </div>
+</body>
+</html>

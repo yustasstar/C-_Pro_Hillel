@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Window</title>
+</head>
+<body>
+    <a href="#" onclick="return openWin()">Открыть новое окно</a><br />
+    <a href="#" onclick="return closeWin()">Закрыть новое окно</a><br />
+    <a href="#" onclick="return putText()">Добавить текст в окно</a><br />
+    <a href="#" onclick="return shiftLeft()">Сдвинуть влево</a><br />
+    <a href="#" onclick="return shiftRight()">Сдвинуть вправо</a><br />
+    <a href="#" onclick="return shiftDown()">Сдвинуть вниз</a><br />
+    <a href="#" onclick="return shiftUp()">Сдвинуть вверх</a><br />
+    <a href="#" onclick="return increase()">Увеличить</a><br />
+    <a href="#" onclick="return decrease()">Уменьшить</a><br />
+    <script>
+        window.resizeTo(300, 300);
+        window.moveTo(50, 50);
+
+        var newWin = null;
+
+        function shiftLeft()
+        {
+            if(newWin)
+                newWin.moveBy(-50, 0);
+            return false;
+        }
+        
+        function shiftRight() {
+            if (newWin)
+                newWin.moveBy(50, 0);
+            return false;
+        }
+
+        function shiftUp() {
+            if (newWin)
+                newWin.moveBy(0, -50);
+            return false;
+        }
+
+        function shiftDown() {
+            if (newWin)
+                newWin.moveBy(0, 50);
+            return false;
+        }
+
+        function increase() {
+            if (newWin)
+                newWin.resizeBy(50, 50);
+            return false;
+        }
+
+        function decrease() {
+            if (newWin)
+                newWin.resizeBy(-50, -50);
+            return false;
+        }
+
+        function openWin()
+        {
+            newWin = window.open('', '', 'width=200, height=200, left=350, top=50, resizable=yes, menubar=yes, toolbar=yes, location=yes');
+            var popup = window.open('https://microsoft.com', 'Microsoft', 'width=400, height=400, resizable=yes');
+            return false;
+        }
+
+        function closeWin()
+        {
+            if (!newWin) {
+                alert("Окно еще не открыто!");
+            }
+            else if (newWin.closed) {
+                alert("Окно уже закрыто!");
+            }
+            else
+                newWin.close();
+
+            return false;
+        }
+
+        function putText()
+        {
+            if (!newWin) {
+                alert("Окно еще не открыто!");
+            }
+            else if (newWin.closed) {
+                alert("Окно уже закрыто!");
+            }
+            else
+                newWin.document.write("<p>New string</p>");
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

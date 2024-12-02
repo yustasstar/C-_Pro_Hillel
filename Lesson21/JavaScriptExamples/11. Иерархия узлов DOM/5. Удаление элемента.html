@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Удаление элемента</title>
+</head>
+<body>
+    <div class="article">
+        <h3>Заголовок статьи</h3>
+        <p>Первый абзац</p>
+        <p>Второй абзац</p>
+    </div>
+    <ul id="ul-4">
+        <li>Первый элемент</li>
+        <li>Второй элемент</li>
+        <li>Третий элемент</li>
+        <li>Четвёртый элемент</li>
+        <li>Пятый элемент</li>
+    </ul>
+    <input type="button" onclick="del_elem()" value="Удалить элемент списка" />
+    <input type="button" onclick="del_list()" value="Удалить список" />
+    <script>
+        var articleDiv = document.querySelector("div.article");
+        var removableNode = document.querySelectorAll("div.article p")[0];
+        articleDiv.removeChild(removableNode);
+
+        function del_list() {
+            var ul = document.getElementById('ul-4');
+            if (ul)
+                ul.removeNode(false);//только для IE
+        }
+
+        function del_elem() {
+            var ul = document.getElementById('ul-4');
+            var li = null;
+            if (ul)
+                li = ul.firstChild;
+            if (li)
+                ul.removeChild(li);
+        }
+    </script>
+</body>
+</html>

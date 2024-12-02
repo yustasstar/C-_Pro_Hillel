@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <script>
+    "use strict"; // используем стандарт ECMAScript 5
+    function square()
+    {
+        var n = 10; // локальная переменная
+        var result = 0; // локальная переменная
+        result = window.n * window.n; // глобальная переменная
+        document.write("Квадрат числа " + window.n + " равен " + result);
+        result = n * n; // локальная переменная
+        document.write("Квадрат числа " + n + " равен " + result);
+        
+    }
+    </script>
+</head>
+<body>
+    <script>
+    var n = 3; // глобальная переменная
+    square();
+    // ошибка: переменная result не объявлена
+    document.write("Квадрат числа " + n + " равен " + result);
+    </script>
+</body>
+</html>

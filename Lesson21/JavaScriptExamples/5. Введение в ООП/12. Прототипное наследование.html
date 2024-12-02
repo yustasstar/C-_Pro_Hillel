@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        function Person(name, surname, age)
+        {
+            this._name = name;
+            this._surname = surname;
+            this._age = age;
+        }
+
+        Person.prototype.setName = function (name) 
+        {
+            if (!name) {
+                throw new Error("Значение name не определено!");
+            }
+            this._name = name;
+        };
+        Person.prototype.getName = function () 
+        {
+            return this._name;
+        };
+
+        Person.prototype.setSurname = function (surname) 
+        {
+            if (!surname) {
+                throw new Error("Значение surname не определено!");
+            }
+            this._surname = surname;
+        };
+        Person.prototype.getSurname = function () 
+        {
+            return this._surname;
+        };
+
+        Person.prototype.setAge = function (age) 
+        {
+            if (!age || age <= 0) {
+                throw new Error("Значение age должно быть положительным!");
+            }
+            this._age = age;
+        };
+
+        Person.prototype.getAge = function () 
+        {
+            return this._age;
+        };
+
+        Person.prototype.print = function () 
+        {
+            document.write("Имя: " + this._name + "<br />");
+            document.write("Фамилия: " + this._surname + "<br />");
+            document.write("Возраст: " + this._age + "<br />");
+        };
+        
+
+        function Student(name, surname, age, rating)
+        {
+            Person.call(this, name, surname, age);
+
+            this._rating = rating;
+        }
+
+        Student.prototype.__proto__ = Person.prototype;
+
+        Student.prototype.setRating = function (rating) 
+        {
+            if (!rating || rating <= 0 || rating > 12) {
+                throw new Error("Значение rating должно быть в диапазоне от 1 до 12!");
+            }
+            this._rating = rating;
+        };
+
+        Student.prototype.getRating = function () 
+        {
+            return this._rating;
+        };
+
+        Student.prototype.print = function ()
+        {
+            Person.prototype.print.call(this);
+            document.write("Рейтинг: " + this._rating + "<br />");
+        };
+
+
+        var person = new Person("Иван", "Иванов", 25);
+        person.print();
+        person.setName("Петр");
+        person.setSurname("Петров");
+        person.setAge(30);
+        person.print();
+
+        var student = new Student("Алексей", "Алексеев", 27, 10.5);
+        student.print();
+        student.setName("Сергей");
+        student.setSurname("Кузнецов");
+        student.setAge(30);
+        student.setRating(12);
+        student.print();
+     </script>
+</body>
+</html>

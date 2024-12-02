@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Демонстрация списков</title>
+    <style>
+        ol {
+            list-style: upper-alpha;
+        }
+
+        ol ul {
+            list-style: url(маркеры/m_gold_ball.gif);
+        }
+
+        ol ol {
+            list-style: decimal;
+        }
+
+        ol ol ul {
+            list-style: url(маркеры/marker01.gif);
+        }
+    </style>
+</head>
+<body style="background: #D3ECFF">
+    <h3>Пример списка с графическими маркерами</h3>
+    <ol style="list-style: url(img/m_gold_ball.gif) outside;">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Forth</li>
+        <li>Fifth</li>
+    </ol>
+    <ol style="list-style: lower-roman">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Forth</li>
+        <li>Fifth</li>
+    </ol>
+
+    <h3>Пример многоуровневого списка</h3>
+    <ol>
+        <li>
+            Cascading Style Sheets
+        </li>
+        <li>
+            Cascading Style Sheets
+            <ul>
+                <li>Cascading Style Sheets</li>
+                <li>Cascading Style Sheets</li>
+                <li>Cascading Style Sheets</li>
+            </ul>
+        </li>
+        <li>
+            Cascading Style Sheets
+            <ol>
+                <li>
+                    Cascading Style Sheets
+                    <ul>
+                        <li>Cascading Style Sheets</li>
+                        <li>Cascading Style Sheets</li>
+                        <li>Cascading Style Sheets</li>
+                    </ul>
+                </li>
+                <li>
+                    Cascading Style Sheets
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+</body>
+</html>

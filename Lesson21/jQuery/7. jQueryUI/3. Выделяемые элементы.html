@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+/* С помощью классов .ui-selecting и .ui-selected настраивается оформление выбираемых и выбранных элементы. */
+
+        #select1 .ui-selecting {
+            background: #E3B1F3;
+            border-style: solid;
+            border-width: 1px;
+        }
+
+        #select1 .ui-selected {
+            font-weight: bold;
+            font-size: 1.1em;
+            border-style: solid;
+            border-width: 1px;
+            background: #B964D4;
+        }
+
+        #select1 {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 45%;
+        }
+
+            #select1 li {
+                margin: 2px;
+                padding: 0.4em;
+                border-style: solid;
+                border-width: 1px;
+                height: 18px;
+            }
+    </style>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $("#select1").selectable();
+    });
+    </script>
+</head>
+<body>
+
+    <ol id="select1" class="ui-widget">
+        <li>Первый пункт списка</li>
+        <li>Второй пункт списка</li>
+        <li>Третий пункт списка</li>
+        <li>Четвертый пункт списка</li>
+        <li>Пятый пункт списка</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Расширение объектов. Prototype</title>
+</head>
+<body>
+    <script>
+        function Rectangle(l, t, r, b) {
+            this.left = l;
+            this.top = t;
+            this.right = r;
+            this.bottom = b;
+            this.Width = function(){
+                return this.right - this.left;
+            };
+            this.Height = function(){
+                return this.bottom - this.top;
+            };
+            return this;
+        }
+
+        function array_max() {
+            var i, max = this[0];
+            for (i = 1; i < this.length; i++)
+                if (max < this[i])
+                    max = this[i];
+            return max;
+        }
+
+
+        var r1 = new Rectangle(10, 20, 60, 80);
+        alert("Ширина прямоугольника: " + r1.Width());
+        alert("Высота прямоугольника: " + r1.Height());
+        r1.area = function () {
+            return this.Width() * this.Height();
+        }
+        alert("Площадь прямоугольника: " + r1.area());
+
+        var r2 = new Rectangle(20, 30, 70, 80);
+        alert("Ширина прямоугольника: " + r2.Width());
+        alert("Высота прямоугольника: " + r2.Height());
+        // alert("Площадь прямоугольника: " + r2.area()); // ошибка: объект не поддерживает данный метод
+
+        Rectangle.prototype.areaOfRectangle = function() {
+            return this.Width() * this.Height();
+        }
+        alert("Площадь прямоугольника: " + r1.areaOfRectangle());
+        alert("Площадь прямоугольника: " + r2.areaOfRectangle());
+
+
+        Array.prototype.max = array_max;
+
+        var a = new Array();
+        var count = 5;
+        for (var i = 0; i < count; i++)
+            a[i] = parseInt(prompt("Введите целое число:", ""));
+        alert("Массив: " + a.join(", ")); 
+        alert("Максимум: " + a.max()); 
+    </script>
+</body>
+</html>

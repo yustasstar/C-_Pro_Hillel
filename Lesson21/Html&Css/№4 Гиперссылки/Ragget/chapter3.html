@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Гиперссылки</title>
+</head>
+<body style="font-family: Arial; font-size: 12pt; padding: 10px 20px 10px 40px">
+    <h1>Три вида списков</h1>
+    <p>
+        В HTML поддерживаются три вида списков. Первый - маркированный список, часто
+        называемый <em><strong>неупорядоченным</strong></em>. Для него используются теги &lt;<strong>ul</strong>&gt; и
+        &lt;<strong>li</strong>&gt;, например:
+    </p>
+    <pre style="color: #000066;">    &lt;<strong>ul</strong>&gt;
+        &lt;<strong>li</strong>&gt;первый элемент списка&lt;/<strong>li</strong>&gt;
+        &lt;<strong>li</strong>&gt;второй элемент списка&lt;/<strong>li</strong>&gt;
+        &lt;<strong>li</strong>&gt;третий элемент списка&lt;/<strong>li</strong>&gt;
+    &lt;/<strong>ul</strong>&gt;</pre>
+
+    <p>
+        Обратите внимание, что список всегда должен заканчиваться конечным тегом
+        &lt;/<strong>ul</strong>&gt;, но конечный тег &lt;/<strong>li</strong>&gt; необязателен и может быть опущен.
+        Второй вид списков - нумерованные списки, часто они называются
+        <em><strong>упорядоченными</strong></em>. Для этого типа используются теги &lt;<strong>ol</strong>&gt; и
+        &lt;<strong>li</strong>&gt;. Например:
+    </p>
+    <pre style="color: #000066;">    &lt;<strong>ol</strong>&gt;
+        &lt;<strong>li</strong>&gt;первый элемент списка&lt;/<strong>li</strong>&gt;
+        &lt;<strong>li</strong>&gt;второй элемент списка&lt;/<strong>li</strong>&gt;
+        &lt;<strong>li</strong>&gt;третий элемент списка&lt;/<strong>li</strong>&gt;
+    &lt;/<strong>ol</strong>&gt;</pre>
+    <p>
+        Как и для маркированных списков, всегда нужно указывать конечный тег
+        &lt;/<strong>ol</strong>&gt;, а конечный тег &lt;/<strong>li</strong>&gt; необязателен и может быть опущен.
+    </p>
+
+    <p>
+        Третий и последний тип списков - список определений. Он позволяет создавать
+        списки терминов и их определений. Списки этого тип начинаются тегом &lt;<strong>dl</strong>&gt; и
+        заканчиваются тегом &lt;/<strong>dl</strong>&gt; Каждый термин начинается тегом &lt;<strong>dt</strong>&gt;, а каждое определение - тегом &lt;<strong>dd</strong>&gt;. Например:
+    </p>
+    <pre style="color: #000066;">    &lt;<strong>dl</strong>&gt;
+        &lt;<strong>dt</strong>&gt;первый термин&lt;/<strong>dt</strong>&gt;
+        &lt;<strong>dd</strong>&gt;его определение&lt;/<strong>dd</strong>&gt;
+        &lt;<strong>dt</strong>&gt;второй термин&lt;/<strong>dt</strong>&gt;
+        &lt;<strong>dd</strong>&gt;его определение&lt;/<strong>dd</strong>&gt;
+        &lt;<strong>dt</strong>&gt;третий термин&lt;/<strong>dt</strong>&gt;
+        &lt;<strong>dd</strong>&gt;его определение&lt;/<strong>dd</strong>&gt;
+    &lt;/<strong>dl</strong>&gt;
+</pre>
+    <p>Конечные теги &lt;/<strong>dt</strong>&gt; и &lt;/<strong>dd</strong>&gt; необязательны, их можно не указывать. Обратите внимание, что списки могут быть вложенными. Например:</p>
+    <pre style="color: #000066;">    &lt;<strong>ol</strong>&gt;
+        &lt;<strong>li</strong>&gt;первый элемент списка&lt;/<strong>li</strong>&gt;
+        &lt;<strong>li</strong>&gt;второй элемент списка
+            &lt;<strong>ul</strong>&gt;
+                &lt;<strong>li</strong>&gt;первый вложенный элемент&lt;/<strong>li</strong>&gt;
+                &lt;<strong>li</strong>&gt;второй вложенный элемент&lt;/<strong>li</strong>&gt;
+            &lt;/<strong>ul</strong>&gt;
+        &lt;/<strong>li</strong>&gt;
+        &lt;<strong>li</strong>&gt;третий элемент списка&lt;/<strong>li</strong>&gt;
+    &lt;/<strong>ol</strong>&gt;
+</pre>
+    <p>Для длинных элементов списков можно также использовать абзацы, заголовки и т.д.</p>
+
+    <p style="text-align: center;"><a href="index.html">Содержание</a></p>
+</body>
+</html>

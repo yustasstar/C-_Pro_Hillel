@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Вложенные объекты и массивы в объектах</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        var country = {
+            name: "Украина",
+            language: "Украинский",
+            capital: {
+
+                name: "Киев",
+                population: 2909491,
+                year: 1534
+            }
+        };
+        document.write("Страна: " + country.name + "<br />");
+        document.write("Государственный язык: " + country.language + "<br />");
+        document.write("Столица: " + country.capital.name + "<br />"); 
+        document.write("Население: " + country["capital"]["population"] + "<br />");
+        document.write("Год основания: " + country.capital["year"] + "<br />");
+
+        var country2 = {
+
+            name: "Швейцария",
+            languages: ["немецкий", "французский", "итальянский"], // массив строк
+            capital: {
+                name: "Берн",
+                population: 126598
+            },
+            cities: [ // массив объектов
+                { name: "Цюрих", population: 378884 },
+                { name: "Женева", population: 188634 },
+                { name: "Базель", population: 164937 }
+            ]
+        };
+
+        document.write("<br />Страна: " + country2.name + "<br />");
+        document.write("Столица: " + country2.capital.name + "<br />");
+        document.write("Население: " + country2["capital"]["population"] + "<br />");
+        document.write("<h5>Официальные языки Швейцарии</h5>");
+        for (var i = 0; i < country2.languages.length; i++)
+            document.write(country2.languages[i] + "<br/>");
+        document.write("<h5>Города Швейцарии</h5>");
+        for (var i = 0; i < country2.cities.length; i++)
+            document.write(country2.cities[i].name + "<br/>");
+    </script>
+</body>
+</html>

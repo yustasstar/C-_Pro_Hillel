@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Element. Рекурсивный обход.</title>
+</head>
+<body>
+    <div class="article">
+        <h3>Заголовок статьи</h3>
+        <p>Первый абзац</p>
+        <p>Второй абзац</p>
+    </div>
+    <script>
+        function getChildren(elem){
+
+            for(var i in elem.childNodes){
+
+                if(elem.childNodes[i].nodeType===1){
+
+                    alert(elem.childNodes[i].tagName);
+                    getChildren(elem.childNodes[i]);
+                }
+            }
+        }
+        var root = document.documentElement;
+        alert(root.tagName);
+        getChildren(root);
+    </script>
+</body>
+</html>

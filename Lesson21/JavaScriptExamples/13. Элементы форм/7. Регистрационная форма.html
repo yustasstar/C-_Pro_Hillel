@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Элементы форм</title>
+<style>
+    body {
+        font: 10pt Tahoma;
+    }
+
+    table.form_holder1 {
+        font: 10pt Tahoma;
+        background-color: #ddeeff;
+    }
+
+        table.form_holder1 thead {
+            background-color: #334466;
+            color: white;
+            font-weight: bold;
+        }
+</style>
+</head>
+<body>
+    <form name="form1">
+        <table class="form_holder1" cellspacing="1">
+            <thead>
+                <tr>
+                    <td colspan="2" align="center">Регистрация на сервере:</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Логин:</td>
+                    <td><input size="26" type="text" name="text_login" /></td>
+                </tr>
+                <tr>
+                    <td>Пароль:</td>
+                    <td><input size="26" type="password" name="text_password1" /></td>
+                </tr>
+                <tr>
+                    <td>Подтверждение:</td>
+                    <td><input size="26" type="password" name="text_password2" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><hr /></td>
+                </tr>
+                <tr>
+                    <td>Полное имя (ФИО):</td>
+                    <td><input size="26" type="text" name="fullname" /></td>
+                </tr>
+                <tr style="vertical-align:top">
+                    <td>Пол</td>
+                    <td>
+                        <input type="radio" name="radio_gender" value="male" />мужской<br />
+                        <input type="radio" name="radio_gender" value="female" />женский
+                    </td>
+                </tr>
+                <tr style="vertical-align:top">
+                    <td>Иностранные<br />языки:</td>
+                    <td>
+                        <input type="checkbox" name="check_languages_1" value="English" checked />Английский<br />
+                        <input type="checkbox" name="check_languages_2" value="German" />Немецкий<br />
+                        <input type="checkbox" name="check_languages_3" value="French" />Французский<br />
+                        <input type="checkbox" name="check_languages_4" value="Spanish" />Испанский<br />
+                        <input type="checkbox" name="check_languages_5" value="Italian" />Итальянский<br />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Сфера деятельности:</td>
+                    <td>
+                        <select name="list_work">
+                            <option value="0">обслуживание</option>
+                            <option value="1" selected>образование</option>
+                            <option value="2">медицина</option>
+                            <option value="3">наука</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>e-mail</td>
+                    <td><input size="26" type="text" name="mail" /></td>
+                </tr>
+                <tr style="vertical-align:top">
+                    <td>Дополнительная<br />информация:</td>
+                    <td>
+                        <textarea name="text_info" cols="20" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Готово" />
+                        <input type="reset" value="Сброс" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

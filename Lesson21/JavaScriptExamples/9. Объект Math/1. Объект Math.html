@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Math</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        document.write("Функция abs() возвращает абсолютное значение числа" + "<br />"); 
+        var x = -25;
+        document.write(Math.abs(x) + "<br />"); 
+        var y = 34;
+        document.write(Math.abs(y) + "<br />");
+
+        document.write("Функции min() и max() возвращают соответственно минимальное и максимальное значение из набора чисел" + "<br />");
+        document.write(Math.max(19, 45) + "<br />");
+        document.write(Math.min(33, 24) + "<br />");
+        document.write(Math.max(1, 2, 3, -9, 46, -23) + "<br />");
+
+        document.write("Функция ceil() округляет число до ближайшего большего целого числа" + "<br />");
+        document.write(Math.ceil(7.2) + "<br />");
+        document.write(Math.ceil(-7.9) + "<br />");
+
+        document.write("Функция floor() округляет число до ближайшего меньшего целого числа" + "<br />");
+        document.write(Math.floor(7.2) + "<br />");
+        document.write(Math.floor(-7.9) + "<br />");
+
+        document.write("Функция round() округляет число до ближайшего меньшего целого числа, если его десятичная часть меньше 0.5." + "<br />");
+        document.write("Если же десятичная часть равна или больше 0.5, то округление идет до ближайшего большего целого числа" + "<br />");
+        document.write(Math.round(7.5) + "<br />");
+        document.write(Math.round(7.4) + "<br />");
+        document.write(Math.round(-7.5) + "<br />");
+        document.write(Math.round(-7.4) + "<br />");
+        document.write(Math.round(-7.6) + "<br />");
+
+        document.write("Функция random() возвращает случайное число с плавающей точкой ии диапазона от 0 до 1" + "<br />");
+        document.write(Math.random() + "<br />");
+
+        document.write("Функция pow() возводит число в степень" + "<br />");
+        document.write(Math.pow(2, 4) + "<br />");
+
+        document.write("Функция sqrt() возвращает квадратный корень числа" + "<br />");
+        document.write(Math.sqrt(49) + "<br />");
+        document.write(Math.sqrt(20) + "<br />");
+        document.write(Math.sqrt(9) + "<br />");
+
+        document.write("Число PI: " + Math.PI + "<br />");
+
+        document.write("Тригонометрические функции" + "<br />");
+        document.write(Math.sin(Math.PI/180 * 90) + "<br />");
+        document.write(Math.cos(0) + "<br />");
+        document.write(Math.tan(Math.PI / 180 * 45) + "<br />");
+
+       
+    </script>
+</body>
+</html>

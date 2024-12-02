@@ -1,0 +1,68 @@
+﻿<html>
+<head>
+<title>Заголовок</title>
+</head>
+<body>
+<h1>Заголовок</h1><p id="paragraph">Абзац</p><pre>Код</pre>
+
+<ul>
+  <li>Элемент внешнего списка №1</li>
+  <li>Элемент внешнего списка №2
+    <ul id="ul-2">
+      <li>Элемент вложенного списка №2.1</li>
+      <li>Элемент вложенного списка №2.2</li>
+      <li>Элемент вложенного списка №2.3</li>
+    </ul>
+  </li>
+  <li>Элемент внешнего списка №3</li>
+  <li>Элемент внешнего списка №4</li>
+</ul>
+
+<input type="button" value="Click Me" onclick="f1()" />
+<input type="button" value="Click Me" onclick="f2()" />
+<input type="button" value="Click Me" onclick="f3()" />
+<input type="button" value="Click Me" onclick="f4()" />
+<input type="button" value="Click Me" onclick="f5()" />
+<input type="button" value="Click Me" onclick="f6()" />
+<input type="button" value="Click Me" onclick="f7()" />
+
+<script>
+
+function f1()
+{
+	document.getElementById ('ul-2').parentNode.style.color = 'blue';
+}
+
+function f2()
+{
+	alert(document.getElementById('paragraph').previousSibling.tagName);
+}
+
+function f3()
+{
+	document.getElementById('paragraph').previousSibling.style.color = 'red';
+}
+
+function f4()
+{
+	alert(document.getElementById ('ul-2').parentNode.nextSibling.nextSibling.innerText);
+}
+
+function f5()
+{
+	alert(document.getElementById ('ul-2').previousSibling.nodeValue);
+}
+
+function f6()
+{
+	alert(document.documentElement.tagName);
+}
+
+function f7()
+{
+    alert(document.getElementById('ul-2').childNodes.length);
+}
+
+</script>
+</body>
+</html>

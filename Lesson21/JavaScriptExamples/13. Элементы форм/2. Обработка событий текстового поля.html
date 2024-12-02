@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Элементы форм</title>
+    <style>
+        #text_1 {
+            border: 1px solid #888888;
+            color: #888888;
+        }
+    </style>
+</head>
+<body>
+    <form name="testform1">
+        Текст: <input type="text" name="text_1" id="text_1" value="Some text..."
+                      onfocus="focusElem(this)"
+                      onblur="blurElem(event)" />
+        <input type="button" value="Ok" onclick="go()">
+    </form>
+    <script type="text/javascript">
+        function go() {
+            alert ("Value: " + document.forms["testform1"].elements["text_1"].value);
+            alert("Value: " + testform1.text_1.value);
+        }
+        function focusElem(elem) {
+            with (elem.style) {
+                border = "2px inset #DDDDDD";
+                color = "#000000"
+            }
+            elem.select();
+        }
+        function blurElem(event) {
+            with (event.target.style) {
+                border = "1px solid #888888";
+                color = "#888888";
+            }
+        }
+
+    </script>
+
+</body>
+</html>

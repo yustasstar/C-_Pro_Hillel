@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Регулярные выражения</title>
+</head>
+<body>
+    <script>
+        var r = /\s+/g;
+        var text = prompt("Введите предложение: ", "");
+        var arr = text.split(r);
+        document.write(arr.join("<br />"));
+    </script>
+</body>
+</html>

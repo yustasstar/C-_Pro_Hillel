@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Проверка наличия и перебор методов и свойств</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        var club = {
+            name: "Черноморец",
+            city: "Одесса",
+            year: 1936,
+            display: function () {
+                document.write(this.name + "<br />");
+                document.write(this.city + "<br />");
+                document.write(this.year + "<br />");
+            }
+        };
+        club.display();
+        var hasNameProp = "name" in club;
+        document.write(hasNameProp + "<br />"); // true - свойство name есть в club
+        var hasStadiumProp = "stadium" in club;
+        document.write(hasStadiumProp + "<br />"); // false - в club нет свойства или метода под названием stadium
+
+        hasNameProp = club.name !== undefined;
+        document.write(hasNameProp + "<br />"); // true - свойство name есть в club
+        hasStadiumProp = club.stadium !== undefined;
+        document.write(hasStadiumProp + "<br />"); // false - в club нет свойства или метода под названием stadium
+
+        // метод hasOwnProperty(), который определен в типе Object
+        hasNameProp = club.hasOwnProperty('name');
+        document.write(hasNameProp + "<br />"); // true - свойство name есть в club
+        var hasDisplayMethod = club.hasOwnProperty('display');
+        document.write(hasDisplayMethod + "<br />"); // true - метод display есть в club
+        hasStadiumProp = club.hasOwnProperty('stadium');
+        document.write(hasStadiumProp + "<br />"); // false - в club нет свойства или метода под названием stadium
+
+        // Перебор свойств и методов
+        for (var key in club)
+        {
+            document.write(key + " : " + club[key] + "<br />");
+        }
+    </script>
+</body>
+</html>

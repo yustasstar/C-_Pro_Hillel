@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <script>
+    // http://www.wisdomweb.ru/JQd/selectors.php
+    $(document).ready(function () {  // Предотвращение преждевременного выполнения кода в jQuery
+
+        $("#el1").click(function () {
+            $(this).css("font-size", "30pt");
+        });
+        $("#el2").dblclick(function () {
+            $(this).css("font-size", "30pt");
+            $(this).css("color", "red");
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <p id="el1"> Щелкните на меня один раз.</p>
+    <p id="el2"> Щелкните на меня два раза.</p>
+</body>
+</html>

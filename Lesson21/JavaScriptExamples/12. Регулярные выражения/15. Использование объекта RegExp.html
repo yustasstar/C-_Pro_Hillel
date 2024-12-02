@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Регулярные выражения</title>
+</head>
+<body>
+    <div style="background: #dddddd; padding: 10px; width: 257px">
+        <form name="sf">
+            Поиск:<input type="text" name="what" />
+            <input type="button" value="Start" onclick="ss()" />
+            <br />
+            <input type="checkbox" name="icase" />Игнорировать регистр<br />
+            <input type="checkbox" name="exact" />Точное соответствие
+        </form>
+    </div>
+    <script>
+        function ss() {
+            var rBody = "(\\b" + sf.what.value;
+            if (sf.exact.checked)
+                rBody += "\\b)";
+            else
+                rBody += "\\w*)";
+
+            var rKey = "g";
+            if (sf.icase.checked)
+                rKey += "i";
+
+            var r = new RegExp(rBody, rKey);
+            var t = srcText.innerText;
+            var arr1 = t.match(r);
+            if (arr1) {
+                alert("Найдено " + arr1.length + " соответствий!");
+                srcText.innerHTML = t.replace(r, "<b>$1</b>")
+            }
+            else {
+                alert("Соответствий нет!")
+                sf.what.focus();
+                sf.what.select();
+            }
+        }
+    </script>
+
+    <hr />
+    <p id="srcText" style="margin: 0 20px 10px 30px">
+        AceHTML 5 has a user friendly interface. In fact, it has graphic toolbars that allow the user to create pages easily in a short time. Moreover, there is a set of tabs which organizes the tools by category to make it easy for the user to find his/her way through this impressive array of tools.
+        AceHTML 5 has a user friendly interface. In fact, it has graphic toolbars that allow the user to create pages easily in a short time. Moreover, there is a set of tabs which organizes the tools by category to make it easy for the user to find his/her way through this impressive array of tools.
+        AceHTML 5 has a user friendly interface. In fact, it has graphic toolbars that allow the user to create pages easily in a short time. Moreover, there is a set of tabs which organizes the tools by category to make it easy for the user to find his/her way through this impressive array of tools.
+    </p>
+</body>
+</html>

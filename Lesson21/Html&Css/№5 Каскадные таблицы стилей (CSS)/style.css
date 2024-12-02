@@ -1,0 +1,31 @@
+body {
+    font-family: Arial;
+    font-size: 10pt;    
+}                   
+p {
+    text-align: justify;
+}
+#cite {
+    text-align: center;
+    font-size: 12pt;
+    color: #333399;
+    border: 1px dashed black;
+}
+                                          
+/* 1й уровень */                
+ol { list-style-type: upper-roman; }
+/* 2й уровень */                
+ol  ol { list-style-type: decimal; }
+/* 3й уровень */                
+ol ol ol { list-style-type: lower-alpha; }
+                      
+a.rollover {
+    color: #660000;
+    text-decoration: none;  
+    font-size: 14pt;
+    font-weight: bold;
+}                         
+a.rollover:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}

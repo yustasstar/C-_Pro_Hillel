@@ -1,0 +1,11 @@
+div.b-yellow { background: #ffffc0; border-color: #e1e190; }
+div.b-gray { background: #eeeeee; border-color: #dcdcdc; }
+div.b-green { background: #eeeeee; border-color: #dcdcdc; }
+div.b-blue { background: #eeeeee; border-color: #dcdcdc; }
+div.b-red { background: #eeeeee; border-color: #dcdcdc; }
+
+span.t-cyan { color: #0099cc; }
+span.t-darkred { color: #cc0000; }
+span.t-green { color: green; }
+span.t_gray { color: #888888; }
+

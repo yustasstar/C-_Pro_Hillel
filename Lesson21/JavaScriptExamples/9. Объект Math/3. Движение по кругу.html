@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Math</title>
+</head>
+<body>
+    <span id="elemToMove" style="position: absolute; left:0; top:0">😊</span>
+    <script type="text/javascript">
+        var R = 80,              // радиус окружности
+            a = 0,               // угол (в радианах)
+            da = 3 * Math.PI / 180,  // приращение угла
+            delay = 30;          // задержка 
+        var elem = document.getElementById("elemToMove");
+
+        // функция движения элемента
+        function moveElem() {
+            // изменение координат элемента
+            elem.style.left = 100 + R * Math.cos(a) + "px";
+            elem.style.top = 100 + R * Math.sin(a) + "px";
+            // увеличение расстояния до полюса
+            a += da;
+        }
+        // периодический вызов функции движения
+        setInterval("moveElem()", delay);
+    </script>
+</body>
+</html>

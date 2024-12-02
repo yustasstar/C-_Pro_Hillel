@@ -1,0 +1,25 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>imgExample</title>
+</head>
+<body>
+    <canvas id='example'>Обновите браузер</canvas>
+    <script>
+      var example = document.getElementById("example"),
+        ctx       = example.getContext('2d'), // Контекст
+        pic = new Image();              // "Создаём" изображение
+      example.height = 300;
+      example.height = 450;
+      pic.src    = 'http://habrahabr.ru/i/nocopypast.png';  // Источник изображения, позаимствовано на хабре
+      pic.onload = function() {    // Событие onLoad, ждём момента пока загрузится изображение
+          ctx.drawImage(pic, 0, 0);  // Рисуем изображение от точки с координатами 0, 0
+          // Иллюстрация для пример №2
+          ctx.drawImage(pic, 0, 130, 300, 150);
+          // Иллюстрация для пример №3
+          ctx.drawImage(pic, 25, 42, 85, 55, 0, 300, 170, 110);
+      }
+    </script>
+</body>
+</html>

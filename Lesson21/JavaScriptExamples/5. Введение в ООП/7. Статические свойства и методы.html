@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Статические свойства и методы</title>
+</head>
+<body>
+    <script>
+        function Calc()
+        {
+            Calc.counter++;
+        }
+        Calc.showCount = function () {
+            alert(this.counter);
+        }
+        new Calc();
+        Calc.showCount();
+        Calc.counter = 0;
+
+       
+
+        Calc.add = function (a, b) {
+            return a + b;
+        }
+
+        Calc.mult = function (a, b) {
+            return a * b;
+        }
+
+        alert(Calc.add(10, 20));
+        alert(Calc.mult(10, 20));
+        new Calc();
+        new Calc();
+        new Calc();
+        Calc.showCount();        
+    </script>
+</body>
+</html>

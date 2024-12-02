@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Регулярные выражения</title>
+</head>
+    <body>
+        <script>
+            var i;
+            var s = prompt("Ваша ОС (Windows/Linux/FreeBSD/DOS)?");
+            if ((i = s.search(/^Windows$|^Linux$|^FreeBSD$|^DOS$/i)) == -1) {
+                alert("Такой ОС нет в списке");
+            }
+            else {
+                alert("Есть такая ОС");
+            }
+
+        </script>
+    </body>
+</html>

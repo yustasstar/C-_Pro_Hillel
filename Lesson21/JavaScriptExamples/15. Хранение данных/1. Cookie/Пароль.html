@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Куки</title>
+</head>
+<body>
+    <form name="frm">
+        <input type="text" name="login" width="200" /><br />
+        <input type="password" name="password" width="200" onfocus="getCookie()" />
+        <input type="button" onclick="setCookie()" value="Click me!" />
+    </form>
+
+    <script>
+        function setCookie() {
+            var d = new Date();
+            d.setMonth(d.getMonth() + 3);
+            document.cookie = "login=" + encodeURIComponent(frm.login.value) + ";expires=" + d.toUTCString();
+            document.cookie = "password=" + frm.password.value + ";expires=" + d.toUTCString();
+            alert("Логин и пароль сохранены в Cookie!");
+        }
+
+        function getCookie() {
+            var str = document.cookie;
+            if (str.length == 0) {
+                return;
+            }
+            var arr = str.split(";");
+            var login = arr[0].slice("login".length + 1);
+            login = decodeURIComponent(login);
+            var password = arr[1].slice("password".length + 1);
+            if (frm.login.value == login)
+                frm.password.value = password;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function () {
+
+    /*
+    Опция autoOpen устанавливает должно ли окно быть открыто автоматически после создания (значение true) или нет (значение false).
+    С помощью метода open можно открыть, а с помощью метода close закрыть модальное диалоговое окно.
+    С помощью опции buttons можно добавлять кнопки в диалоговые окна.
+    */
+
+        $("#dialog2").dialog({ autoOpen: false, buttons: {
+            OK: function () {
+                $(this).dialog("close");
+                alert("Вы нажали ОК.");
+            },
+            Отмена: function () {
+                $(this).dialog("close");
+                alert("Вы нажали Отмена.");
+            }
+        }
+        });
+        $("#but1").click(function () {
+		$("#dialog1").dialog({ autoOpen: false, buttons: {
+            OK: function () {
+                $(this).dialog("close");
+                alert("Вы нажали ОК.");
+            }
+        }
+        });
+            $("#dialog1").dialog("open");
+        });
+
+        $("#but2").click(function () {
+            $("#dialog2").dialog("open");
+        });
+    });
+    </script>
+</head>
+<body>
+    <input id="but1" type="button" value="Открыть окно с одной кнопкой" />
+    <input id="but2" type="button" value="Открыть окно с двумя кнопками" />
+    <div id="dialog1" title="Первое окно" style="display:none">
+        <p><b>Это - первое окно</b>. Данное окно имеет одну кнопку <b>OK</b>.</p>
+    </div>
+    <div id="dialog2" title="Второе окно">
+        <p><b>Это - второе окно</b>. Данное окно имеет две кнопки <b>OK</b> и <b>Отмена</b>.</p>
+    </div>
+</body>
+</html>

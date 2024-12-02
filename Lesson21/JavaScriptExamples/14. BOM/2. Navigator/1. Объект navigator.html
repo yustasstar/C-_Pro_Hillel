@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Navigator</title>
+</head>
+<body>
+    <script type="text/javascript">
+    document.write("<table width='100%' align='center'>");
+    document.write("<tr>");
+    document.write("<td>appCodeName - внутреннее кодовое имя, присвоенное каждому браузеру</td><td>"
+        + navigator.appCodeName + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>appName - официальное название браузера</td><td>" + navigator.appName + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>appVersion - номер версии браузера</td><td>" + navigator.appVersion + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>appMinorVersion - дополнительная информация о версии браузера </td><td>"
+        + navigator.appMinorVersion + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>cpuClass - класс процессора, установленного на пользовательском компьютере</td><td>"
+        + navigator.cpuClass + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>platform - платформа, на которой запущен браузер</td><td>"
+        + navigator.platform + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>userAgent - строка, содержащая все или некоторые из свойств: appCodeName, appName, appVersion, language и platform</td><td>"
+        + navigator.userAgent + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>systemLanguage - язык по умолчанию, поддерживаемый системой</td><td>"
+        + navigator.systemLanguage + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>userLanguage - язык, установленный в системе пользователем</td><td>"
+        + navigator.userLanguage + "</td>");
+    document.write("</tr>");
+    document.write("<tr>");
+    document.write("<td>cookieEnabled - принимает значение true, если поддержка cookie-файлов (файлов предпочтений пользователя) в браузере разрешена, и false - в противном случае</td><td>"
+        + navigator.cookieEnabled + "</td>");
+    document.write("</tr>");
+    document.write("</table>");
+    </script>
+</body>
+</html>

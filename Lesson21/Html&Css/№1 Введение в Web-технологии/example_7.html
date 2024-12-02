@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Cохранение исходного форматирования текста</title>
+</head>
+<body>
+<pre>#include &lt;iostream&gt;
+using namespace std;
+double Add(double a, double b)
+{
+	return a + b;
+}
+double Sub(double a, double b)
+{
+	return a - b;
+}
+double Mult(double a,double b)
+{
+	return a * b;
+}
+double Div(double a,double b)
+{
+	return a / b;
+}
+void f (int n, int m)
+{
+	cout << n << endl << m << endl;
+}
+void horizontal (int stars)
+{
+	for (int i = 0; i < stars; i++)
+		cout << '*';
+}
+void vertical (int stars)
+{
+	for (int i = 0; i < stars; i++)
+		cout << '*' << endl;
+}
+void main()
+{
+	void (*p) (int, int);
+	p = f;
+	p(5, 7);
+	(*p)(5, 7); 
+	p(100, 200);
+	double(*ptr[4])(double, double) = {Add, Sub, Mult, Div};
+	double n1, n2;
+	int choice;
+	cout<<"Enter two number: ";
+	cin >> n1 >> n2;
+	cout << "\n1.+\n2.-\n3.*\n4./\n";
+	cout << "Make your choice: ";
+	cin >> choice;
+	if(choice < 1 || choice > 4)
+	{
+		cout << "Incorrect choice!!!";
+		return;
+	}
+	cout << "Result: ";
+	cout << ptr[choice-1](n1, n2);
+	cout << endl;
+	void (*ptr2)(int); 
+	ptr2 = horizontal; 
+	ptr2(10); 
+	ptr2 = vertical; 
+	ptr2(10);
+}
+    </pre>
+</body>
+</html>

@@ -1,0 +1,5 @@
+https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Tutorial
+https://habrahabr.ru/post/111308/
+https://habrahabr.ru/post/111385/
+https://habrahabr.ru/post/116860/
+https://habrahabr.ru/post/118356/

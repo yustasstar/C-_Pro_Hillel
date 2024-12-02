@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Инкапсуляция</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        function Rectangle(l, t, r, b)
+        {
+            var _left = l;
+            var _top = t;
+            var _right = r;
+            var _bottom = b;
+            this.Width = function() {
+            return _right - _left;
+            };
+            this.Height = function() {
+                return _bottom - _top;
+            };
+            this.getLeft = function () {
+                return _left;
+            }
+            this.setLeft = function (l) {
+                if (typeof l === "number" && l > 0) {
+                    return _left = l;
+                } else {
+                    alert("Недопустимое значение");
+                }
+            }
+            this.getRight = function () {
+                return _right;
+            }
+            this.setRight = function (r) {
+                if (typeof r === "number" && r > 0) {
+                    return _right = r;
+                } else {
+                    alert("Недопустимое значение");
+                }
+            }
+            this.getTop = function () {
+                return _top;
+            }
+            this.setTop = function (t) {
+                if (typeof t === "number" && t > 0) {
+                    return _top = t;
+                } else {
+                    alert("Недопустимое значение");
+                }
+            }
+            this.getBottom = function () {
+                return _bottom;
+            }
+            this.setBottom = function (b) {
+                if (typeof b === "number" && b > 0) {
+                    return _bottom = b;
+                } else {
+                    alert("Недопустимое значение");
+                }
+            }
+        }
+        var leftX = parseInt(prompt("Введите координату X левого верхнего угла: ", ""));
+        var topY = parseInt(prompt("Введите координату Y левого верхнего угла: ", ""));
+        var rightX = parseInt(prompt("Введите координату X правого нижнего угла: ", ""));
+        var bottomY = parseInt(prompt("Введите координату Y правого нижнего угла: ", ""));
+        var r = new Rectangle(leftX, topY, rightX, bottomY);
+        alert("Ширина прямоугольника: " + r.Width());
+        alert("Высота прямоугольника: " + r.Height());
+        r.setLeft(10);
+        alert(r._left);
+        r.setTop(10);
+        r.setRight(50);
+        r.setBottom(70);
+        alert("Ширина прямоугольника: " + r.Width());
+        alert("Высота прямоугольника: " + r.Height());
+    </script>
+</body>
+</html>

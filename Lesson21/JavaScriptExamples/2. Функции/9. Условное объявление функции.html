@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        var number = +prompt("Введите число: ", 3);
+        var choice = +prompt("Что будем вычислять? Квадрат числа (1) или куб(2) ?: ", 2);
+        if (choice == 1) {
+            function Calc(n) {
+                return n * n;
+            }
+        }
+        else if (choice == 2) {
+            function Calc(n) {
+                return n * n * n;
+            }
+        }
+        else alert("Неверный выбор!");
+        //alert("Результат: " + Calc(number)); // ошибка
+
+        var result;
+        if (choice == 1) {
+            result = function(n) {
+                return n * n;
+            }
+        }
+        else if (choice == 2) {
+            result = function(n) {
+                return n * n * n;
+            }
+        }
+        else alert("Неверный выбор!");
+        alert("Результат: " + result(number));
+    </script>
+</body>
+</html>

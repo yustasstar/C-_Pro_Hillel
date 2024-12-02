@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <script>
+        // Обертка (function($){ }) (jQuery) используется для того, чтобы внутри кода плагина можно было использовать знак $,
+        // и при этом не будет конфликта с другими библиотеками JavaScript.
+    (function ($) {
+
+        /* Создаем плагин с именем adjust, который будет устанавливать размер текста выбранных элементов равным 1.4em и передавать их дальше по цепочки методов. */
+        $.fn.adjust = function () {
+            /* Для того, чтобы поддержать цепочку методов нужно вернуть из плагина преобразованную группу выбранных элементов */
+            return this.each(function () {
+                $(this).css("fontSize", "1.4em");
+            });
+        }
+
+    })(jQuery)
+
+    $(document).ready(function () {
+        $("#but1").click(function () {
+            $("p").adjust().css("color", "red").css("fontWeight", "bold");
+        });
+    });
+    </script>
+</head>
+<body>
+    <p>Первый абзац</p>
+    <p>Второй абзац</p>
+    <p>Третий абзац</p>
+    <p>Четвертый абзац</p>
+    <input type="button" id="but1" value="Изменить оформление абзацев" />
+</body>
+</html>
+

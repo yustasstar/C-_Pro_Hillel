@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Куки</title>
+    <style>
+        #div1, #div2 {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function btnClick() {
+            var d = new Date();
+            d.setMonth(d.getMonth() + 6);
+            if (loginform.login.value.length == 0 || loginform.pass.value == 0) {
+                alert("Не введён логин или пароль!");
+                return;
+            }
+            document.cookie = "LOGIN=" + encodeURIComponent(loginform.login.value) + ";path=/;expires=" + d.toUTCString() + ";";
+            document.cookie = "PASSWORD=" + loginform.pass.value + ";path=/;expires=" + d.toUTCString() + ";";
+            alert("Вы успешно авторизованы!");
+        }
+        function docLoad() {
+            var str = document.cookie;
+            if (str.length == 0) {
+                document.getElementById("div1").style.display = "block";
+                document.getElementById("div2").style.display = "none";
+                return;
+            }
+            var begin = str.indexOf("LOGIN") + 6;
+            var end = str.indexOf(";");
+            var s = str.slice(begin, end);
+            s = decodeURIComponent(s);
+            document.getElementById("div1").style.display = "none";
+            document.getElementById("div2").style.display = "block";
+            document.getElementById("info").innerText = "Привет, " + s + "!";
+        }
+        function delCookie() {
+            var d = new Date();
+            d.setMonth(d.getMonth() - 1);
+            document.cookie = "LOGIN=;path=/;expires=" + d.toUTCString() + ";";
+            document.cookie = "PASSWORD=;path=/;expires=" + d.toUTCString() + ";";
+            alert("Cookie успешно удалён!");
+        }
+
+    </script>
+    </head>
+    <body onload="docLoad()">
+        <div id="div1">
+            <form name="loginform">
+                Логин: <input type="text" name="login" /><br />
+                Пароль: <input type="password" name="pass" /><br />
+                <input type="button" value="Вход" onclick="btnClick()" />
+            </form>
+        </div>
+        <div style="text-align:center" id="div2">
+            <h1 id="info" style="text-align:center"></h1>
+            <input type="button" value="Удалить Cookie" onclick="delCookie()" />
+        </div>
+
+    </body>
+    </html>

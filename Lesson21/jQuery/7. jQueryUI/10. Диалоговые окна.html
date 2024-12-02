@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function () {
+    /*
+    С помощью метода dialog можно превратить выбранный элемент в диалоговое окно.
+    Диалоговое окно отображается поверх текста страницы и содержит заголовок и поле с содержимым.
+    Диалоговое окно можно перетаскивать, растягивать и закрывать с помощью иконки "х" в верхнем правом углу окна.
+    Если содержимое превышает размеры диалогового окна, то полоса прокрутки будет автоматически отображена.
+    */
+        $("#dialog1").dialog({ width: 400, height: 300 });
+    });
+    </script>
+</head>
+<body>
+    <div id="dialog1" title="Заголовок окна">
+        <p>Это - диалоговое окно. Данное окно можно перетаскивать, растягивать и закрывать с помощью "х" в верхнем правом углу.</p>
+    </div>
+</body>
+</html>

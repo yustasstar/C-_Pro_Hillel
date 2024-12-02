@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <script>
+        function simpleFunction()
+        { 
+            alert("Данная функция не принимает аргументов и не возвращает значение");
+        }
+        function cube(n)
+        {
+            var c = n * n * n; 
+            return c;  
+        }
+    </script>
+</head>
+<body>
+    <script>
+        simpleFunction();
+        alert("Куб числа " + 3 + " равен " + cube(3));
+        alert("Куб числа " + 5 + " равен " + cube(5));
+        alert(cube);
+        simpleFunction = null;
+        // simpleFunction(); // ошибка
+    </script>
+</body>
+</html>
+
+
+

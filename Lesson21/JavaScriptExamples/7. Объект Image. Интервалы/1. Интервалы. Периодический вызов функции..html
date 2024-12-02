@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Интервалы. Периодический вызов функции.</title>
+    <style>
+        #paragraph{
+            font-size:20pt;
+            font-style:italic;
+            font-family:Verdana;
+        }
+    </style>
+    <script>
+        "use strict";
+        function show() {
+            var str;
+            counter++;
+            var p = document.getElementById("paragraph");
+            if (flag)
+            {
+                str = "Разработка клиентских сценариев с использованием JavaScript";
+                p.style.color = color[index];
+                p.style.backgroundColor = color[color.length - 1 - index];
+                index++;
+                if (index > 5)
+                    index = 0;
+            }               
+            else
+                str = " ";
+            flag = !flag;            
+            p.innerHTML = "<strong>" + str + "</strong>";          
+            if (counter == 12)
+                clearInterval(idTimer);
+        }
+
+        function showTime() {
+            var now = new Date();
+            var h = now.getHours();
+            if (h < 10)
+                h = "0" + h;
+            var m = now.getMinutes();
+            if (m < 10)
+                m = "0" + m;
+            var s = now.getSeconds();
+            if (s < 10)
+                s = "0" + s;
+            var str = DaysOfWeek[now.getDay()] + ", " + now.getDate() + " " + Monthes[now.getMonth()] + " " + now.getFullYear() + "  " + h + ":" + m + ":" + s;
+            document.getElementById("header").innerText = str;
+        }
+    </script>
+</head>
+<body>
+    <h1 id="header"></h1>
+    <p id="paragraph"> </p>
+    <script>   
+        "use strict";
+        var flag = false;       
+        var DaysOfWeek = new Array("Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота");
+        var Monthes = new Array("Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля", "Августа", "Сентября", "Октября", "Ноября", "Декабря");
+        var index = 0;
+        var color = new Array("red", "yellow", "green", "magenta", "blue", "cyan");
+        var counter = 0;
+        var idTimer = setInterval("show()", 1000);
+        setInterval("showTime()", 500);
+    </script>
+</body>
+</html>

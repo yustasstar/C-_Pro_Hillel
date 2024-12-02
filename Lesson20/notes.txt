@@ -1,0 +1,14 @@
+Виконання команд та SqlCommand
+
+Transactions
+CRUD operations
+DataSet
+Приклад використання
+
+https://dotnettutorials.net/course/ado-net-tutorial-for-beginners-and-professionals/
+https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/
+https://www.completecsharptutorial.com/ado-net/
+https://www.geeksforgeeks.org/introduction-to-ado-net/
+https://www.pragimtech.com/courses/ado-net-tutorial-for-beginners/
+https://www.progress.com/tutorials/net
+https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/ado-net-code-examples

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        #tabs {
+            font-size: 0.8em;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+        // Виджет tabs как и виджет accordion используется для группировки информации на странице с целью экономии места
+        $("#tabs").tabs();
+    });
+    </script>
+</head>
+<body>
+    <div id="tabs">
+        <ul>
+            <li><a href="#tabs-1">JavaScript</a></li>
+            <li><a href="#tabs-2">jQuery</a></li>
+            <li><a href="#tabs-3">AngularJS</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p><b>JavaScript</b>- прототипно-ориентированный сценарный язык программирования.</p>
+            <p>JavaScript обычно используется как встраиваемый язык для программного доступа к объектам приложений. Наиболее широкое применение находит в браузерах как язык сценариев для придания интерактивности веб-страницам.</p>
+            <p>Основные архитектурные черты: динамическая типизация, слабая типизация, автоматическое управление памятью, прототипное программирование.</p>
+        </div>
+        <div id="tabs-2">
+            <p><b>jQuery</b>- библиотека JavaScript, фокусирующаяся на взаимодействии JavaScript и HTML.</p>
+            <p>Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам и содержимому элементов DOM, манипулировать ими. Также библиотека jQuery предоставляет удобный API для работы с AJAX.</p>
+        </div>
+        <div id="tabs-3">
+            <p><b>AngularJS</b>- JavaScript-фреймворк с открытым исходным кодом.</p>
+            <p>Предназначен для разработки одностраничных приложений. Его цель — расширение браузерных приложений на основе MVC шаблона, а также упрощение тестирования и разработки.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        #testcontainer {
+            font-size: 1em;
+            padding: 10px;
+            width: 380px;
+            height: 140px;
+            border: 1px solid grey;
+            overflow: hidden;
+        }
+
+            #testcontainer h2 {
+                margin-top: 0px;
+                margin-bottom: 13px;
+            }
+
+            #testcontainer p {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+        .ui-widget-header {
+            text-align: center;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+
+        $("#but1").click(function () {
+            $("#testcontainer").animate({
+                borderColor: "#EA3B53",
+                borderWidth: 8,
+                backgroundColor: "#97D400",
+                width: 700,
+                height: 300
+            }, 1500);
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <div id="testcontainer" class="ui-widget ui-corner-all">
+        <h2 class="ui-widget-header ui-corner-all">Анимация</h2>
+    </div>
+    <br />
+    <input id="but1" type="button" value="Запустить анимацию" />
+</body>
+</html>

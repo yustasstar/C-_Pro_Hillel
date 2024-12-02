@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <script>
+    $(document).ready(function () {  // Предотвращение преждевременного выполнения кода в jQuery
+
+        // http://www.wisdomweb.ru/JQd/selectors.php
+        //Установим размер шрифта всех абзацев равным 20 пикселям
+        $("p").css("fontSize", "20px");
+        //Изменим на зеленый цвет шрифта элемента с id=el2
+        $("#el2").css("color", "green");
+        //Изменим на красный цвет шрифта элемента с class=el3
+        $(".el3").css("color", "red");
+        //Сделаем жирным шрифт элементов с id=el2 и class=el3
+        $("#el2,.el3").css("fontWeight", "bold");
+        //Изменим на синий цвет текста кнопки
+         $(":input").css("color", "blue");
+        //Установим размер шрифта всех элементов, имеющих атрибут href, равным 20 пикселям
+        $("[href]").css("fontSize", "20px");
+        //Изменим на зеленый цвет ссылки на www.wisdomweb.ru
+        $("[href='http://www.wisdomweb.ru/']").css("color", "green");
+
+    });
+    </script>
+</head>
+<body>
+    <p>Первый абзац.</p>
+    <p id="el2">Второй абзац.</p>
+    <p class="el3">Третий абзац.</p>
+    <input type="text" value="Текстовое поле" />
+    <input type="button" value="Кнопка" />
+    <br /><br />
+    <a href="http://www.wisdomweb.ru/">wisdomweb.ru</a>
+    <br /><br />
+    <a href="http://www.wisdomweb.ru/HTML/">HTML учебник</a>
+</body>
+</html>

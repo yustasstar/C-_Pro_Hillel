@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Каскадность стилей в CSS3</title>
+    <style>
+        #index {
+            color: blue;
+        }
+
+        .redLink {
+            color: red;
+            font-size: 20px;
+        }
+
+        a {
+            color: black !important;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Для изучения CSS пройдите по ссылке:
+        <a id="index" class="redLink" href="https://webref.ru/css">Справочник CSS</a>
+    </p>
+</body>
+</html>

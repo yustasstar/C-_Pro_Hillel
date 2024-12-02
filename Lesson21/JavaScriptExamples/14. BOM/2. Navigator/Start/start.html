@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Navigator</title>
+</head>
+<body>
+    <script>
+        var agent = navigator.userAgent;
+        if (agent.lastIndexOf("OPR") != -1)
+            location.replace("start_Opera.html");
+        else
+            if (agent.lastIndexOf("Firefox") != -1)
+                location.replace("start_Firefox.html");
+            else
+                if (agent.lastIndexOf(".NET") != -1)
+                    location.replace("start_InternetExplorer.html");
+                else
+                    if (agent.lastIndexOf("Edge") != -1)
+                        location.replace("start_Edge.html");
+                    else
+                        if (agent.lastIndexOf("Chrome") != -1)
+                            location.replace("start_Google_Chrome.html");
+                        else
+                            location.replace("start_unknown.html");
+    </script>
+</body>
+</html>

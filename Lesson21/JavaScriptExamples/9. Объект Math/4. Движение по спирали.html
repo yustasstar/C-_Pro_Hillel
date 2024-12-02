@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Math</title>
+</head>
+<body>
+    <span id="elemToMove" style="position: absolute; left: 0; top: 0;">😊</span>
+    <script type="text/javascript">
+        var R = 50, a = 0, dR = 1, delay = 50, k = 100;
+        da = 30 * Math.PI / 180;
+        var elem = document.getElementById("elemToMove");
+        function moveElem() {
+            elem.style.left = k + R * Math.cos(a) + "px";
+            elem.style.top = 100 + R * Math.sin(a) + "px";
+            a += da;
+            k += 5;
+        }
+        setInterval("moveElem()", delay);
+    </script>
+    </body>
+</html>

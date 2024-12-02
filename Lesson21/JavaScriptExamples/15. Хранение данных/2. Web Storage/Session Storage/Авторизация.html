@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Session storage</title>
+    <style>
+        #div1, #div2 {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function btnClick() {
+            if (loginform.login.value.length == 0 || loginform.pass.value == 0) {
+                alert("Не введён логин или пароль!");
+                return;
+            }
+            sessionStorage.setItem("login", loginform.login.value);
+            sessionStorage.setItem("password", loginform.pass.value);
+            alert("Вы успешно авторизованы!");
+        }
+        function docLoad() {
+            var login = sessionStorage.getItem("login");
+            if (login == null) {
+                document.getElementById("div1").style.display = "block";
+                document.getElementById("div2").style.display = "none";
+                return;
+            }
+            document.getElementById("div1").style.display = "none";
+            document.getElementById("div2").style.display = "block";
+            document.getElementById("info").innerText = "Привет, " + login + "!";
+        }
+        function delCookie() {
+            sessionStorage.removeItem("login");
+            sessionStorage.removeItem("password");
+            // sessionStorage.clear();
+            alert("Данные успешно удалены!");
+        }
+
+    </script>
+    </head>
+    <body onload="docLoad()">
+        <div id="div1">
+            <form name="loginform">
+                Логин: <input type="text" name="login" /><br />
+                Пароль: <input type="password" name="pass" /><br />
+                <input type="button" value="Вход" onclick="btnClick()" />
+            </form>
+        </div>
+        <div style="text-align:center" id="div2">
+            <h1 id="info" style="text-align:center"></h1>
+            <input type="button" value="Удалить данные" onclick="delCookie()" />
+        </div>
+
+    </body>
+    </html>

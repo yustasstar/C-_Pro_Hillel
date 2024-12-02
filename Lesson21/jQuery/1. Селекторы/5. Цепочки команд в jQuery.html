@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        p {
+            border: 1px solid;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+
+        $("p").mouseover(function () { $("p").css("color", "green").css("font-size","1.4em"); });
+        $("p").mouseout(function () { $("p").css("color", "black").css("font-size", "1em"); });
+
+    });
+    </script>
+
+</head>
+<body>
+    <p>
+        Код обработчика mouseover будет выполнен, когда курсор мыши будет наведен на элемент.
+        Код обработчика mouseout будет выполнен, когда курсор мыши будет выведен из границ элемента.
+    </p>
+</body>
+</html>

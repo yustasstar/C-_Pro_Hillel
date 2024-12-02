@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {  // Предотвращение преждевременного выполнения кода в jQuery
+            $("#but1").click(function () {
+                $('div.lang').replaceWith(function () {
+                    return '<li class="lang">' + $(this).text() + "</li>";
+                });
+                $('div#list').replaceWith(function () {
+                    return '<ol>' + $(this).html() + "</ol>";
+                });
+            });
+
+            $("#but2").click(function () {
+                $('<li class="lang">jQuery</li>').replaceAll('li.lang');
+            });
+        });
+    </script>
+</head>
+<body>
+    <input id="but1" type="button" value="Преобразовать элемент div в список" />
+    <input id="but2" type="button" value="Заменим элементы списка другим содержимым" />
+    <div id="list">
+        <div class="lang">Java</div>
+        <div class="lang">C/C++</div>
+        <div class="lang">C#</div>
+    </div>
+</body>
+</html>

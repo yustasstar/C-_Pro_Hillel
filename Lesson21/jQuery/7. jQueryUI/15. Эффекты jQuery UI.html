@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        #testcontainer {
+            padding: 10px;
+            width: 390px;
+            height: 140px;
+            border: 1px solid grey;
+        }
+
+            #testcontainer h2 {
+                margin-top: 0px;
+                margin-bottom: 13px;
+                text-align: center;
+                padding: 5px;
+            }
+
+            #testcontainer p {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+    </style>
+    <script>
+    $(document).ready(function () {
+
+        $("#but1").click(function () {
+            $("#testcontainer").hide($("#effect1").val(), {}, 3000);
+        });
+        $("#but2").click(function () {
+            $("#testcontainer").show($("#effect1").val(), {}, 3000);
+        });
+
+    });
+    </script>
+</head>
+<body>
+    1. Выберите желаемый эффект из списка ниже:<br /><br />
+    <select id="effect1" name="effect">
+        <option value="blind">Ослепление</option>
+        <option value="bounce">Подпрыгивание</option>
+        <option value="clip">Обрезание</option>
+        <option value="drop">Падение</option>
+        <option value="explode">Взрыв</option>
+        <option value="fade">Исчезание</option>
+        <option value="fold">Складывание</option>
+        <option value="highlight">Подсветка</option>
+        <option value="puff">Рассеивание</option>
+        <option value="pulsate">Пульсирование</option>
+        <option value="shake">Тряска</option>
+        <option value="slide">Выскальзывание</option>
+    </select>
+    <br /><br />
+    2. Выберите желаемое действие:<br /><br />
+    <input id="but1" type="button" value="Скрыть элемент" />
+    <input id="but2" type="button" value="Показать элемент" />
+    <br /><br />
+    <div id="testcontainer" class="ui-widget ui-corner-all">
+        <h2 class="ui-widget-header ui-corner-all">Оформляемый элемент</h2>
+        <p><b>Оформляемый элемент</b> </p>
+    </div>
+</body>
+</html>

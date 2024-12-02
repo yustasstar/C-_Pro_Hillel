@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Создание, добавление и удаление элементов</title>
+</head>
+<body>
+    <div class="article">
+        <h3>Заголовок статьи</h3>
+        <p>Первый абзац</p>
+        <p>Второй абзац</p>
+    </div>
+    <script>
+        var articleDiv = document.querySelector("div.article");
+        var elem = document.createElement("h2");
+        elem.style.color = "blue";
+        var elemText = document.createTextNode("JavaScript. Document Object Model");
+       
+        elem.appendChild(elemText);
+        articleDiv.appendChild(elem);
+
+        var elem2 = document.createElement("h2");
+        elem2.style.color = "red";
+        elem2.textContent = "JavaScript. Document Object Model";
+        var firstElem = articleDiv.firstChild.nextSibling;
+        articleDiv.insertBefore(elem2, firstElem);
+
+        var body = document.body;
+        var ul = document.createElement("ul");
+        ul.setAttribute('type', 'circle');
+
+        var li = document.createElement("li");
+        var text = document.createTextNode('Элемент 1');
+        li.appendChild(text);
+        ul.appendChild(li);
+
+        li = document.createElement("li");
+        text = document.createTextNode('Элемент 2');
+        li.appendChild(text);
+        ul.appendChild(li);
+
+        li = document.createElement("li");
+        text = document.createTextNode('Элемент 3');
+        li.appendChild(text);
+        ul.appendChild(li);
+
+        li = document.createElement("li");
+        text = document.createTextNode('Элемент 0');
+        li.appendChild(text);
+
+        ul.insertBefore(li, ul.firstChild);
+
+        body.appendChild(ul);
+    </script>
+</body>
+</html>

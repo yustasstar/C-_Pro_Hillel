@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <!--https://jqueryui.com/download/-->
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <style type="text/css">
+        #drag {
+            border: 1px solid;
+            padding: 15px;
+            width: 140px;
+            height: 60px;
+        }
+
+        .ui-draggable {
+            padding: 15px;
+            border-style: solid;
+            border-width: 1px;
+            width: 130px;
+            height: 100px;
+        }
+
+        .ui-draggable-dragging {
+            background-color: #ecbfda;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+
+            // С помощью метода draggable Вы можете сделать выбранный элемент перетаскиваемым.
+            $("#drag").draggable();
+            // С помощью опции axis Вы можете определить направление оси, по которой можно перетаскивать элемент.
+            $("#drag1").draggable({ axis: "x", cursor: "move" });
+            $("#drag2").draggable({ axis: "y", cursor: "help" });
+            // Опция revert определяет будет ли элемент возвращаться на изначальную позицию после завершения перетаскивания.
+            $("#drag3").draggable({ revert: true });
+        });
+    </script>
+</head>
+<body>
+    <p>Вы можете перетаскивать элемент мышкой:</p>
+    <div id="drag" class="ui-corner-all ui-widget ui-widget-header">Попробуйте перетащить меня</div>
+    <div id="drag1" class="ui-widget ui-corner-all">Вы можете перетаскивать меня мышкой по оси x. </div>
+    <br /><br />
+    <div id="drag2" class="ui-widget ui-corner-all">Вы можете перетаскивать меня мышкой по оси y. </div>
+    <div id="drag3" class="ui-widget ui-corner-all">Попробуйте перетащить меня. </div>
+</body>
+</html>

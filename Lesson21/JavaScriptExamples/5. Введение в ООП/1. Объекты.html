@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объекты</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        // var club = new Object();
+        var club = {}; // альтернативный способ
+        club.name = "Динамо";
+        club.city = "Киев";
+        club.year = 1927;
+        club.display = function()
+        {
+            document.write(this.name + "<br />");
+            document.write(this.city + "<br />");
+            document.write(this.year + "<br />");
+        };
+        club.display();
+
+        var club2 = {}; 
+        club2["name"] = "Шахтер";
+        club2["city"] = "Донецк";
+        club2["year"] = 1936;
+        club2["display"] = function()
+        {
+            document.write(this.name + "<br />");
+            document.write(this.city + "<br />");
+            document.write(this.year + "<br />");
+            document.write(this.stadium + "<br />");
+        };
+        club2["display"]();
+        club2["stadium"] = "Донбасс Арена";
+        club2["display"]();
+
+        var club3 = {
+            name: "Черноморец",
+            city: "Одесса",
+            year: 1936,
+            stadium: "Черноморец",
+            display: function()
+            {
+                document.write(this.name + "<br />");
+                document.write(this.city + "<br />");
+                document.write(this.year + "<br />");
+                document.write(this.stadium + "<br />");
+            }
+        };
+        club3.display();
+
+        delete club2.stadium;
+        club2.display();
+
+    </script>
+</body>
+</html>

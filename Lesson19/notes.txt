@@ -1,0 +1,30 @@
+Влаштування бази даних.
+Документи
+CRUD з даними
+Агрегатні функції
+Приклади
+
+https://www.mongodb.com/docs/manual/
+https://www.ibm.com/topics/nosql-databases
+https://aws.amazon.com/ru/nosql/
+https://www.guru99.com/nosql-tutorial.html
+https://www.geeksforgeeks.org/introduction-to-nosql/
+https://dottutorials.net/nosql-db-dotnet-core-example-csharp-litedb-tutorial/
+https://www.c-sharpcorner.com/UploadFile/f0b2ed/introduction-of-nosql-database/
+
+Додаткове завдання: 
+Створити базу даних "інтернет магазин" за допомогою MongoDB.
+
+Колекції:
+- products
+- orders
+- categories
+- і т.д (додати ще якicь за вибором)
+
+Написати запити:
+
+- CRUD для кожної колекції
+- вивести усі товари з категоріями
+- вивести товари які були в замовленнях
+- вивести кількість замовлень кожного товару
+- написати кілька своїх запитів на пошук товарiв

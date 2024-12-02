@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Image</title>
+</head>
+<body>
+    <div style="text-align: center">
+        <img src="IMG/flower1.jpg" id="picture" /> <br />
+    </div>
+    <script>
+        var img = new Array("IMG/flower1.jpg", "IMG/flower2.jpg", "IMG/flower3.jpg", "IMG/flower4.jpg", 
+            "IMG/flower5.jpg", "IMG/flower6.jpg", "IMG/flower7.jpg", "IMG/flower8.jpg", 
+            "IMG/flower9.jpg", "IMG/flower10.jpg");
+        var index = 0;
+        setInterval("nextImage()", 1000);
+        function nextImage()
+        {
+             if (index < img.length - 1)
+                 index++;
+            else
+                 index = 0;
+             document.images["picture"].src = img[index];
+        }
+    </script>
+</body>
+</html>

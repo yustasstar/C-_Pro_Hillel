@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        class Person {
+            constructor(name, surname, age) {
+                this.name = name;
+                this.surname = surname;
+                this.age = age;
+            }
+            setName(name) {
+                if (!name) {
+                    throw new Error("Значение name не определено!");
+                }
+                this.name = name;
+            }
+            getName() {
+                return name;
+            }
+            setSurname(surname) {
+                if (!surname) {
+                    throw new Error("Значение surname не определено!");
+                }
+                this.surname = surname;
+            }
+            getSurname() {
+                return this.surname;
+            }
+            setAge(age) {
+                if (!age || age <= 0) {
+                    throw new Error("Значение age должно быть положительным!");
+                }
+                this.age = age;
+            }
+            getAge() {
+                return this.age;
+            }
+
+            print() {
+                document.write("Имя: " + this.name + "<br />");
+                document.write("Фамилия: " + this.surname + "<br />");
+                document.write("Возраст: " + this.age + "<br />");
+            }
+            static nameToUpper(person) {
+                return person.name.toUpperCase();
+            }
+            static surnameToUpper(person) {
+                return person.surname.toUpperCase();
+            }
+        }
+
+        class Student extends Person {
+            constructor(name, surname, age, rating) {
+                super(name, surname, age);
+                this.rating = rating;
+            }
+            setRating(rating) {
+                if (!rating || rating <= 0 || rating > 12) {
+                    throw new Error("Значение rating должно быть в диапазоне от 1 до 12!");
+                }
+                this._rating = rating;
+            }
+            getRating() {
+                return this.rating;
+            }
+            print() {
+                super.print();
+                document.write("Рейтинг: " + this.rating + "<br />");
+            }
+        }
+
+        var person = new Person("Иван", "Иванов", 25);
+        person.print();
+        person.setName("Петр");
+        person.setSurname("Петров");
+        person.setAge(30);
+        person.print();
+        document.write("Имя в верхнем регистре: " + Person.nameToUpper(person) + "<br />");
+        document.write("Фамилия в верхнем регистре: " + Person.surnameToUpper(person) + "<br />");
+        var copy = person; // копируются ссылки
+        copy.print();
+        person.setName("Алексей");
+        person.setSurname("Алексеев");
+        person.setAge(22);
+        copy.print();
+
+        var student = new Student("Сергей", "Сергеев", 27, 10.5);
+        student.print();
+        student.setName("Олег");
+        student.setSurname("Кузнецов");
+        student.setAge(30);
+        student.setRating(12);
+        student.print();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script>
+        var i = 0;
+        var id = 0;
+    $(document).ready(function () {       
+        var id = setInterval("Indicator()", 1000);
+    });
+    function Indicator()
+    {
+        $("#progressbar").progressbar({ value: i });
+        i += 10;
+        if (i == 100)
+        {
+            clearInterval(id);
+        }
+    }   
+    </script>
+</head>
+<body>
+    <div id="progressbar"></div>
+</body>
+</html>

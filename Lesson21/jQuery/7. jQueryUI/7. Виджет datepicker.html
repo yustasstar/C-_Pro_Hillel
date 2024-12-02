@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function () {
+  // Виджет datepicker привязывает к текстовому полю интерактивный календарь, который отображается когда поле становится активным.
+  // Если пользователь щелкнет на какую-либо дату в календаре, она будет автоматически введена в текстовое поле, как будто он ввел ее вручную.
+        $("#datepicker").datepicker();
+        $("#datepicker1").datepicker({
+            monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
+            dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+            firstDay: 1,
+            dateFormat: "dd.mm.yy"
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <p>Стандартный виджет datepicker (щелкните в текстовом поле ниже):</p>
+    <input type="text" id="datepicker" />
+    <p>Виджет datepicker для использования в Украине:</p>
+    <input type="text" id="datepicker1" />
+</body>
+</html>

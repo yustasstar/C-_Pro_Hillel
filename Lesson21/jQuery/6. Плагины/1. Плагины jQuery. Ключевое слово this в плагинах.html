@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        .sel1 {
+            color: blue;
+        }
+
+        .sel2 {
+            color: red;
+        }
+    </style>
+    <script>
+    // Обертка (function($){ }) (jQuery) используется для того, чтобы внутри кода плагина можно было использовать знак $,
+    // и при этом не будет конфликта с другими библиотеками JavaScript.
+    (function ($) {
+
+        /* Создаем плагин с именем plugin, который будет находить сумму всех выбранных абзацев на странице */
+        $.fn.plugin = function () {
+            var sum = 0;
+            /* Для того, чтобы сослаться на выбранный элемент в коде плагина мы используем this,
+            но в функции обратного вызова необходимо использовать $(this) для этих же целей */
+            this.each(function () {
+                sum = sum + Number($(this).text());
+            });
+            return sum;
+        }
+
+    })(jQuery)
+
+    $(document).ready(function () {
+        $("#but1").click(function () {
+            alert("Сумма равна: " + $("p").plugin());
+        });
+        $("#but2").click(function () {
+            alert("Сумма равна: " + $(".sel1").plugin());
+        });
+        $("#but3").click(function () {
+            alert("Сумма равна: " + $(".sel2").plugin());
+        });
+    });
+    </script>
+</head>
+<body>
+    <p class="sel2">10</p>
+    <p class="sel1">20</p>
+    <p class="sel2">30</p>
+    <p class="sel1">40</p>
+    <p class="sel2">50</p>
+    <p class="sel2">60</p>
+    <input type="button" id="but1" value="Подсчитать сумму всех абзацев" />
+    <input type="button" id="but2" value="Подсчитать сумму всех абзацев c class=sel1" />
+    <input type="button" id="but3" value="Подсчитать сумму всех абзацев c class=sel2" />
+</body>
+</html>

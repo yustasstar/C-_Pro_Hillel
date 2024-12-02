@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <script>
+        function display(x, y) {
+            if (y == undefined)
+                y = x;
+            var z = x * y;
+            document.write(x + " умножить на " + y + " равно " + z + "<br/>");
+        }
+
+        function show()
+        {
+            var z = 1;
+            for (var i = 0; i < arguments.length; i++)
+                z *= arguments[i];
+            document.write(z + "<br/>");
+        }
+    </script>
+</head>
+<body>
+    <script>
+        display(10);
+        display(10, 2);
+
+        show(5); 
+        show(5, 4);
+        show(5, 4, 3);
+    </script>
+</body>
+</html>

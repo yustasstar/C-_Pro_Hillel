@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <link href="jquery-ui-1.12.1/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script>
+    $(document).ready(function () {
+
+   /*
+   Опция modal позволяет сделать диалоговое окно модальным.
+   Модальные окна используются для привлечения дополнительного внимания со стороны пользователей.
+    Пока открыто модальное окно, пользователь не может взаимодействовать с другими элементами страницы.
+    */
+        $("#dialog1").dialog({ modal: true, height: 200, width: 330 });
+    });
+    </script>
+</head>
+<body>
+    <p>Попробуйте нажать на кнопку ниже или ввести текст в текстовое поле, пока открыто модальное окно.</p>
+    <input type="button" value="Нажми на меня" />
+    <br /><br />
+    <input type="text" />
+    <div id="dialog1" title="Модальное окно">
+        <p>Пока Вы не закроете это окно, Вы не сможете взаимодействовать с другими элементами страницы.</p>
+    </div>
+</body>
+</html>

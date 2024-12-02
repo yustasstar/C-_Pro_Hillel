@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Объект Math</title>
+</head>
+<body>
+    <div id="div1" style="width:600px;height:450px;background-color:#00FFFF;border:red 2px solid;position:absolute;top:0px;left:0px"></div>
+    <span id="ball" style='position:absolute;top:0px;left:0px'>😊</span>
+
+    <script>
+        var alpha;
+        var ro = 3, x = 0, y = 0;
+        do {
+            var angle = parseInt(prompt("Введите угол перемещения шарика", ""));
+        } while (isNaN(angle));
+        alpha = Math.PI * angle / 180;
+        setInterval("Ball()", 10);
+
+        function Ball()
+        {
+            if (x < 0 || x > 590)
+            {
+                alpha = Math.PI - alpha;
+            }
+            if (y < 0 || y > 430)
+            {
+                alpha = -alpha;
+            }
+            x1 = ro * Math.cos(alpha);
+            y1 = ro * Math.sin(alpha);
+            x += x1;
+            y += y1;
+            document.getElementById("ball").style.top = y + "px";
+            document.getElementById("ball").style.left = x + "px";
+        }
+    </script>
+</body>
+</html>

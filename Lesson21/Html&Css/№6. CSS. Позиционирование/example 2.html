@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS. Позиционирование</title>
+    <style type="text/css">
+        body {
+            background-color: #dddddd;
+        }
+
+        h1.EmbossUp {
+            position: relative;
+            font-family: Arial Black, sans-serif;
+            font-size: 72pt;
+        }
+
+            h1.EmbossUp span.text {
+                position: absolute;
+                color: #dddddd;
+            }
+
+            h1.EmbossUp span.shadow {
+                position: absolute;
+                left: 2px;
+                top: 2px;
+                color: #333333;
+            }
+
+            h1.EmbossUp span.highlight {
+                position: absolute;
+                left: -2px;
+                top: -2px;
+                color: #ffffff;
+            }
+    </style>
+</head>
+<body>
+    <h1 class="EmbossUp">
+        <span class="shadow">Заголовок с рельефом</span>
+        <span class="highlight">Заголовок с рельефом</span>
+        <span class="text">Заголовок с рельефом</span>
+    </h1>
+</body>
+</html>

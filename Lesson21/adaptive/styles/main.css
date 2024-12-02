@@ -1,0 +1,94 @@
+body{
+    background-color: #ccc;
+    font-family: "Segoe UI";
+}
+
+#wrapper{
+    width: 96%;
+    max-width: 920px;
+    margin: auto;
+    padding: 2%;
+}
+
+section#main{
+    width: 60%;
+    margin-right:5%;
+    float:left;
+}
+
+aside{
+    width: 35%;
+    float: right;
+}
+
+header h1{
+    height: 98px;
+    width: 98px;
+    float: left;
+    background: url(../images/logo.png) center no-repeat;
+    background-size: contain;
+    text-indent: -9999px;    
+}
+
+header nav{
+    float: right;
+    margin-top: 30px;
+}
+
+header nav li{
+    display: inline;
+    margin-left: 15px;
+}
+
+header nav li a{
+    text-decoration: none;
+    color: #333;
+}
+
+#skipTo{
+    display: none;
+}
+
+#banner{
+    /*float:left;*/
+    margin-bottom: 15px;
+    width: 100%
+}
+
+#banner img{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 480px){
+
+    header nav, section#main, aside{
+        float: none;
+        width: 100%;
+        margin: 0 0 10px;
+    }
+
+    header{
+        text-align: center;
+    }
+
+    header nav ul{
+        padding: 0;
+    }
+
+    header nav a{
+        display: block;
+        padding: 10px;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    header h1{
+        width: 100%;
+    }
+
+    #skipTo{
+        display: block;
+    }
+
+}

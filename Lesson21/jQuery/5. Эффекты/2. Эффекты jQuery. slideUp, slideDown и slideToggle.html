@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery</title>
+    <script src="jquery-3.1.0.min.js">
+    </script>
+    <style type="text/css">
+        #square {
+            border: 2px solid;
+            padding: 5px;
+            background-color: #65E080;
+            height: 280px;
+            width: 300px;
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+    $(document).ready(function () {
+
+        $("#but1").click(function () { $("#square").slideUp(3000) });
+        $("#but2").click(function () { $("#square").slideDown(3000) });
+        $("#but3").click(function () { $("#square").slideToggle(3000) });
+        $("#but4").click(function () {
+            $("#square").slideUp(3000, function () {
+                alert("Текст был скрыт");
+            });
+        });
+
+    });
+    </script>
+</head>
+<body>
+    <div id="square">
+        <p><b>jQuery</b> - это библиотека, значительно упрощающая написание кода. </p>
+        <p>Девиз jQuery <i>"write less, do more"</i> (пиши меньше, делай больше) максимально точно отражает главное предназначение jQuery.</p>
+        <p>jQuery содержит функции, позволяющие создавать анимацию и обработчики событий. </p>
+    </div>
+    <input id="but1" type="button" value="Скрыть" />
+    <input id="but2" type="button" value="Отобразить" />
+    <input id="but3" type="button" value="Скрыть/отобразить" />
+    <br /><br />
+    <input id="but4" type="button" value="После выполнения скрытия вывести сообщение" />
+</body>
+</html>
