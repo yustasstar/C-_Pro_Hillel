@@ -1,0 +1,11 @@
+﻿// migration part: 
+// In Visual Studio, open NuGet Package Manager Console from
+// Tools -> NuGet Package Manager -> Package Manager Console and enter the following command
+// 1. add-migration Initial
+// 2. update-database –verbose
+
+// Add-Migration Initial -Context FirstInternetShopDbContext -OutputDir Migrations/SqlServerMigrations
+// update-database -Context FirstInternetShopDbContext
+
+// Add-Migration Initial2 -Context SecondInternetShopDbContext -OutputDir Migrations/SqlServerMigrations2
+// update-database -Context SecondInternetShopDbContext
