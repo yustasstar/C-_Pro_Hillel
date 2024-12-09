@@ -40,7 +40,7 @@ namespace WebApiDapperDemo.Controllers
         }
 
         [HttpDelete("{id:int}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> Put(int id)
         {
             return Ok(await _employeeService.DeleteEmployee(id));
         }

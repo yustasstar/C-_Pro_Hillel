@@ -26,7 +26,7 @@ namespace WebApiDapperDemo.Services
             return await _dbService.GetAsync<Employee>("SELECT * FROM EMPLOYEE WHERE id=@Id", new { id });
         }
 
-        public async Task<IEnumerable<Employee>> GetEmployeeList()
+        public async Task<List<Employee>> GetEmployeeList()
         {
             return await _dbService.GetAll<Employee>("SELECT * FROM EMPLOYEE", new { });
         }
