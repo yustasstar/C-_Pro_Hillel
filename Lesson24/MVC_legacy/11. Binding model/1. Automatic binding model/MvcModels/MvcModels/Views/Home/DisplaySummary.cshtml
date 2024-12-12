@@ -1,0 +1,10 @@
+﻿
+@model MvcModels.Models.AddressSummary
+
+@{
+    ViewBag.Title = "DisplaySummary";
+}
+
+<h2>Адрес проживания</h2>
+<div><label>Город:</label>@Html.DisplayFor(m => m.City)</div>
+<div><label>Страна:</label>@Html.DisplayFor(m => m.Country)</div>

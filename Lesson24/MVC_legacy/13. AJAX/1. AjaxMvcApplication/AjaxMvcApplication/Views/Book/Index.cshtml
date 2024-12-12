@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<script type="text/javascript">
+    function OnBegin() {
+        alert("Происходит отправка запроса");
+    }
+    function OnSuccess(data) {
+        alert("Запрос был успешно выполнен. Получены следующие данные: \n" + data);
+    }
+    function OnComplete(request, status) {
+        alert("Статус запроса : " + status);
+    }
+</script>
+
+<div>
+@using (Ajax.BeginForm("Search", new AjaxOptions { UpdateTargetId = "results", // id элемента, в котором будут выводиться результаты запроса
+                                                   LoadingElementId = "loading", //  id элемента html-страницы, который будет отображаться во время запроса
+                                                   LoadingElementDuration = 2000, // количество миллисекунд, через которое появится элемент, указанный в параметре LoadingElementId
+                                                   Confirm = "Выполнить AJAX-запрос?", // настраивает сообщение о подтверждении отправки запроса на сервер
+                                                   InsertionMode = InsertionMode.InsertBefore, // устанавливает, как полученные результаты будут отображаться на странице. Может принимать одно из трех значений перечисления InsertionMode: InsertAfter, InsertBefore и Replace(по умолчанию).
+                                                   OnBegin = "OnBegin",// обратный вызов перед отправкой запроса
+                                                   OnSuccess = "OnSuccess", // обратный вызов после удачного выполнения запроса
+                                                   OnComplete = "OnComplete" // обратный вызов после выполнения запроса (как удачного, так и неудачного)
+}))
+{
+    <input type="text" name="name" />
+    <input type="submit" value="Поиск" />
+    <div id="loading" style="display:none; color:Red; font-weight:bold;">
+    <p>Обработка AJAX-запроса...</p>
+    </div>
+}
+    <div id="results"></div>
+<div id="oldbook">
+    @Ajax.ActionLink("Самая старая книга", "OldBook", new AjaxOptions { UpdateTargetId = "oldbook", InsertionMode = InsertionMode.InsertAfter })
+</div>
+</div>

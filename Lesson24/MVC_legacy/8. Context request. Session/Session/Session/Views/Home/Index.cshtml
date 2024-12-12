@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="col-md-offset-2 col-md-10">
+        Здравствуйте, @Session["login"]
+    </div>
+    @using (Html.BeginForm("Logout", "Home", FormMethod.Get))
+    {
+        <div class="form-actions no-color">
+            <input type="submit" value="Выйти" class="btn btn-default" />
+        </div>
+    }
+    <div class="form-actions no-color">
+        @Html.ActionLink("На страницу авторизации", "Create", "Login")
+    </div>
+</body>
+</html>

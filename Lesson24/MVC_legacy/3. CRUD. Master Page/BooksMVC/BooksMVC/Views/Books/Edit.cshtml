@@ -1,0 +1,94 @@
+﻿@model BooksMVC.Models.books
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    // Генерирует скрытое поле формы (токен борьбы с фальсификацией), которое проверяется при отправке формы.
+    @Html.AntiForgeryToken()
+    // Возвращает неупорядоченный список (элемент ul) сообщений проверки, содержащихся в объекте ModelStateDictionary.
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>books</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Pages)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Pages)
+            @Html.ValidationMessageFor(model => model.Pages)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.YearPress)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.YearPress)
+            @Html.ValidationMessageFor(model => model.YearPress)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Themes)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Themes)
+            @Html.ValidationMessageFor(model => model.Themes)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Author)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Author)
+            @Html.ValidationMessageFor(model => model.Author)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Press)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Press)
+            @Html.ValidationMessageFor(model => model.Press)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Comment)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Comment)
+            @Html.ValidationMessageFor(model => model.Comment)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Quantity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Quantity)
+            @Html.ValidationMessageFor(model => model.Quantity)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+

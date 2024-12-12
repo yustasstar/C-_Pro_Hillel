@@ -1,0 +1,26 @@
+﻿@model IEnumerable<StudentsMVC.Models.Student>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="@Url.Content("~/Content/site.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div>
+        <h3>Список студентов</h3>
+        <table>
+            <tr><td><p>Имя студента</p></td><td><p>Фамилия студента</p></td><td><p>Возраст</p></td><td><p>Средний балл</p></td></tr>
+            @foreach (var st in Model)
+            {
+                <tr><td><p>@st.Name</p></td><td><p>@st.Surname</p></td><td><p>@st.Age</p></td><td><p>@st.GPA</p></td></tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

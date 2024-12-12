@@ -1,0 +1,57 @@
+﻿@model Soccer.Models.Players
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Добавление нового игрока</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Футболист</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Name, "Имя игрока:")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Age, "Возраст:")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Age)
+            @Html.ValidationMessageFor(model => model.Age)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Position, "Позиция на поле:")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Position)
+            @Html.ValidationMessageFor(model => model.Position)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TeamId, "Команда:")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.TeamId, ViewBag.ListTeams as SelectList)
+            @Html.ValidationMessageFor(model => model.TeamId)
+        </div>
+
+        <p>
+            <input type="submit" value="Создать" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("К списку игроков", "Index")
+</div>
+

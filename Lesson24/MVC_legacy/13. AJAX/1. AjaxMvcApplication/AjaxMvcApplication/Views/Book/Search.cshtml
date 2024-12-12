@@ -1,0 +1,14 @@
+﻿@model IEnumerable<AjaxMvcApplication.Models.book>
+ 
+    @if (Model != null && Model.Count()>0)
+    {
+        <h3>Все книги автора: @Model.First().Author</h3>
+        <ul>
+        @foreach (var item in Model)
+        { 
+            <li>@item.Name</li>
+        }
+        </ul>
+    }
+
+

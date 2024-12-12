@@ -1,0 +1,29 @@
+﻿@model Soccer.Models.Teams
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Подробности</h2>
+
+<fieldset>
+    <legend>Команда</legend>
+
+    <div class="display-label">
+        Название команды:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         Тренер:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Coach)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id=Model.Id }) |
+   @Html.ActionLink("Вернуться к списку команд", "Index")
+</p>

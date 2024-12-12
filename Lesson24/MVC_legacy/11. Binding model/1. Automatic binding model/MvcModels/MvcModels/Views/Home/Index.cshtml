@@ -1,0 +1,24 @@
+﻿
+@model MvcModels.Models.User
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Данные пользователя</h2>
+<div><label>ID:</label>@Html.DisplayFor(m => m.UserId)</div>
+<div><label>Имя:</label>@Html.DisplayFor(m => m.FirstName)</div>
+<div><label>Фамилия:</label>@Html.DisplayFor(m => m.LastName)</div>
+<div><label>Город:</label>@Html.DisplayFor(m => m.HomeAddress.City)</div>
+<div><label>Страна:</label>@Html.DisplayFor(m => m.HomeAddress.Country)</div>
+<br />
+@Html.ActionLink("Добавить пользователя", "CreateUser")
+<br />
+@Html.ActionLink("Имена", "Names")
+<br />
+@Html.ActionLink("Список имен", "NamesList")
+<br />
+@Html.ActionLink("Адреса", "Address")
+<br />
+@Html.ActionLink("Список адресов", "AddressList")
+
+

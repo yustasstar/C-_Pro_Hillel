@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="84e534f4c16043c1978519c839a79407" Name="Diagram1">
+        <EntityTypeShape EntityType="VUZModel.DEPARTMENT" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.FACULTY" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.LECTURE" Width="1.5" PointX="10.5" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.LECTURE_TYPE" Width="1.5" PointX="8.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.POST" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.ROOM" Width="1.5" PointX="8.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.SGROUP" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.SUBJECT" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.TEACHER" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.show_post" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VUZModel.show_T" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="VUZModel.dep_frk_fac" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.grp_frk_dep" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.tch_frk_dep" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.lec_frk_grp" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.lec_frk_rom" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.lec_frk_sbj" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.lec_frk_tch" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.lec_typ" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.F_KEY_POST" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.grp_frk_tch" ManuallyRouted="false" />
+        <AssociationConnector Association="VUZModel.tch_frk_tch" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

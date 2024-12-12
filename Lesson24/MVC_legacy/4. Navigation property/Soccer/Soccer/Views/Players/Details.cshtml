@@ -1,0 +1,43 @@
+﻿@model Soccer.Models.Players
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Подробности</h2>
+
+<fieldset>
+    <legend>Футболист</legend>
+
+    <div class="display-label">
+        Имя игрока:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         Возраст:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Age)
+    </div>
+
+    <div class="display-label">
+        Позиция на поле:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Position)
+    </div>
+
+    <div class="display-label">
+         Команда:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Teams.Name)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("К списку игроков", "Index")
+</p>

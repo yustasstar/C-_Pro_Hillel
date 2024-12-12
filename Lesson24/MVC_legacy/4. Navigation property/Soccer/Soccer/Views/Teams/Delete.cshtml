@@ -1,0 +1,33 @@
+﻿@model Soccer.Models.Teams
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удаление команды</h2>
+
+<h3>Вы действительно хотите удалить команду?</h3>
+<fieldset>
+    <legend>Команда</legend>
+
+    <div class="display-label">
+        Название команды:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+        Тренер:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Coach)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Удалить" /> |
+        @Html.ActionLink("Вернуться к списку команд", "Index")
+    </p>
+}

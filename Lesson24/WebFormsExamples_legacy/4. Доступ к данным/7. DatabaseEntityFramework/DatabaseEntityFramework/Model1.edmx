@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VUZModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DEPARTMENT">
+          <Key>
+            <PropertyRef Name="DepPK" />
+          </Key>
+          <Property Name="DepPK" Type="int" Nullable="false" />
+          <Property Name="FacFK" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Head" Type="varchar" MaxLength="20" />
+          <Property Name="Building" Type="char" MaxLength="5" />
+          <Property Name="Fund" Type="numeric" Precision="7" Scale="2" />
+        </EntityType>
+        <EntityType Name="FACULTY">
+          <Key>
+            <PropertyRef Name="FacPK" />
+          </Key>
+          <Property Name="FacPK" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="Dean" Type="varchar" MaxLength="20" />
+          <Property Name="Building" Type="char" MaxLength="5" />
+          <Property Name="Fund" Type="numeric" Precision="7" Scale="2" />
+        </EntityType>
+        <EntityType Name="LECTURE">
+          <Key>
+            <PropertyRef Name="lecPK" />
+          </Key>
+          <Property Name="lecPK" Type="int" Nullable="false" />
+          <Property Name="TchFK" Type="int" />
+          <Property Name="GrpFK" Type="int" Nullable="false" />
+          <Property Name="SbjFK" Type="int" />
+          <Property Name="RomFK" Type="int" />
+          <Property Name="id_type" Type="int" Nullable="false" />
+          <Property Name="Week" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Day_week" Type="char" MaxLength="3" Nullable="false" />
+          <Property Name="Lesson" Type="numeric" Precision="1" Scale="0" />
+        </EntityType>
+        <EntityType Name="LECTURE_TYPE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="POST">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ROOM">
+          <Key>
+            <PropertyRef Name="RomPK" />
+          </Key>
+          <Property Name="RomPK" Type="int" Nullable="false" />
+          <Property Name="Num" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="Floor" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Building" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="Seats" Type="numeric" Precision="3" Scale="0" />
+        </EntityType>
+        <EntityType Name="SGROUP">
+          <Key>
+            <PropertyRef Name="GrpPK" />
+          </Key>
+          <Property Name="GrpPK" Type="int" Nullable="false" />
+          <Property Name="DepFK" Type="int" />
+          <Property Name="Num" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="Kurs" Type="numeric" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Quantity" Type="numeric" Precision="2" Scale="0" />
+          <Property Name="Rating" Type="numeric" Precision="3" Scale="0" />
+          <Property Name="CurFK" Type="int" />
+        </EntityType>
+        <EntityType Name="SUBJECT">
+          <Key>
+            <PropertyRef Name="SbjPK" />
+          </Key>
+          <Property Name="SbjPK" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TEACHER">
+          <Key>
+            <PropertyRef Name="TchPK" />
+          </Key>
+          <Property Name="TchPK" Type="int" Nullable="false" />
+          <Property Name="DepFK" Type="int" />
+          <Property Name="Name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="IDCode" Type="char" MaxLength="10" />
+          <Property Name="id_Post" Type="int" Nullable="false" />
+          <Property Name="Tel" Type="char" MaxLength="7" />
+          <Property Name="Salary" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="Rise" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="HireDate" Type="datetime" />
+          <Property Name="Chief" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'VUZ.dbo.show_post' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="show_post">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'VUZ.dbo.show_T' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="show_T">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="id_post" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="idcode" Type="char" MaxLength="10" />
+          <Property Name="id_post" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="phone" Type="char" MaxLength="7" />
+          <Property Name="salary" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="rise" Type="numeric" Precision="6" Scale="2" />
+          <Property Name="hiredate" Type="datetime" />
+        </EntityType>
+        <Association Name="dep_frk_fac">
+          <End Role="FACULTY" Type="Self.FACULTY" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FACULTY">
+              <PropertyRef Name="FacPK" />
+            </Principal>
+            <Dependent Role="DEPARTMENT">
+              <PropertyRef Name="FacFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_KEY_POST">
+          <End Role="POST" Type="Self.POST" Multiplicity="1" />
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="POST">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TEACHER">
+              <PropertyRef Name="id_Post" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="grp_frk_dep">
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+          <End Role="SGROUP" Type="Self.SGROUP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTMENT">
+              <PropertyRef Name="DepPK" />
+            </Principal>
+            <Dependent Role="SGROUP">
+              <PropertyRef Name="DepFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="grp_frk_tch">
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+          <End Role="SGROUP" Type="Self.SGROUP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEACHER">
+              <PropertyRef Name="TchPK" />
+            </Principal>
+            <Dependent Role="SGROUP">
+              <PropertyRef Name="CurFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_grp">
+          <End Role="SGROUP" Type="Self.SGROUP" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGROUP">
+              <PropertyRef Name="GrpPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="GrpFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_rom">
+          <End Role="ROOM" Type="Self.ROOM" Multiplicity="0..1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROOM">
+              <PropertyRef Name="RomPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="RomFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_sbj">
+          <End Role="SUBJECT" Type="Self.SUBJECT" Multiplicity="0..1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUBJECT">
+              <PropertyRef Name="SbjPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="SbjFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_tch">
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEACHER">
+              <PropertyRef Name="TchPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="TchFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_typ">
+          <End Role="LECTURE_TYPE" Type="Self.LECTURE_TYPE" Multiplicity="1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LECTURE_TYPE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="id_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tch_frk_dep">
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTMENT">
+              <PropertyRef Name="DepPK" />
+            </Principal>
+            <Dependent Role="TEACHER">
+              <PropertyRef Name="DepFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tch_frk_tch">
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+          <End Role="TEACHER1" Type="Self.TEACHER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEACHER">
+              <PropertyRef Name="TchPK" />
+            </Principal>
+            <Dependent Role="TEACHER1">
+              <PropertyRef Name="Chief" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="AddDepartment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Id" Type="int" Mode="In" />
+          <Parameter Name="Faculty" Type="nvarchar" Mode="In" />
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Head" Type="nvarchar" Mode="In" />
+          <Parameter Name="Building" Type="int" Mode="In" />
+          <Parameter Name="Fund" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="how_many_teacher" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="s" Type="int" Mode="InOut" />
+        </Function>
+        <EntityContainer Name="VUZModelStoreContainer">
+          <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FACULTY" EntityType="Self.FACULTY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LECTURE" EntityType="Self.LECTURE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LECTURE_TYPE" EntityType="Self.LECTURE_TYPE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="POST" EntityType="Self.POST" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ROOM" EntityType="Self.ROOM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SGROUP" EntityType="Self.SGROUP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SUBJECT" EntityType="Self.SUBJECT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TEACHER" EntityType="Self.TEACHER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="show_post" EntityType="Self.show_post" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [show_post].[name] AS [name]
+    FROM [dbo].[show_post] AS [show_post]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="show_T" EntityType="Self.show_T" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [show_T].[name] AS [name], 
+    [show_T].[idcode] AS [idcode], 
+    [show_T].[id_post] AS [id_post], 
+    [show_T].[phone] AS [phone], 
+    [show_T].[salary] AS [salary], 
+    [show_T].[rise] AS [rise], 
+    [show_T].[hiredate] AS [hiredate]
+    FROM [dbo].[show_T] AS [show_T]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="dep_frk_fac" Association="Self.dep_frk_fac">
+            <End Role="FACULTY" EntitySet="FACULTY" />
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+          </AssociationSet>
+          <AssociationSet Name="F_KEY_POST" Association="Self.F_KEY_POST">
+            <End Role="POST" EntitySet="POST" />
+            <End Role="TEACHER" EntitySet="TEACHER" />
+          </AssociationSet>
+          <AssociationSet Name="grp_frk_dep" Association="Self.grp_frk_dep">
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+            <End Role="SGROUP" EntitySet="SGROUP" />
+          </AssociationSet>
+          <AssociationSet Name="grp_frk_tch" Association="Self.grp_frk_tch">
+            <End Role="TEACHER" EntitySet="TEACHER" />
+            <End Role="SGROUP" EntitySet="SGROUP" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_grp" Association="Self.lec_frk_grp">
+            <End Role="SGROUP" EntitySet="SGROUP" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_rom" Association="Self.lec_frk_rom">
+            <End Role="ROOM" EntitySet="ROOM" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_sbj" Association="Self.lec_frk_sbj">
+            <End Role="SUBJECT" EntitySet="SUBJECT" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_tch" Association="Self.lec_frk_tch">
+            <End Role="TEACHER" EntitySet="TEACHER" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_typ" Association="Self.lec_typ">
+            <End Role="LECTURE_TYPE" EntitySet="LECTURE_TYPE" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="tch_frk_dep" Association="Self.tch_frk_dep">
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+            <End Role="TEACHER" EntitySet="TEACHER" />
+          </AssociationSet>
+          <AssociationSet Name="tch_frk_tch" Association="Self.tch_frk_tch">
+            <End Role="TEACHER" EntitySet="TEACHER" />
+            <End Role="TEACHER1" EntitySet="TEACHER" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VUZModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="DEPARTMENT">
+          <Key>
+            <PropertyRef Name="DepPK" />
+          </Key>
+          <Property Name="DepPK" Type="Int32" Nullable="false" />
+          <Property Name="FacFK" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Head" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Building" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="Fund" Type="Decimal" Precision="7" Scale="2" />
+          <NavigationProperty Name="FACULTY" Relationship="Self.dep_frk_fac" FromRole="DEPARTMENT" ToRole="FACULTY" />
+          <NavigationProperty Name="SGROUP" Relationship="Self.grp_frk_dep" FromRole="DEPARTMENT" ToRole="SGROUP" />
+          <NavigationProperty Name="TEACHER" Relationship="Self.tch_frk_dep" FromRole="DEPARTMENT" ToRole="TEACHER" />
+        </EntityType>
+        <EntityType Name="FACULTY">
+          <Key>
+            <PropertyRef Name="FacPK" />
+          </Key>
+          <Property Name="FacPK" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Dean" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Building" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="Fund" Type="Decimal" Precision="7" Scale="2" />
+          <NavigationProperty Name="DEPARTMENT" Relationship="Self.dep_frk_fac" FromRole="FACULTY" ToRole="DEPARTMENT" />
+        </EntityType>
+        <EntityType Name="LECTURE">
+          <Key>
+            <PropertyRef Name="lecPK" />
+          </Key>
+          <Property Name="lecPK" Type="Int32" Nullable="false" />
+          <Property Name="TchFK" Type="Int32" />
+          <Property Name="GrpFK" Type="Int32" Nullable="false" />
+          <Property Name="SbjFK" Type="Int32" />
+          <Property Name="RomFK" Type="Int32" />
+          <Property Name="id_type" Type="Int32" Nullable="false" />
+          <Property Name="Week" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Day_week" Type="String" MaxLength="3" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Lesson" Type="Decimal" Precision="1" Scale="0" />
+          <NavigationProperty Name="SGROUP" Relationship="Self.lec_frk_grp" FromRole="LECTURE" ToRole="SGROUP" />
+          <NavigationProperty Name="ROOM" Relationship="Self.lec_frk_rom" FromRole="LECTURE" ToRole="ROOM" />
+          <NavigationProperty Name="SUBJECT" Relationship="Self.lec_frk_sbj" FromRole="LECTURE" ToRole="SUBJECT" />
+          <NavigationProperty Name="TEACHER" Relationship="Self.lec_frk_tch" FromRole="LECTURE" ToRole="TEACHER" />
+          <NavigationProperty Name="LECTURE_TYPE" Relationship="Self.lec_typ" FromRole="LECTURE" ToRole="LECTURE_TYPE" />
+        </EntityType>
+        <EntityType Name="LECTURE_TYPE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="LECTURE" Relationship="Self.lec_typ" FromRole="LECTURE_TYPE" ToRole="LECTURE" />
+        </EntityType>
+        <EntityType Name="POST">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="TEACHER" Relationship="Self.F_KEY_POST" FromRole="POST" ToRole="TEACHER" />
+        </EntityType>
+        <EntityType Name="ROOM">
+          <Key>
+            <PropertyRef Name="RomPK" />
+          </Key>
+          <Property Name="RomPK" Type="Int32" Nullable="false" />
+          <Property Name="Num" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="Floor" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Building" Type="String" MaxLength="5" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="Seats" Type="Decimal" Precision="3" Scale="0" />
+          <NavigationProperty Name="LECTURE" Relationship="Self.lec_frk_rom" FromRole="ROOM" ToRole="LECTURE" />
+        </EntityType>
+        <EntityType Name="SGROUP">
+          <Key>
+            <PropertyRef Name="GrpPK" />
+          </Key>
+          <Property Name="GrpPK" Type="Int32" Nullable="false" />
+          <Property Name="DepFK" Type="Int32" />
+          <Property Name="Num" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="Kurs" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="Quantity" Type="Decimal" Precision="2" Scale="0" />
+          <Property Name="Rating" Type="Decimal" Precision="3" Scale="0" />
+          <Property Name="CurFK" Type="Int32" />
+          <NavigationProperty Name="DEPARTMENT" Relationship="Self.grp_frk_dep" FromRole="SGROUP" ToRole="DEPARTMENT" />
+          <NavigationProperty Name="LECTURE" Relationship="Self.lec_frk_grp" FromRole="SGROUP" ToRole="LECTURE" />
+          <NavigationProperty Name="TEACHER" Relationship="Self.grp_frk_tch" FromRole="SGROUP" ToRole="TEACHER" />
+        </EntityType>
+        <EntityType Name="SUBJECT">
+          <Key>
+            <PropertyRef Name="SbjPK" />
+          </Key>
+          <Property Name="SbjPK" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="LECTURE" Relationship="Self.lec_frk_sbj" FromRole="SUBJECT" ToRole="LECTURE" />
+        </EntityType>
+        <EntityType Name="TEACHER">
+          <Key>
+            <PropertyRef Name="TchPK" />
+          </Key>
+          <Property Name="TchPK" Type="Int32" Nullable="false" />
+          <Property Name="DepFK" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="IDCode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="id_Post" Type="Int32" Nullable="false" />
+          <Property Name="Tel" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="Salary" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="Rise" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="HireDate" Type="DateTime" Precision="3" />
+          <Property Name="Chief" Type="Int32" />
+          <NavigationProperty Name="DEPARTMENT" Relationship="Self.tch_frk_dep" FromRole="TEACHER" ToRole="DEPARTMENT" />
+          <NavigationProperty Name="LECTURE" Relationship="Self.lec_frk_tch" FromRole="TEACHER" ToRole="LECTURE" />
+          <NavigationProperty Name="POST" Relationship="Self.F_KEY_POST" FromRole="TEACHER" ToRole="POST" />
+          <NavigationProperty Name="SGROUP" Relationship="Self.grp_frk_tch" FromRole="TEACHER" ToRole="SGROUP" />
+          <NavigationProperty Name="TEACHER1" Relationship="Self.tch_frk_tch" FromRole="TEACHER" ToRole="TEACHER1" />
+          <NavigationProperty Name="TEACHER2" Relationship="Self.tch_frk_tch" FromRole="TEACHER1" ToRole="TEACHER" />
+        </EntityType>
+        <EntityType Name="show_post">
+          <Key>
+            <PropertyRef Name="name" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="show_T">
+          <Key>
+            <PropertyRef Name="name" />
+            <PropertyRef Name="id_post" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="idcode" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="id_post" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="phone" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+          <Property Name="salary" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="rise" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="hiredate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <Association Name="dep_frk_fac">
+          <End Role="FACULTY" Type="Self.FACULTY" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FACULTY">
+              <PropertyRef Name="FacPK" />
+            </Principal>
+            <Dependent Role="DEPARTMENT">
+              <PropertyRef Name="FacFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="grp_frk_dep">
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+          <End Role="SGROUP" Type="Self.SGROUP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTMENT">
+              <PropertyRef Name="DepPK" />
+            </Principal>
+            <Dependent Role="SGROUP">
+              <PropertyRef Name="DepFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tch_frk_dep">
+          <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="0..1" />
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DEPARTMENT">
+              <PropertyRef Name="DepPK" />
+            </Principal>
+            <Dependent Role="TEACHER">
+              <PropertyRef Name="DepFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_grp">
+          <End Role="SGROUP" Type="Self.SGROUP" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SGROUP">
+              <PropertyRef Name="GrpPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="GrpFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_rom">
+          <End Role="ROOM" Type="Self.ROOM" Multiplicity="0..1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROOM">
+              <PropertyRef Name="RomPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="RomFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_sbj">
+          <End Role="SUBJECT" Type="Self.SUBJECT" Multiplicity="0..1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUBJECT">
+              <PropertyRef Name="SbjPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="SbjFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_frk_tch">
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEACHER">
+              <PropertyRef Name="TchPK" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="TchFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lec_typ">
+          <End Role="LECTURE_TYPE" Type="Self.LECTURE_TYPE" Multiplicity="1" />
+          <End Role="LECTURE" Type="Self.LECTURE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LECTURE_TYPE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="LECTURE">
+              <PropertyRef Name="id_type" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="F_KEY_POST">
+          <End Role="POST" Type="Self.POST" Multiplicity="1" />
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="POST">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="TEACHER">
+              <PropertyRef Name="id_Post" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="grp_frk_tch">
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+          <End Role="SGROUP" Type="Self.SGROUP" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEACHER">
+              <PropertyRef Name="TchPK" />
+            </Principal>
+            <Dependent Role="SGROUP">
+              <PropertyRef Name="CurFK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tch_frk_tch">
+          <End Role="TEACHER" Type="Self.TEACHER" Multiplicity="0..1" />
+          <End Role="TEACHER1" Type="Self.TEACHER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TEACHER">
+              <PropertyRef Name="TchPK" />
+            </Principal>
+            <Dependent Role="TEACHER1">
+              <PropertyRef Name="Chief" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="VUZEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" />
+          <EntitySet Name="FACULTY" EntityType="Self.FACULTY" />
+          <EntitySet Name="LECTURE" EntityType="Self.LECTURE" />
+          <EntitySet Name="LECTURE_TYPE" EntityType="Self.LECTURE_TYPE" />
+          <EntitySet Name="POST" EntityType="Self.POST" />
+          <EntitySet Name="ROOM" EntityType="Self.ROOM" />
+          <EntitySet Name="SGROUP" EntityType="Self.SGROUP" />
+          <EntitySet Name="SUBJECT" EntityType="Self.SUBJECT" />
+          <EntitySet Name="TEACHER" EntityType="Self.TEACHER" />
+          <EntitySet Name="show_post" EntityType="Self.show_post" />
+          <EntitySet Name="show_T" EntityType="Self.show_T" />
+          <AssociationSet Name="dep_frk_fac" Association="Self.dep_frk_fac">
+            <End Role="FACULTY" EntitySet="FACULTY" />
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+          </AssociationSet>
+          <AssociationSet Name="grp_frk_dep" Association="Self.grp_frk_dep">
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+            <End Role="SGROUP" EntitySet="SGROUP" />
+          </AssociationSet>
+          <AssociationSet Name="tch_frk_dep" Association="Self.tch_frk_dep">
+            <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+            <End Role="TEACHER" EntitySet="TEACHER" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_grp" Association="Self.lec_frk_grp">
+            <End Role="SGROUP" EntitySet="SGROUP" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_rom" Association="Self.lec_frk_rom">
+            <End Role="ROOM" EntitySet="ROOM" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_sbj" Association="Self.lec_frk_sbj">
+            <End Role="SUBJECT" EntitySet="SUBJECT" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_frk_tch" Association="Self.lec_frk_tch">
+            <End Role="TEACHER" EntitySet="TEACHER" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="lec_typ" Association="Self.lec_typ">
+            <End Role="LECTURE_TYPE" EntitySet="LECTURE_TYPE" />
+            <End Role="LECTURE" EntitySet="LECTURE" />
+          </AssociationSet>
+          <AssociationSet Name="F_KEY_POST" Association="Self.F_KEY_POST">
+            <End Role="POST" EntitySet="POST" />
+            <End Role="TEACHER" EntitySet="TEACHER" />
+          </AssociationSet>
+          <AssociationSet Name="grp_frk_tch" Association="Self.grp_frk_tch">
+            <End Role="TEACHER" EntitySet="TEACHER" />
+            <End Role="SGROUP" EntitySet="SGROUP" />
+          </AssociationSet>
+          <AssociationSet Name="tch_frk_tch" Association="Self.tch_frk_tch">
+            <End Role="TEACHER" EntitySet="TEACHER" />
+            <End Role="TEACHER1" EntitySet="TEACHER" />
+          </AssociationSet>
+          <FunctionImport Name="AddDepartment">
+            <Parameter Name="Id" Mode="In" Type="Int32" />
+            <Parameter Name="Faculty" Mode="In" Type="String" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Head" Mode="In" Type="String" />
+            <Parameter Name="Building" Mode="In" Type="Int32" />
+            <Parameter Name="Fund" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="how_many_teacher">
+            <Parameter Name="s" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VUZModelStoreContainer" CdmEntityContainer="VUZEntities">
+          <EntitySetMapping Name="DEPARTMENT">
+            <EntityTypeMapping TypeName="VUZModel.DEPARTMENT">
+              <MappingFragment StoreEntitySet="DEPARTMENT">
+                <ScalarProperty Name="DepPK" ColumnName="DepPK" />
+                <ScalarProperty Name="FacFK" ColumnName="FacFK" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Head" ColumnName="Head" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Fund" ColumnName="Fund" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FACULTY">
+            <EntityTypeMapping TypeName="VUZModel.FACULTY">
+              <MappingFragment StoreEntitySet="FACULTY">
+                <ScalarProperty Name="FacPK" ColumnName="FacPK" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Dean" ColumnName="Dean" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Fund" ColumnName="Fund" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LECTURE">
+            <EntityTypeMapping TypeName="VUZModel.LECTURE">
+              <MappingFragment StoreEntitySet="LECTURE">
+                <ScalarProperty Name="lecPK" ColumnName="lecPK" />
+                <ScalarProperty Name="TchFK" ColumnName="TchFK" />
+                <ScalarProperty Name="GrpFK" ColumnName="GrpFK" />
+                <ScalarProperty Name="SbjFK" ColumnName="SbjFK" />
+                <ScalarProperty Name="RomFK" ColumnName="RomFK" />
+                <ScalarProperty Name="id_type" ColumnName="id_type" />
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="Day_week" ColumnName="Day_week" />
+                <ScalarProperty Name="Lesson" ColumnName="Lesson" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LECTURE_TYPE">
+            <EntityTypeMapping TypeName="VUZModel.LECTURE_TYPE">
+              <MappingFragment StoreEntitySet="LECTURE_TYPE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POST">
+            <EntityTypeMapping TypeName="VUZModel.POST">
+              <MappingFragment StoreEntitySet="POST">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ROOM">
+            <EntityTypeMapping TypeName="VUZModel.ROOM">
+              <MappingFragment StoreEntitySet="ROOM">
+                <ScalarProperty Name="RomPK" ColumnName="RomPK" />
+                <ScalarProperty Name="Num" ColumnName="Num" />
+                <ScalarProperty Name="Floor" ColumnName="Floor" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="Seats" ColumnName="Seats" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SGROUP">
+            <EntityTypeMapping TypeName="VUZModel.SGROUP">
+              <MappingFragment StoreEntitySet="SGROUP">
+                <ScalarProperty Name="GrpPK" ColumnName="GrpPK" />
+                <ScalarProperty Name="DepFK" ColumnName="DepFK" />
+                <ScalarProperty Name="Num" ColumnName="Num" />
+                <ScalarProperty Name="Kurs" ColumnName="Kurs" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+                <ScalarProperty Name="CurFK" ColumnName="CurFK" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUBJECT">
+            <EntityTypeMapping TypeName="VUZModel.SUBJECT">
+              <MappingFragment StoreEntitySet="SUBJECT">
+                <ScalarProperty Name="SbjPK" ColumnName="SbjPK" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TEACHER">
+            <EntityTypeMapping TypeName="VUZModel.TEACHER">
+              <MappingFragment StoreEntitySet="TEACHER">
+                <ScalarProperty Name="TchPK" ColumnName="TchPK" />
+                <ScalarProperty Name="DepFK" ColumnName="DepFK" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IDCode" ColumnName="IDCode" />
+                <ScalarProperty Name="id_Post" ColumnName="id_Post" />
+                <ScalarProperty Name="Tel" ColumnName="Tel" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="Rise" ColumnName="Rise" />
+                <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+                <ScalarProperty Name="Chief" ColumnName="Chief" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="show_post">
+            <EntityTypeMapping TypeName="VUZModel.show_post">
+              <MappingFragment StoreEntitySet="show_post">
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="show_T">
+            <EntityTypeMapping TypeName="VUZModel.show_T">
+              <MappingFragment StoreEntitySet="show_T">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="idcode" ColumnName="idcode" />
+                <ScalarProperty Name="id_post" ColumnName="id_post" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="rise" ColumnName="rise" />
+                <ScalarProperty Name="hiredate" ColumnName="hiredate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AddDepartment" FunctionName="VUZModel.Store.AddDepartment" />
+          <FunctionImportMapping FunctionImportName="how_many_teacher" FunctionName="VUZModel.Store.how_many_teacher" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

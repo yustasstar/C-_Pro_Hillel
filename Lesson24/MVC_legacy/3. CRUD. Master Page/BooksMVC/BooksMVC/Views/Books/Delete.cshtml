@@ -1,0 +1,76 @@
+﻿@model BooksMVC.Models.books
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>books</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Pages)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Pages)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.YearPress)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.YearPress)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Themes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Themes)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Author)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Author)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Press)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Press)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comment)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comment)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    // Генерирует скрытое поле формы (токен борьбы с фальсификацией), которое проверяется при отправке формы.
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

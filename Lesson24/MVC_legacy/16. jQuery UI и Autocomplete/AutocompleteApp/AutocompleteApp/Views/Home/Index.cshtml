@@ -1,0 +1,26 @@
+﻿@model AutocompleteApp.Models.Club
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href='@Url.Content("~/Content/themes/base/all.css")' rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <input type="text" id="club" name="name" data-autocomplete-source='@Url.Action("AutocompleteSearch", "Home")' />
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryUI")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var target = $("#club");
+            target.autocomplete({ source: target.attr("data-autocomplete-source") });   
+        });
+    </script>
+</body>
+</html>

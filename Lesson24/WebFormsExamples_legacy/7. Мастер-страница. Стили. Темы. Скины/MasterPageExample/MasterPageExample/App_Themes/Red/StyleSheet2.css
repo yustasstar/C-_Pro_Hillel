@@ -1,0 +1,19 @@
+﻿.btn1
+{
+	font-family: Calibri;
+	font-size: medium;
+	font-weight: bolder;
+	color: #FFFF00;
+	background-color: #0000FF;
+	border: 10px ridge #FFFF00;
+}
+
+.btn2
+{
+	font-family: Calibri;
+	font-size: medium;
+	font-weight: bolder;
+	color: #FF3300;
+	background-color: #00FFFF;
+	border: 10px inset #FFFF00;
+}

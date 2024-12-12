@@ -1,0 +1,42 @@
+﻿@model Soccer.Models.Teams
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Добавление новой команды</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Команда</legend>
+
+        <div class="editor-label">
+            @Html.Label("Название команды:")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+            @Html.ValidationMessageFor(model => model.Name)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Тренер:")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Coach)
+            @Html.ValidationMessageFor(model => model.Coach)
+        </div>
+
+        <p>
+            <input type="submit" value="Добавить команду" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Вернуться к списку команд", "Index")
+</div>
+
+

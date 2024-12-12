@@ -1,0 +1,31 @@
+﻿@model ASP_NET_Identity.Models.EditModel
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit your profile data</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.ValidationSummary()
+        <div>
+            <p>Year of birth: @Html.EditorFor(model => model.BirthYear)</p>
+        </div>
+        <div>
+            <p>City: @Html.EditorFor(model => model.City)</p>
+        </div>
+        <div>
+            <p>Country: @Html.EditorFor(model => model.Country)</p>
+        </div>
+        <div>
+            <div>
+                <input type="submit" value="Save" />
+            </div>
+        </div>
+    </div>
+}
+

@@ -1,0 +1,29 @@
+﻿@model ASP_NET_Identity.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Profile</h2>
+
+<table class="table">
+       <tr>
+        <td>
+            Year of birth: @Html.DisplayFor(modelItem => modelItem.BirthYear)
+        </td>
+        <td>
+            City: @Html.DisplayFor(modelItem => modelItem.City)
+        </td>
+        <td>
+            Country: @Html.DisplayFor(modelItem => modelItem.Country)
+        </td>
+        <td>
+            Login: @Html.DisplayFor(modelItem => modelItem.UserName)
+        </td>
+           <td>
+               @Html.ActionLink("Edit", "Edit", "Account") |
+               @Html.ActionLink("Delete", "Delete", "Account")
+           </td>
+    </tr>
+
+</table>

@@ -1,0 +1,86 @@
+﻿@model IEnumerable<CRUDDialogApp.Models.Student>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href='@Url.Content("~/Content/themes/base/jquery-ui.css")' rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create", "Students", new { },
+                      new { @class = "viewDialog", data_dialog_title = "Create model" })
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GPA)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Surname)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Age)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GPA)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Students", new { id = item.Id },
+                          new { @class = "viewDialog", data_dialog_title = "Edit model" }) |
+                    @Html.ActionLink("Details", "Details", "Students", new { id = item.Id },
+                          new { @class = "viewDialog", data_dialog_title = "View model" })  |
+                    @Html.ActionLink("Delete", "Delete", "Students", new { id = item.Id },
+                          new { @class = "viewDialog", data_dialog_title = "Delete model" })
+                </td>
+            </tr>
+        }
+
+    </table>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryUI")
+    <script>
+        $(document).ready(function () {
+
+            $(".viewDialog").on("click", function (e) {
+                e.preventDefault();
+
+                $("<div></div>")
+                    .addClass("dialog")
+                    .appendTo("body")
+                    .dialog({
+                        title: $(this).attr("data-dialog-title"),
+                        close: function () { $(this).remove() },
+                        modal: true
+                    })
+                    .load(this.href);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@using ManyToManyExample1.Models
+@model ManyToManyExample1.Models.Continent
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Добавление нового континента</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Континент</legend>
+
+        <div class="editor-label"><b>Название</b></div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Name)
+        </div>
+
+        <div class="editor-label"><b>Языки</b></div>
+        @{
+            List<Language> languages = ViewBag.Languages;
+            foreach (Language lang in languages)
+            {
+                <input type="checkbox" name="selectedLanguages" value="@lang.Id" />@lang.Name <br />
+            }
+        }
+        <p>
+            <input type="submit" value="Сохранить" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Назад к списку континентов", "Index")
+</div>
+
+

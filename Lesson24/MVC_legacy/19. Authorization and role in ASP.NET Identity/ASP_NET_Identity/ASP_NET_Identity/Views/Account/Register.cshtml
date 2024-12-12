@@ -1,0 +1,68 @@
+﻿@model ASP_NET_Identity.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Registration</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <h4>User registration</h4>
+        <hr />
+        @Html.ValidationSummary(false)
+
+        <div>
+            e-mail:
+            <div>
+                @Html.EditorFor(model => model.Email)
+            </div>
+        </div>
+
+        <div>
+            Year of birth:
+            <div>
+                @Html.EditorFor(model => model.BirthYear)
+            </div>
+        </div>
+
+        <div>
+            City:
+            <div>
+                @Html.EditorFor(model => model.City)
+            </div>
+        </div>
+
+        <div>
+            Country:
+            <div>
+                @Html.EditorFor(model => model.Country)
+            </div>
+        </div>
+
+        <div>
+            Password:
+            <div>
+                @Html.EditorFor(model => model.Password)
+            </div>
+        </div>
+
+        <div>
+            Confirm password:
+            <div>
+                @Html.EditorFor(model => model.PasswordConfirm)
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <input type="submit" value="Register" />
+            </div>
+        </div>
+    </div>
+}
+

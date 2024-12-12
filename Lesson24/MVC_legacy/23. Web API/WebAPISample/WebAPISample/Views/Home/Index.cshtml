@@ -1,0 +1,211 @@
+﻿<div id="tableBlock"></div>
+<div id="editBlock">
+    <h3>Редактирование студента</h3>
+    <table>
+        <tr><td><input type="hidden" id="editId" /></td><td></td></tr>
+        <tr><td><label>Имя: </label></td><td><input type="text" id="editName" /></td></tr>
+        <tr><td><label>Фамилия: </label></td><td><input type="text" id="editSurname" /></td></tr>
+        <tr><td><label>Возраст: </label></td><td><input type="number" id="editAge" /></td></tr>
+        <tr><td><label>Средний балл: </label></td><td><input type="number" id="editGPA" /></td></tr>
+    </table>
+    <button id="editStudent">Сохранить</button>
+</div>
+<div id="createBlock">
+    <h3>Добавление студента</h3>
+    <table>
+        <tr><td><label>Имя: </label></td><td><input type="text" id="addName" /></td></tr>
+        <tr><td><label>Фамилия: </label></td><td><input type="text" id="addSurname" /></td></tr>
+        <tr><td><label>Возраст: </label></td><td><input type="number" id="addAge" /></td></tr>
+        <tr><td><label>Средний балл: </label></td><td><input type="number" id="addGPA" /></td></tr>
+    </table>
+    <button id="addStudent">Сохранить</button>
+</div>
+
+<script type="text/javascript">
+    $(function ()
+    {
+        GetAllStudents();
+
+        $("#editStudent").click(function (event) {
+            event.preventDefault();
+            EditStudent();
+        });
+
+        $("#addStudent").click(function (event) {
+            event.preventDefault();
+            AddStudent();
+        });
+
+    });
+
+    // Получение всех студентов по ajax-запросу
+    function GetAllStudents() {
+
+        $("#createBlock").css('display', 'block');
+        $("#editBlock").css('display', 'none');
+        $.ajax({
+            // Строка указывающая URL, на который будет отправлен запрос.
+            url: 'http://localhost:4772/api/values',
+            // Устанавливает тип запроса
+            type: 'GET',
+            // Ожидаемый для приема с сервера тип данных
+            dataType: 'json',
+            // Функция, код которой будет выполнен если запрос будет завершен успешно.
+            success: function (data) {
+                WriteResponse(data);
+            },
+            // Функция, код которой будет выполнен если во время исполнения запроса произойдет ошибка.
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+
+    // Добавление нового студента
+    function AddStudent() {
+        // получаем значения для добавляемого студента
+        var student = {
+            Name: $('#addName').val(),
+            Surname: $('#addSurname').val(),
+            Age: $('#addAge').val(),
+            GPA: $('#addGPA').val()
+        };
+
+        $.ajax({
+            // Строка указывающая URL, на который будет отправлен запрос.
+            url: 'http://localhost:4772/api/values',
+            // Устанавливает тип запроса
+            type: 'POST',
+            // Данные, которые будут переданы на сервер с запросом.
+            data: JSON.stringify(student), //Преобразует значение JavaScript в строку JSON
+            // Указывает тип содержимого, которое будет передано на сервер.
+            contentType: "application/json;charset=utf-8",
+            // Функция, код которой будет выполнен если запрос будет завершен успешно.
+            success: function (data) {
+                GetAllStudents();
+            },
+            // Функция, код которой будет выполнен если во время исполнения запроса произойдет ошибка.
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+        // очищаем форму добавления студента
+        $('#addName').val("");
+        $('#addSurname').val("");
+        $('#addAge').val("");
+        $('#addGPA').val("");
+    }
+    // Удаление студента
+    function DeleteStudent(id) {
+
+        $.ajax({
+            // Строка указывающая URL, на который будет отправлен запрос.
+            url: 'http://localhost:4772/api/values/' + id,
+            // Устанавливает тип запроса
+            type: 'DELETE',
+            // Указывает тип содержимого, которое будет передано на сервер.
+            contentType: "application/json;charset=utf-8",
+            // Функция, код которой будет выполнен если запрос будет завершен успешно.
+            success: function (data) {
+                GetAllStudents();
+            },
+            // Функция, код которой будет выполнен если во время исполнения запроса произойдет ошибка.
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+    // редактирование студента
+    function EditStudent() {
+        var id = $('#editId').val()
+        // получаем новые значения для редактируемого студента
+        var student = {
+            Id: $('#editId').val(),
+            Name: $('#editName').val(),
+            Surname: $('#editSurname').val(),
+            Age: $('#editAge').val(),
+            GPA: $('#editGPA').val()
+        };
+        $.ajax({
+            // Строка указывающая URL, на который будет отправлен запрос.
+            url: 'http://localhost:4772/api/values/' + id,
+            // Устанавливает тип запроса
+            type: 'PUT',
+            // Данные, которые будут переданы на сервер с запросом.
+            data: JSON.stringify(student), // Преобразует значение JavaScript в строку JSON
+            // Указывает тип содержимого, которое будет передано на сервер.
+            contentType: "application/json;charset=utf-8",
+            // Функция, код которой будет выполнен если запрос будет завершен успешно.
+            success: function (data) {
+                GetAllStudents();
+            },
+            // Функция, код которой будет выполнен если во время исполнения запроса произойдет ошибка.
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+    // вывод полученных данных на экран
+    function WriteResponse(students) {
+        var strResult = "<table><th>ID</th><th>Имя</th><th>Фамилия</th><th>Возраст</th><th>Средний балл</th>";
+        $.each(students, function (index, student) {
+            strResult += "<tr><td>" + student.Id + "</td><td> " + student.Name + "</td><td>" + student.Surname + "</td><td>" +
+            student.Age + "</td><td>" + student.GPA +
+            "</td><td><a id='editItem' data-item='" + student.Id + "' onclick='EditItem(this);return false;' >Редактировать</a></td>" +
+            "<td><a id='delItem' data-item='" + student.Id + "' onclick='DeleteItem(this);return false;' >Удалить</a></td></tr>";
+        });
+        strResult += "</table>";
+        $("#tableBlock").html(strResult);
+
+    }
+    // обработчик удаления
+    function DeleteItem(el) {
+        event.preventDefault();
+        // получаем id удаляемого объекта
+        var id = $(el).attr('data-item');
+        DeleteStudent(id);
+    }
+    // обработчик редактирования
+    function EditItem(el) {
+        event.preventDefault();
+        // получаем id редактируемого объекта
+        var id = $(el).attr('data-item');
+        GetStudent(id);
+    }
+    // вывод данных редактируемого студента в поля для редактирования
+    function ShowStudent(student) {
+        if (student != null) {
+            $("#createBlock").css('display', 'none');
+            $("#editBlock").css('display', 'block');
+
+            $("#editId").val(student.Id);
+            $('#editName').val(student.Name);
+            $('#editSurname').val(student.Surname);
+            $('#editAge').val(student.Age);
+            $('#editGPA').val(student.GPA);
+        }
+        else {
+            alert("Такой студент не существует");
+        }
+    }
+    // запрос студента на редактирование
+    function GetStudent(id) {
+
+        $.ajax({
+            // Строка указывающая URL, на который будет отправлен запрос.
+            url: 'http://localhost:4772/api/values/' + id,
+            // Устанавливает тип запроса
+            type: 'GET',
+            // Ожидаемый для приема с сервера тип данных
+            dataType: 'json',
+            // Функция, код которой будет выполнен если запрос будет завершен успешно.
+            success: function (data) {
+                ShowStudent(data);
+            },
+            // Функция, код которой будет выполнен если во время исполнения запроса произойдет ошибка.
+            error: function (x, y, z) {
+                alert(x + '\n' + y + '\n' + z);
+            }
+        });
+    }
+</script>

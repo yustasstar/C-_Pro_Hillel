@@ -1,0 +1,47 @@
+﻿@model Soccer.Models.Players
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удаление игрока</h2>
+
+<h3>Вы действительно хотите удалить игрока?</h3>
+<fieldset>
+    <legend>Футболист</legend>
+
+    <div class="display-label">
+        Имя игрока:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+        Возраст:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Age)
+    </div>
+
+    <div class="display-label">
+        Позиция на поле:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Position)
+    </div>
+
+    <div class="display-label">
+         Команда:
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Teams.Name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Удалить" /> |
+        @Html.ActionLink("К списку игроков", "Index")
+    </p>
+}

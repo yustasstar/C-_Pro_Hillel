@@ -1,0 +1,15 @@
+﻿ <asp:Button runat="server"
+ BackColor="Yellow" 
+ BorderColor="Red" 
+ BorderStyle="Ridge" 
+ BorderWidth="10px" 
+ ForeColor="#3333FF" 
+ SkinID="skin1" />
+ 
+  <asp:Button runat="server"
+ BackColor="Green" 
+ BorderColor="Magenta" 
+ BorderStyle="Inset" 
+ BorderWidth="10px" 
+ ForeColor="Magenta" 
+ SkinID="skin2" />

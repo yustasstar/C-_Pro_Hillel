@@ -1,0 +1,30 @@
+﻿@using ManyToManyExample1.Models
+@model ManyToManyExample1.Models.Language
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Подробности</h2>
+
+<fieldset>
+    <legend>Информация о языке</legend>
+
+    <div class="display-label"><b>Название</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label"><b>Континенты</b></div>
+    <ul>
+        @foreach (Continent c in Model.Continents)
+        {
+            <li>@c.Name</li>
+        }
+    </ul>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Редактировать", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Вернуться к списку языков", "Index")
+</p>

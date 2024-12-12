@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+    <body>
+        <h2>Загрузка нескольких файлов</h2>
+        <p>
+            @using (Html.BeginForm("", "home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <!--
+                    Для передачи больших файлов используется MIME-тип данных multipart/form-data;
+                    при формировании формы с несколькими элементами загрузки файлов необходимо формировать
+                    имена элементов (атрибуты name) с индексаторами [№]. Это соглашение ASP.NET MVC,
+                    которое позволяет автоматически получить массив элементов при работе с действиями контроллеров.
+                    -->
+
+            <input type="file" name="fileUpload" multiple /><br />
+            <input type="submit" name="Submit" id="SubmitMultiply" value="Upload" />
+            }
+        </p>
+        <p>@ViewBag.Text</p>
+    </body>
+</html>

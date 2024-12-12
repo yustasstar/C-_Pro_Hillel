@@ -1,0 +1,24 @@
+﻿@model ManyToManyExample1.Models.Continent
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удаление континента</h2>
+
+<h3>Вы действительно хотите удалить континент?</h3>
+<fieldset>
+    <legend>Континент</legend>
+
+    <div class="display-label"><b>Название</b></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Удалить" /> |
+        @Html.ActionLink("Вернуться к списку континентов", "Index")
+    </p>
+}
