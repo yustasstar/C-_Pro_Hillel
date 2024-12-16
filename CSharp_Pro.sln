@@ -244,6 +244,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Service", "Les
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetShopAspNetCoreMvc", "Lesson26\InternetShopAspNetCoreMvc\InternetShopAspNetCoreMvc\InternetShopAspNetCoreMvc.csproj", "{E647FB8F-F28F-45C2-BAE9-6B978E8AD225}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_11_NotesApp", "HW_11_NotesApp\NotesApp\HW_11_NotesApp.csproj", "{F168C548-7575-4E55-B910-F0A63017511D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -598,6 +600,14 @@ Global
 		{E647FB8F-F28F-45C2-BAE9-6B978E8AD225}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E647FB8F-F28F-45C2-BAE9-6B978E8AD225}.Release|x86.ActiveCfg = Release|Any CPU
 		{E647FB8F-F28F-45C2-BAE9-6B978E8AD225}.Release|x86.Build.0 = Release|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Debug|x86.Build.0 = Debug|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Release|x86.ActiveCfg = Release|Any CPU
+		{F168C548-7575-4E55-B910-F0A63017511D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -680,6 +690,7 @@ Global
 		{96EB09D3-DD63-4A1E-87CB-6471816C2B6A} = {A68C633F-5127-4055-B4A8-4CB055EB4D60}
 		{5A374451-8354-4E2C-A950-3F709191B408} = {A68C633F-5127-4055-B4A8-4CB055EB4D60}
 		{E647FB8F-F28F-45C2-BAE9-6B978E8AD225} = {765BEE6B-6B0B-4811-A306-61F9FACB9EA0}
+		{F168C548-7575-4E55-B910-F0A63017511D} = {6A05DF64-88D8-4839-98A0-785F3F512A6D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}
