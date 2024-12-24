@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MovieManager.Contract\MovieManager.Contract.csproj" />
     <ProjectReference Include="..\MovieManager.Data\MovieManager.Data.csproj" />
   </ItemGroup>
