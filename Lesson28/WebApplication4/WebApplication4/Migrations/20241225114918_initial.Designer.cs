@@ -12,8 +12,8 @@ using WebApplication4.Data;
 namespace WebApplication4.Migrations
 {
     [DbContext(typeof(CinemaDbContext))]
-    [Migration("20240328191257_added-seed")]
-    partial class addedseed
+    [Migration("20241225114918_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
