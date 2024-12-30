@@ -1,0 +1,35 @@
+Паттерн MVC
+Написання прикладу на ASP.NET Core MVC.
+
+https://www.tutorialspoint.com/asp.net_core/index.htm
+https://practicaldotnet.io/c/PracticalMVC
+https://medium.com/net-core/building-a-web-application-using-asp-net-core-mvc-and-entity-framework-core-15ee6192b3f3
+https://www.youtube.com/watch?v=hZ1DASYd9rk
+https://code-maze.com/asp-net-core-mvc-series/
+https://labpys.com/how-to-create-crud-operation-in-asp-net-core-mvc-c/
+https://www.freecodecamp.org/news/how-to-perform-crud-operations-with-asp-net-core-using-vs-code-and-ado-net-b12404aef708/
+https://www.dotnettricks.com/learn/aspnetcore/entity-framework-core-crud-operations
+https://medium.com/c-sharp-progarmming/implement-crud-operation-asp-net-mvc-with-ef-core-c8eddf8571f8
+
+Створіть клас «Замітка», в якому зберігатиметься така інформація:
+
+Назва замітки.
+Текст замітки.
+Дата створення замітки.
+Теги.
+Реалізуйте необхідні методи і поля.
+Реалізуйте виведення інформації на екран.
+Використовуйте MVC-патерн у коді цієї програми.
+
+Додатково:
+Створіть клас «Контакт», в якому зберігатиметься така інформація:
+
+Ім'я контакту.
+Мобільний телефон.
+Альтернативний мобільний телефон.
+Email.
+Короткий опис.
+Реалізуйте необхідні методи і поля.
+
+Реалізуйте виведення інформації на екран.
+Використовуйте MVC-патерн у коді цієї програми.

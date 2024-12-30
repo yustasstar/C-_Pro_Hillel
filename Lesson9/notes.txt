@@ -1,0 +1,11 @@
+Взаємодія з файловою системою.
+
+Серіалізація.
+
+Робота з JSON та XML-файлами.
+
+Логування
+
+ LINQ
+
+https://code-maze.com/csharp-xml-serialization/

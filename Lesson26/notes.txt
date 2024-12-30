@@ -1,33 +1,20 @@
 Web API.
-
 REST API
-
 Middleware.
-
 Приклад створення Web API з використанням EF Core
 
 https://www.ibm.com/topics/rest-apis#:~:text=the%20next%20step-,What%20is%20a%20REST%20API%3F,representational%20state%20transfer%20architectural%20style.
-
 https://aws.amazon.com/ru/what-is/restful-api/
-
 https://en.wikipedia.org/wiki/REST
-
 https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
-
 https://learn.microsoft.com/ru-ru/aspnet/core/tutorials/first-web-api?view=aspnetcore-7.0&tabs=visual-studio
-
 https://www.freecodecamp.org/news/an-awesome-guide-on-how-to-build-restful-apis-with-asp-net-core-87b818123e28/
-
 https://code-maze.com/net-core-series/
-
 https://betterprogramming.pub/building-rest-api-with-asp-net-core-3cd144d222d8
-
 https://www.codingvila.com/2021/05/create-rest-api-with-asp-dot-net-core-5-entity-framework-core.html
 
 додаткове завдання:
-
 Створити REST API для інтернет магазина за допомогою Web API
-
 Зберігати все в MS SQL базу даних за допомогою code-first підходу,
 
 використовуючи Entity Framework Core.
@@ -40,21 +27,15 @@ Customer
 Order
 і т.д
 Створити ендпоінти для CRUD (create, read, update, delete) операцій із кожною сутністю.
-
 Використовувати HTTP методи (GET, POST, PUT, PATCH, DELETE).
-
 Необхідно, що API відповідало підходам REST API.
 
 https://wearecommunity.io/communities/bakyiv/articles/1264
-
 https://appmaster.io/blog/the-six-rules-of-rest-apis
-
 https://dou.ua/forums/topic/34550/
-
 ﻿https://stackify.com/asp-net-razor-pages-vs-mvc/
 
 Створити REST API для інтернет магазина за допомогою Web API
-
 Зберігати все в MS SQL базу даних за допомогою code-first підходу, 
 
 використовуючи Entity Framework Core.
@@ -67,13 +48,9 @@ Customer
 Order
 і т.д
 Створити ендпоінти для CRUD (create, read, update, delete) операцій із кожною сутністю.
-
 Використовувати HTTP методи (GET, POST, PUT, PATCH, DELETE).
-
 Необхідно, що API відповідало підходам REST API.
 
 https://wearecommunity.io/communities/bakyiv/articles/1264
-
 https://appmaster.io/blog/the-six-rules-of-rest-apis
-
 https://dou.ua/forums/topic/34550/
