@@ -385,6 +385,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Service", "Les
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Service.Tests", "Lesson30\MovieManager\MovieManager.Service.Tests\MovieManager.Service.Tests.csproj", "{569AE0EE-2B30-48E6-A700-4AAEBB3A2333}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HW_12_InternetShopMVC", "HW_12_InternetShopMVC", "{41353F9D-B69F-47DA-A2BD-D0A04CBFF1B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InternetShopAspNetCoreMvc", "HW_12_InternetShop\InternetShopAspNetCoreMvc\InternetShopAspNetCoreMvc.csproj", "{B3094C6D-34E1-4775-9034-349F2B9E32CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -963,6 +967,14 @@ Global
 		{569AE0EE-2B30-48E6-A700-4AAEBB3A2333}.Release|Any CPU.Build.0 = Release|Any CPU
 		{569AE0EE-2B30-48E6-A700-4AAEBB3A2333}.Release|x86.ActiveCfg = Release|Any CPU
 		{569AE0EE-2B30-48E6-A700-4AAEBB3A2333}.Release|x86.Build.0 = Release|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Debug|x86.Build.0 = Debug|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Release|x86.ActiveCfg = Release|Any CPU
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1084,6 +1096,8 @@ Global
 		{27F8657A-B3EF-439B-A00E-8162C293A724} = {DEE9A43C-05E9-4CC4-AB3D-0CF1B83EC751}
 		{56BCB9C9-1B80-44EE-9C91-A63A4B55879D} = {DEE9A43C-05E9-4CC4-AB3D-0CF1B83EC751}
 		{569AE0EE-2B30-48E6-A700-4AAEBB3A2333} = {DEE9A43C-05E9-4CC4-AB3D-0CF1B83EC751}
+		{41353F9D-B69F-47DA-A2BD-D0A04CBFF1B8} = {6A05DF64-88D8-4839-98A0-785F3F512A6D}
+		{B3094C6D-34E1-4775-9034-349F2B9E32CA} = {41353F9D-B69F-47DA-A2BD-D0A04CBFF1B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6AD6DC20-5849-4A61-A23D-351C5583DCF0}
