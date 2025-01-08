@@ -4,9 +4,9 @@ using InternetShopAspNetCoreMvc.Models;
 
 namespace InternetShopAspNetCoreMvc.Data.Configuration
 {
-    public class OrderDetailConfiguration : IEntityTypeConfiguration<OrderDetail>
+    public class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
     {
-        public void Configure(EntityTypeBuilder<OrderDetail> builder)
+        public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
             builder.HasKey(od => od.Id);
             builder.Property(od => od.Id).ValueGeneratedOnAdd();
@@ -15,10 +15,9 @@ namespace InternetShopAspNetCoreMvc.Data.Configuration
 
             // Define relationships
             builder.HasOne(od => od.Order)
-                   .WithMany(o => o.OrderDetails)
+                   .WithMany(o => o.OrderItems)
                    .HasForeignKey(od => od.OrderId)
                    .OnDelete(DeleteBehavior.NoAction);
-
         }
     }
 }

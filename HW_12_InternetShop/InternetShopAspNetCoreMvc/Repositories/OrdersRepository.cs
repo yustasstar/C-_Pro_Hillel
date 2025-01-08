@@ -38,7 +38,7 @@ namespace InternetShopAspNetCoreMvc.Repositories
 
                     foreach (var item in cartItems)
                     {
-                        var orderDetails = new OrderDetail
+                        var orderItem = new OrderItem
                         {
                             OrderId = order.Id,
                             ProductId = item.ProductId,
@@ -46,7 +46,7 @@ namespace InternetShopAspNetCoreMvc.Repositories
                             Quantity = item.Quantity,
                             Total = item.Quantity * item.Product.Price,
                         };
-                        _context.OrderDetails.Add(orderDetails);
+                        _context.OrderItems.Add(orderItem);
                         _context.CartItems.Remove(item);
                     }
                     _context.SaveChanges();
@@ -71,7 +71,7 @@ namespace InternetShopAspNetCoreMvc.Repositories
 		{
 			return _context.Orders
 				.AsNoTracking()
-				.Include(x => x.OrderDetails)
+				.Include(x => x.OrderItems)
 				.ThenInclude(x => x.Product)
 				.FirstOrDefault(x => x.Id == id);
         }
@@ -88,7 +88,7 @@ namespace InternetShopAspNetCoreMvc.Repositories
             return _context.Orders
 				.AsNoTracking()
                 .Include(x => x.User)
-                .Include(x => x.OrderDetails)
+                .Include(x => x.OrderItems)
                 .ThenInclude(x => x.Product)
 				.Where(x => x.UserId == id)
 				.ToList();

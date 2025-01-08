@@ -20,7 +20,7 @@ namespace InternetShopAspNetCoreMvc.ViewModels
         public IFormFile Image { get; set; }
 
         [Required(ErrorMessage = "Please Choose a Category")]
-        public int CategoryId { get; set; }
 
+        public int CategoryId { get; set; }
     }
 }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace InternetShopAspNetCoreMvc.Migrations
 {
     [DbContext(typeof(InternetShopDbContext))]
-    [Migration("20250108113719_initial")]
+    [Migration("20250108191925_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -100,7 +100,7 @@ namespace InternetShopAspNetCoreMvc.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.OrderDetail", b =>
+            modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.OrderItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -129,7 +129,7 @@ namespace InternetShopAspNetCoreMvc.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderDetails");
+                    b.ToTable("OrderItems");
                 });
 
             modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.Product", b =>
@@ -208,7 +208,7 @@ namespace InternetShopAspNetCoreMvc.Migrations
                         {
                             Id = 1,
                             Address = "test-1",
-                            CreatedAt = new DateTime(2025, 1, 8, 11, 37, 18, 996, DateTimeKind.Utc).AddTicks(9119),
+                            CreatedAt = new DateTime(2025, 1, 8, 19, 19, 25, 334, DateTimeKind.Utc).AddTicks(9258),
                             Email = "vasya@gmail.com",
                             Fullname = "Vasya Pupkin",
                             Username = "Vasya"
@@ -217,7 +217,7 @@ namespace InternetShopAspNetCoreMvc.Migrations
                         {
                             Id = 2,
                             Address = "test-2",
-                            CreatedAt = new DateTime(2025, 1, 8, 11, 37, 18, 996, DateTimeKind.Utc).AddTicks(9145),
+                            CreatedAt = new DateTime(2025, 1, 8, 19, 19, 25, 334, DateTimeKind.Utc).AddTicks(9279),
                             Email = "petya@gmail.com",
                             Fullname = "Petya Pupkin",
                             Username = "Petya"
@@ -254,16 +254,16 @@ namespace InternetShopAspNetCoreMvc.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.OrderDetail", b =>
+            modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.OrderItem", b =>
                 {
                     b.HasOne("InternetShopAspNetCoreMvc.Models.Order", "Order")
-                        .WithMany("OrderDetails")
+                        .WithMany("OrderItems")
                         .HasForeignKey("OrderId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("InternetShopAspNetCoreMvc.Models.Product", "Product")
-                        .WithMany("OrderDetails")
+                        .WithMany("OrderItems")
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
@@ -291,14 +291,14 @@ namespace InternetShopAspNetCoreMvc.Migrations
 
             modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.Order", b =>
                 {
-                    b.Navigation("OrderDetails");
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.Product", b =>
                 {
                     b.Navigation("CartItems");
 
-                    b.Navigation("OrderDetails");
+                    b.Navigation("OrderItems");
                 });
 
             modelBuilder.Entity("InternetShopAspNetCoreMvc.Models.User", b =>

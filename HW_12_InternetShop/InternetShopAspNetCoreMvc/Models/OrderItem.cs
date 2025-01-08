@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace InternetShopAspNetCoreMvc.Models
 {
-    public class OrderDetail
+    public class OrderItem
     {
         public int Id { get; set; }
 
@@ -23,7 +23,6 @@ namespace InternetShopAspNetCoreMvc.Models
         [Required]
         [Column(TypeName = "decimal(18,2)")]
         public decimal Total { get; set; }
-
 
         public Order Order { get; set; }
 

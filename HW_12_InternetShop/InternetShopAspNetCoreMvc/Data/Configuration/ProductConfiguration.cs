@@ -17,7 +17,7 @@ namespace InternetShopAspNetCoreMvc.Data.Configuration
 
             // Define relationships
 
-            builder.HasMany(p => p.OrderDetails)
+            builder.HasMany(p => p.OrderItems)
                    .WithOne(od => od.Product)
                    .HasForeignKey(od => od.ProductId)
                    .OnDelete(DeleteBehavior.NoAction);

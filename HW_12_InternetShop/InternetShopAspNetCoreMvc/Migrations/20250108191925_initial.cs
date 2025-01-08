@@ -116,7 +116,7 @@ namespace InternetShopAspNetCoreMvc.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "OrderDetails",
+                name: "OrderItems",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -129,14 +129,14 @@ namespace InternetShopAspNetCoreMvc.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_OrderDetails", x => x.Id);
+                    table.PrimaryKey("PK_OrderItems", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_OrderDetails_Orders_OrderId",
+                        name: "FK_OrderItems_Orders_OrderId",
                         column: x => x.OrderId,
                         principalTable: "Orders",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_OrderDetails_Products_ProductId",
+                        name: "FK_OrderItems_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id");
@@ -147,8 +147,8 @@ namespace InternetShopAspNetCoreMvc.Migrations
                 columns: new[] { "Id", "Address", "CreatedAt", "Email", "Fullname", "Username" },
                 values: new object[,]
                 {
-                    { 1, "test-1", new DateTime(2025, 1, 8, 11, 37, 18, 996, DateTimeKind.Utc).AddTicks(9119), "vasya@gmail.com", "Vasya Pupkin", "Vasya" },
-                    { 2, "test-2", new DateTime(2025, 1, 8, 11, 37, 18, 996, DateTimeKind.Utc).AddTicks(9145), "petya@gmail.com", "Petya Pupkin", "Petya" }
+                    { 1, "test-1", new DateTime(2025, 1, 8, 19, 19, 25, 334, DateTimeKind.Utc).AddTicks(9258), "vasya@gmail.com", "Vasya Pupkin", "Vasya" },
+                    { 2, "test-2", new DateTime(2025, 1, 8, 19, 19, 25, 334, DateTimeKind.Utc).AddTicks(9279), "petya@gmail.com", "Petya Pupkin", "Petya" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -162,13 +162,13 @@ namespace InternetShopAspNetCoreMvc.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetails_OrderId",
-                table: "OrderDetails",
+                name: "IX_OrderItems_OrderId",
+                table: "OrderItems",
                 column: "OrderId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_OrderDetails_ProductId",
-                table: "OrderDetails",
+                name: "IX_OrderItems_ProductId",
+                table: "OrderItems",
                 column: "ProductId");
 
             migrationBuilder.CreateIndex(
@@ -189,7 +189,7 @@ namespace InternetShopAspNetCoreMvc.Migrations
                 name: "CartItems");
 
             migrationBuilder.DropTable(
-                name: "OrderDetails");
+                name: "OrderItems");
 
             migrationBuilder.DropTable(
                 name: "Orders");
