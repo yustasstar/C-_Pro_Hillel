@@ -8,15 +8,15 @@ namespace InternetShopAspNetCoreMvc.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
-            builder.HasKey(od => od.Id);
-            builder.Property(od => od.Id).ValueGeneratedOnAdd();
-            builder.Property(od => od.Price).IsRequired().HasColumnType("decimal(18,2)");
-            builder.Property(od => od.Total).IsRequired().HasColumnType("decimal(18,2)");
+            builder.HasKey(oi => oi.Id);
+            builder.Property(oi => oi.Id).ValueGeneratedOnAdd();
+            builder.Property(oi => oi.Price).IsRequired().HasColumnType("decimal(18,2)");
+            builder.Property(oi => oi.Total).IsRequired().HasColumnType("decimal(18,2)");
 
             // Define relationships
-            builder.HasOne(od => od.Order)
+            builder.HasOne(oi => oi.Order)
                    .WithMany(o => o.OrderItems)
-                   .HasForeignKey(od => od.OrderId)
+                   .HasForeignKey(oi => oi.OrderId)
                    .OnDelete(DeleteBehavior.NoAction);
         }
     }
