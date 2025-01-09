@@ -17,7 +17,7 @@ namespace InternetShopAspNetCoreMvc.Data.Configuration
             builder.HasOne(oi => oi.Order)
                    .WithMany(o => o.OrderItems)
                    .HasForeignKey(oi => oi.OrderId)
-                   .OnDelete(DeleteBehavior.NoAction);
+                   .OnDelete(DeleteBehavior.Cascade); //delete all OrderItems on Order deletion
         }
     }
 }

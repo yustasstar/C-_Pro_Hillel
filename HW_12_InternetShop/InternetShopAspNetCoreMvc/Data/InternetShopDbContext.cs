@@ -18,6 +18,7 @@ namespace InternetShopAspNetCoreMvc.Data
 		{
 			base.OnModelCreating(modelBuilder);
 			modelBuilder.ApplyConfigurationsFromAssembly(typeof(InternetShopDbContext).Assembly);
+			
 			new DbInitializer(modelBuilder).Seed();
 		}
 	}
