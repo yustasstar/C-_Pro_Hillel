@@ -1,0 +1,31 @@
+Створення проекту FullStack.
+
+Back end: ASP.NET Core Web API
+
+Front end: Angular
+
+Аутентифікація та авторизація.
+
+Способи авторизації та безпека.
+
+JSON Web Token (JWT) bearer token.
+
+Identity Server
+
+https://identityserver4.readthedocs.io/en/latest/
+
+https://dou.ua/forums/topic/34491/
+
+https://www.techtarget.com/searchdatamanagement/definition/hashing ;
+
+https://cheapsslsecurity.com/blog/what-is-asymmetric-encryption-understand-with-simple-examples/ ;
+
+https://www.akana.com/blog/what-is-jwt ;
+
+https://medium.com/system-design-blog/long-polling-vs-websockets-vs-server-sent-events-c43ba96df7c1
+
+https://angular.io/tutorial
+
+https://www.tektutorialshub.com/angular-tutorial/
+
+https://ng-girls.gitbook.io/todo-list-tutorial/v/stackblitz/
