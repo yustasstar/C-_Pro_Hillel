@@ -407,6 +407,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieManager.Service.Tests", "Lesson31\MovieManagerApiAndAngularUI\MovieManager\api\MovieManager.Service.Tests\MovieManager.Service.Tests.csproj", "{E5A00342-18E3-4132-A539-2A21E0F3C1A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lesson_32 - .NetC#QuestionsAndTasks", "Lesson_32 - .NetC#QuestionsAndTasks", "{83680FC2-1D94-4F8E-A45F-891203578721}"
+	ProjectSection(SolutionItems) = preProject
+		Lesson32\notes.txt = Lesson32\notes.txt
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NetC#QuestionsAndTasks", ".NetC#QuestionsAndTasks", "{90776FD3-04B3-4E73-83B6-84AC2CFA2BF3}"
 	ProjectSection(SolutionItems) = preProject
@@ -418,7 +421,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".NetC#QuestionsAndTasks", "
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBusPatternDemo", "EventBusPatternDemo", "{609E8A99-9C6B-4C3E-AB36-C1F424532A0F}"
 	ProjectSection(SolutionItems) = preProject
-		Lesson32\EventBusPatternDemo\ДополнительныеМатериалы\Event_Bus.txt = Lesson32\EventBusPatternDemo\ДополнительныеМатериалы\Event_Bus.txt
+		Lesson32\EventBusPatternDemo\Event_Bus.txt = Lesson32\EventBusPatternDemo\Event_Bus.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RabbitMqDemo", "RabbitMqDemo", "{8A7F752F-0C30-40AC-90EC-8C68FC0FBDA0}"

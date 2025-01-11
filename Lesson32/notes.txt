@@ -1,0 +1,23 @@
+Презентація проектів, створених студентами.
+
+Підбиття підсумків.
+
+Відповіді на запитання.
+
+Обговорення можливих питань на співбесідах.
+
+Додатковi посилання:
+
+https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/record ;
+
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-7.0&tabs=visual-studio ;
+
+https://blog.markvincze.com/back-to-basics-dictionary-part-1/ ;
+
+https://www.programiz.com/dsa/priority-queue ;
+
+https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping ;
+
+https://www.tutorialspoint.com/difference-between-views-and-materialized-views-in-sql ;
+
+https://www.tutorialspoint.com/difference-between-function-and-procedure ;
